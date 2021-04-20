@@ -1,0 +1,368 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "016.moc3",
+    "Textures": [
+      "textures/texture_00.png",
+      "textures/texture_01.png"
+    ],
+    "Physics": "016.physics3.json",
+    "Motions": {
+      "": [
+        {
+          "File": "motions/F_12.motion3.json"
+        },
+        {
+          "File": "motions/P_17_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_10.motion3.json"
+        },
+        {
+          "File": "motions/LP_18_loop.motion3.json"
+        },
+        {
+          "File": "motions/F_09.motion3.json"
+        },
+        {
+          "File": "motions/RP_03_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_02.motion3.json"
+        },
+        {
+          "File": "motions/F_04.motion3.json"
+        },
+        {
+          "File": "motions/LP_24.motion3.json"
+        },
+        {
+          "File": "motions/LP_04.motion3.json"
+        },
+        {
+          "File": "motions/RP_01.motion3.json"
+        },
+        {
+          "File": "motions/P_17.motion3.json"
+        },
+        {
+          "File": "motions/RP_02.motion3.json"
+        },
+        {
+          "File": "motions/LP_05_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_20_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_06.motion3.json"
+        },
+        {
+          "File": "motions/F_13.motion3.json"
+        },
+        {
+          "File": "motions/LP_08_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_02_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_10_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_08.motion3.json"
+        },
+        {
+          "File": "motions/LP_19.motion3.json"
+        },
+        {
+          "File": "motions/RP_24_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_21.motion3.json"
+        },
+        {
+          "File": "motions/F_07.motion3.json"
+        },
+        {
+          "File": "motions/P_08.motion3.json"
+        },
+        {
+          "File": "motions/RP_06_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_20.motion3.json"
+        },
+        {
+          "File": "motions/P_24_loop.motion3.json"
+        },
+        {
+          "File": "motions/BodyVia.motion3.json"
+        },
+        {
+          "File": "motions/P_08_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_19.motion3.json"
+        },
+        {
+          "File": "motions/RP_20.motion3.json"
+        },
+        {
+          "File": "motions/P_04.motion3.json"
+        },
+        {
+          "File": "motions/F_05.motion3.json"
+        },
+        {
+          "File": "motions/F_03.motion3.json"
+        },
+        {
+          "File": "motions/F_06.motion3.json"
+        },
+        {
+          "File": "motions/LP_20_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_19_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_22.motion3.json"
+        },
+        {
+          "File": "motions/P_21_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_18.motion3.json"
+        },
+        {
+          "File": "motions/BodyFrom.motion3.json"
+        },
+        {
+          "File": "motions/P_06.motion3.json"
+        },
+        {
+          "File": "motions/P_09.motion3.json"
+        },
+        {
+          "File": "motions/RP_20_loop.motion3.json"
+        },
+        {
+          "File": "motions/F_02.motion3.json"
+        },
+        {
+          "File": "motions/P_24.motion3.json"
+        },
+        {
+          "File": "motions/FacialTo.motion3.json"
+        },
+        {
+          "File": "motions/P_02_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_09_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_21.motion3.json"
+        },
+        {
+          "File": "motions/P_01.motion3.json"
+        },
+        {
+          "File": "motions/P_20.motion3.json"
+        },
+        {
+          "File": "motions/LP_10_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_04_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_21_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_24_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_04.motion3.json"
+        },
+        {
+          "File": "motions/P_19.motion3.json"
+        },
+        {
+          "File": "motions/RP_19_loop.motion3.json"
+        },
+        {
+          "File": "motions/F_10.motion3.json"
+        },
+        {
+          "File": "motions/RP_05.motion3.json"
+        },
+        {
+          "File": "motions/LP_17_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_21.motion3.json"
+        },
+        {
+          "File": "motions/BodyLoop.motion3.json"
+        },
+        {
+          "File": "motions/RP_08_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_10_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_05_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_09_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_03_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_03.motion3.json"
+        },
+        {
+          "File": "motions/LP_08.motion3.json"
+        },
+        {
+          "File": "motions/RP_05_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_06_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_04_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_22_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_24.motion3.json"
+        },
+        {
+          "File": "motions/LP_02_loop.motion3.json"
+        },
+        {
+          "File": "motions/F_08.motion3.json"
+        },
+        {
+          "File": "motions/P_05.motion3.json"
+        },
+        {
+          "File": "motions/P_18.motion3.json"
+        },
+        {
+          "File": "motions/LP_03.motion3.json"
+        },
+        {
+          "File": "motions/LP_02.motion3.json"
+        },
+        {
+          "File": "motions/P_03_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_06.motion3.json"
+        },
+        {
+          "File": "motions/RP_22.motion3.json"
+        },
+        {
+          "File": "motions/RP_10.motion3.json"
+        },
+        {
+          "File": "motions/LP_10.motion3.json"
+        },
+        {
+          "File": "motions/RP_04_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_09_loop.motion3.json"
+        },
+        {
+          "File": "motions/FacialFrom.motion3.json"
+        },
+        {
+          "File": "motions/RP_22_loop.motion3.json"
+        },
+        {
+          "File": "motions/F_11.motion3.json"
+        },
+        {
+          "File": "motions/RP_03.motion3.json"
+        },
+        {
+          "File": "motions/LP_05.motion3.json"
+        },
+        {
+          "File": "motions/F_01.motion3.json"
+        },
+        {
+          "File": "motions/LP_17.motion3.json"
+        },
+        {
+          "File": "motions/P_19_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_18.motion3.json"
+        },
+        {
+          "File": "motions/BodyTo.motion3.json"
+        },
+        {
+          "File": "motions/RP_09.motion3.json"
+        },
+        {
+          "File": "motions/RP_21_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_17.motion3.json"
+        },
+        {
+          "File": "motions/P_18_loop.motion3.json"
+        },
+        {
+          "File": "motions/RP_18_loop.motion3.json"
+        },
+        {
+          "File": "motions/LP_09.motion3.json"
+        },
+        {
+          "File": "motions/LP_01.motion3.json"
+        },
+        {
+          "File": "motions/LP_06_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_22_loop.motion3.json"
+        },
+        {
+          "File": "motions/P_22.motion3.json"
+        },
+        {
+          "File": "motions/RP_17_loop.motion3.json"
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeROpen",
+        "ParamEyeLOpen"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": [
+        "ParamMouthOpenY"
+      ]
+    }
+  ]
+}
