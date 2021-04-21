@@ -1,5 +1,5 @@
 {
-    "01": [
+    "001": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -19,6 +19,11 @@
             "costumeId": 4,
             "name": "私立秋島高校",
             "path": "live2d/01/004/001.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "束の間のロンググッドバイ",
+            "path": "live2d/01/005/001.model3.json"
         },
         {
             "costumeId": 6,
@@ -51,7 +56,7 @@
             "path": "live2d/01/012/001.model3.json"
         }
     ],
-    "02": [
+    "002": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -93,12 +98,17 @@
             "path": "live2d/02/008/002.model3.json"
         },
         {
+            "costumeId": 9,
+            "name": "ベイビー・クロケット",
+            "path": "live2d/02/009/002.model3.json"
+        },
+        {
             "costumeId": 10,
             "name": "ゴールデンアワー",
             "path": "live2d/02/010/002.model3.json"
         }
     ],
-    "03": [
+    "003": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -150,7 +160,7 @@
             "path": "live2d/03/010/003.model3.json"
         }
     ],
-    "04": [
+    "004": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -217,7 +227,7 @@
             "path": "live2d/04/014/004.model3.json"
         }
     ],
-    "05": [
+    "005": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -279,7 +289,7 @@
             "path": "live2d/05/012/005.model3.json"
         }
     ],
-    "06": [
+    "006": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -341,7 +351,7 @@
             "path": "live2d/06/012/006.model3.json"
         }
     ],
-    "07": [
+    "007": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -401,9 +411,14 @@
             "costumeId": 12,
             "name": "KAZAHANA",
             "path": "live2d/07/012/007.model3.json"
+        },
+        {
+            "costumeId": 13,
+            "name": "未来永遠のともだち",
+            "path": "live2d/07/013/007.model3.json"
         }
     ],
-    "08": [
+    "008": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -445,6 +460,11 @@
             "path": "live2d/08/008/008.model3.json"
         },
         {
+            "costumeId": 9,
+            "name": "ユー・ガット・エール",
+            "path": "live2d/08/009/008.model3.json"
+        },
+        {
             "costumeId": 10,
             "name": "harvest ＆ pup",
             "path": "live2d/08/010/008.model3.json"
@@ -465,7 +485,7 @@
             "path": "live2d/08/013/008.model3.json"
         }
     ],
-    "09": [
+    "009": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -487,9 +507,19 @@
             "path": "live2d/09/004/009.model3.json"
         },
         {
+            "costumeId": 5,
+            "name": "スイート・セレナーデ",
+            "path": "live2d/09/005/009.model3.json"
+        },
+        {
             "costumeId": 6,
             "name": "Secret Garden",
             "path": "live2d/09/006/009.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "雲がちぎれる時を",
+            "path": "live2d/09/007/009.model3.json"
         },
         {
             "costumeId": 8,
@@ -517,7 +547,7 @@
             "path": "live2d/09/012/009.model3.json"
         }
     ],
-    "10": [
+    "010": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -532,6 +562,11 @@
             "costumeId": 3,
             "name": "Forever Friends",
             "path": "live2d/10/003/010.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "in other words",
+            "path": "live2d/10/004/010.model3.json"
         },
         {
             "costumeId": 6,
@@ -559,7 +594,7 @@
             "path": "live2d/10/010/010.model3.json"
         }
     ],
-    "11": [
+    "011": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -621,7 +656,7 @@
             "path": "live2d/11/012/011.model3.json"
         }
     ],
-    "12": [
+    "012": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -676,9 +711,14 @@
             "costumeId": 11,
             "name": "帰れない？帰らない？",
             "path": "live2d/12/011/012.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "青空バイクに恋してる",
+            "path": "live2d/12/012/012.model3.json"
         }
     ],
-    "13": [
+    "013": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -735,7 +775,7 @@
             "path": "live2d/13/011/013.model3.json"
         }
     ],
-    "14": [
+    "014": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -777,12 +817,22 @@
             "path": "live2d/14/008/014.model3.json"
         },
         {
+            "costumeId": 9,
+            "name": "在りし日の詩",
+            "path": "live2d/14/009/014.model3.json"
+        },
+        {
             "costumeId": 10,
             "name": "ステラ・ハント",
             "path": "live2d/14/010/014.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "ゲルトルート",
+            "path": "live2d/14/012/014.model3.json"
         }
     ],
-    "15": [
+    "015": [
         {
             "costumeId": 1,
             "name": "私服",
@@ -839,7 +889,7 @@
             "path": "live2d/15/011/015.model3.json"
         }
     ],
-    "16": [
+    "016": [
         {
             "costumeId": 1,
             "name": "私服",

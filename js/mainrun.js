@@ -33,6 +33,7 @@ class ModelViewer {
 
             this.loadBtn.click(()=>{
                 if(this.costselecter.val()){
+                    console.log(this.costselecter.val())
                     this.LoadModel(this.costselecter.val());
                 }
             })
@@ -94,7 +95,7 @@ class ModelViewer {
         }
 
         Setupcharselecter(){
-            let charselectlist = "";
+            let charselectlist = "<option>Select</option>";
             $.each(charset, function(key,val){
                 charselectlist += '<option value="'+val.id+'">'+val.Name+'</option>';
             });
@@ -106,13 +107,15 @@ class ModelViewer {
                 }
 
                 let cid = event.target.value;
+                console.log(cid);
                 this.Setupcostselecter(cid);
+
             });
         }
 
         Setupcostselecter(cid){
             let costselectlist = "";
-            $.each(costset[String('00'+cid).slice(-2)], function(key,val){
+            $.each(costset[String('000'+cid).slice(-3)], function(key,val){
                 costselectlist += '<option value="'+val.path+'">'+val.name+'</option>';
                 // console.log(key, val);
             });

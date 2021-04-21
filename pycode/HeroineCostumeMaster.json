@@ -1,0 +1,1166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -5833203989897267233
+  },
+  "m_Name": "HeroineCostumeMaster",
+  "<ModelList>k__BackingField": [
+    {
+      "id": 1001,
+      "heroineId": 1,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 1002,
+      "heroineId": 1,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 1003,
+      "heroineId": 1,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 2001,
+      "heroineId": 2,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 2002,
+      "heroineId": 2,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 2003,
+      "heroineId": 2,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 3001,
+      "heroineId": 3,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 3002,
+      "heroineId": 3,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 3003,
+      "heroineId": 3,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 4001,
+      "heroineId": 4,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 4002,
+      "heroineId": 4,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 4003,
+      "heroineId": 4,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 4004,
+      "heroineId": 4,
+      "costumeId": 4,
+      "costumeName": "ひたむきトレイル"
+    },
+    {
+      "id": 5001,
+      "heroineId": 5,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 5002,
+      "heroineId": 5,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 5003,
+      "heroineId": 5,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 5004,
+      "heroineId": 5,
+      "costumeId": 4,
+      "costumeName": "三兵衛、秋の感謝フェア"
+    },
+    {
+      "id": 6001,
+      "heroineId": 6,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 6002,
+      "heroineId": 6,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 6003,
+      "heroineId": 6,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 7001,
+      "heroineId": 7,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 7002,
+      "heroineId": 7,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 7003,
+      "heroineId": 7,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 8001,
+      "heroineId": 8,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 8002,
+      "heroineId": 8,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 8003,
+      "heroineId": 8,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 9001,
+      "heroineId": 9,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 9002,
+      "heroineId": 9,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 9003,
+      "heroineId": 9,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 9004,
+      "heroineId": 9,
+      "costumeId": 4,
+      "costumeName": "虹を見たあの日の"
+    },
+    {
+      "id": 10001,
+      "heroineId": 10,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 10002,
+      "heroineId": 10,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 10003,
+      "heroineId": 10,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 11001,
+      "heroineId": 11,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 11002,
+      "heroineId": 11,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 11003,
+      "heroineId": 11,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 12001,
+      "heroineId": 12,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 12002,
+      "heroineId": 12,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 12003,
+      "heroineId": 12,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 12004,
+      "heroineId": 12,
+      "costumeId": 4,
+      "costumeName": "エンドオブサマーを見送って"
+    },
+    {
+      "id": 13001,
+      "heroineId": 13,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 13002,
+      "heroineId": 13,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 13003,
+      "heroineId": 13,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 13004,
+      "heroineId": 13,
+      "costumeId": 4,
+      "costumeName": "Reach For The World!"
+    },
+    {
+      "id": 14001,
+      "heroineId": 14,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 14002,
+      "heroineId": 14,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 14003,
+      "heroineId": 14,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 15001,
+      "heroineId": 15,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 15002,
+      "heroineId": 15,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 15003,
+      "heroineId": 15,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 16001,
+      "heroineId": 16,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 16002,
+      "heroineId": 16,
+      "costumeId": 2,
+      "costumeName": "レッスン着"
+    },
+    {
+      "id": 16003,
+      "heroineId": 16,
+      "costumeId": 3,
+      "costumeName": "Forever Friends"
+    },
+    {
+      "id": 16004,
+      "heroineId": 16,
+      "costumeId": 4,
+      "costumeName": "ハニーバタフライ"
+    },
+    {
+      "id": 101001,
+      "heroineId": 101,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 102001,
+      "heroineId": 102,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 103001,
+      "heroineId": 103,
+      "costumeId": 1,
+      "costumeName": "私服"
+    },
+    {
+      "id": 2004,
+      "heroineId": 2,
+      "costumeId": 4,
+      "costumeName": "都立神瑞学園高校"
+    },
+    {
+      "id": 13005,
+      "heroineId": 13,
+      "costumeId": 5,
+      "costumeName": "カストールの安息日"
+    },
+    {
+      "id": 14004,
+      "heroineId": 14,
+      "costumeId": 4,
+      "costumeName": "勝利の栄光を君に"
+    },
+    {
+      "id": 10004,
+      "heroineId": 10,
+      "costumeId": 4,
+      "costumeName": "in other words"
+    },
+    {
+      "id": 8004,
+      "heroineId": 8,
+      "costumeId": 4,
+      "costumeName": "What a girl wants"
+    },
+    {
+      "id": 7004,
+      "heroineId": 7,
+      "costumeId": 4,
+      "costumeName": "導きのロストラビット"
+    },
+    {
+      "id": 12005,
+      "heroineId": 12,
+      "costumeId": 5,
+      "costumeName": "パウダーシュガーの降る頃に"
+    },
+    {
+      "id": 11004,
+      "heroineId": 11,
+      "costumeId": 4,
+      "costumeName": "ユメ・ウツツ・Unconscious"
+    },
+    {
+      "id": 4006,
+      "heroineId": 4,
+      "costumeId": 6,
+      "costumeName": "Never Knows Best "
+    },
+    {
+      "id": 16005,
+      "heroineId": 16,
+      "costumeId": 5,
+      "costumeName": "Only two twin primes"
+    },
+    {
+      "id": 3004,
+      "heroineId": 3,
+      "costumeId": 4,
+      "costumeName": "ひとりこのへやで"
+    },
+    {
+      "id": 5005,
+      "heroineId": 5,
+      "costumeId": 5,
+      "costumeName": "都立神瑞学園高校"
+    },
+    {
+      "id": 6004,
+      "heroineId": 6,
+      "costumeId": 4,
+      "costumeName": "小さな当たり前と大きな幸せ"
+    },
+    {
+      "id": 6005,
+      "heroineId": 6,
+      "costumeId": 5,
+      "costumeName": "笑顔で空を灯して"
+    },
+    {
+      "id": 9005,
+      "heroineId": 9,
+      "costumeId": 5,
+      "costumeName": "スイート・セレナーデ"
+    },
+    {
+      "id": 13006,
+      "heroineId": 13,
+      "costumeId": 6,
+      "costumeName": "炎獄式ビターエンド"
+    },
+    {
+      "id": 15004,
+      "heroineId": 15,
+      "costumeId": 4,
+      "costumeName": "フィルムいっぱいの思い出を"
+    },
+    {
+      "id": 1004,
+      "heroineId": 1,
+      "costumeId": 4,
+      "costumeName": "私立秋島高校"
+    },
+    {
+      "id": 1005,
+      "heroineId": 1,
+      "costumeId": 5,
+      "costumeName": "束の間のロンググッドバイ"
+    },
+    {
+      "id": 7005,
+      "heroineId": 7,
+      "costumeId": 5,
+      "costumeName": "春風トラベリング"
+    },
+    {
+      "id": 8005,
+      "heroineId": 8,
+      "costumeId": 5,
+      "costumeName": "私立星漣女子学院"
+    },
+    {
+      "id": 15005,
+      "heroineId": 15,
+      "costumeId": 5,
+      "costumeName": "極彩色で笑いたい"
+    },
+    {
+      "id": 11005,
+      "heroineId": 11,
+      "costumeId": 5,
+      "costumeName": "DAYS and the DAY"
+    },
+    {
+      "id": 12006,
+      "heroineId": 12,
+      "costumeId": 6,
+      "costumeName": "タイムコールが聴こえる"
+    },
+    {
+      "id": 4007,
+      "heroineId": 4,
+      "costumeId": 7,
+      "costumeName": "スタンドバイミー"
+    },
+    {
+      "id": 3005,
+      "heroineId": 3,
+      "costumeId": 5,
+      "costumeName": "わたしにできること"
+    },
+    {
+      "id": 6006,
+      "heroineId": 6,
+      "costumeId": 6,
+      "costumeName": "今日は明日の思い出"
+    },
+    {
+      "id": 9006,
+      "heroineId": 9,
+      "costumeId": 6,
+      "costumeName": "Secret Garden"
+    },
+    {
+      "id": 9007,
+      "heroineId": 9,
+      "costumeId": 7,
+      "costumeName": "雲がちぎれる時を"
+    },
+    {
+      "id": 2005,
+      "heroineId": 2,
+      "costumeId": 5,
+      "costumeName": "シロクロ・コミット"
+    },
+    {
+      "id": 8006,
+      "heroineId": 8,
+      "costumeId": 6,
+      "costumeName": "UP！"
+    },
+    {
+      "id": 14005,
+      "heroineId": 14,
+      "costumeId": 5,
+      "costumeName": "ウェーニーウィーディーウィーキー"
+    },
+    {
+      "id": 16006,
+      "heroineId": 16,
+      "costumeId": 6,
+      "costumeName": "リンケージ・マイナー"
+    },
+    {
+      "id": 1006,
+      "heroineId": 1,
+      "costumeId": 6,
+      "costumeName": "Knocking on My Dream!!"
+    },
+    {
+      "id": 2006,
+      "heroineId": 2,
+      "costumeId": 6,
+      "costumeName": "Knocking on My Dream!!"
+    },
+    {
+      "id": 3006,
+      "heroineId": 3,
+      "costumeId": 6,
+      "costumeName": "Knocking on My Dream!!"
+    },
+    {
+      "id": 4008,
+      "heroineId": 4,
+      "costumeId": 8,
+      "costumeName": "Knocking on My Dream!!"
+    },
+    {
+      "id": 5006,
+      "heroineId": 5,
+      "costumeId": 6,
+      "costumeName": "にこにこワクワク 最高潮！"
+    },
+    {
+      "id": 6007,
+      "heroineId": 6,
+      "costumeId": 7,
+      "costumeName": "にこにこワクワク 最高潮！"
+    },
+    {
+      "id": 7007,
+      "heroineId": 7,
+      "costumeId": 7,
+      "costumeName": "にこにこワクワク 最高潮！"
+    },
+    {
+      "id": 8007,
+      "heroineId": 8,
+      "costumeId": 7,
+      "costumeName": "にこにこワクワク 最高潮！"
+    },
+    {
+      "id": 9008,
+      "heroineId": 9,
+      "costumeId": 8,
+      "costumeName": "Good meal, Good life"
+    },
+    {
+      "id": 10006,
+      "heroineId": 10,
+      "costumeId": 6,
+      "costumeName": "Good meal, Good life"
+    },
+    {
+      "id": 11007,
+      "heroineId": 11,
+      "costumeId": 7,
+      "costumeName": "Good meal, Good life"
+    },
+    {
+      "id": 12007,
+      "heroineId": 12,
+      "costumeId": 7,
+      "costumeName": "Good meal, Good life"
+    },
+    {
+      "id": 13007,
+      "heroineId": 13,
+      "costumeId": 7,
+      "costumeName": "MiRAGE! MiRAGE!!"
+    },
+    {
+      "id": 14006,
+      "heroineId": 14,
+      "costumeId": 6,
+      "costumeName": "MiRAGE! MiRAGE!!"
+    },
+    {
+      "id": 15006,
+      "heroineId": 15,
+      "costumeId": 6,
+      "costumeName": "MiRAGE! MiRAGE!!"
+    },
+    {
+      "id": 16007,
+      "heroineId": 16,
+      "costumeId": 7,
+      "costumeName": "MiRAGE! MiRAGE!!"
+    },
+    {
+      "id": 11006,
+      "heroineId": 11,
+      "costumeId": 6,
+      "costumeName": "孤独ノスヽメ"
+    },
+    {
+      "id": 3008,
+      "heroineId": 3,
+      "costumeId": 8,
+      "costumeName": "ぬれねこにひき"
+    },
+    {
+      "id": 10008,
+      "heroineId": 10,
+      "costumeId": 8,
+      "costumeName": "back on top"
+    },
+    {
+      "id": 7009,
+      "heroineId": 7,
+      "costumeId": 9,
+      "costumeName": "雨に唄えば"
+    },
+    {
+      "id": 5008,
+      "heroineId": 5,
+      "costumeId": 8,
+      "costumeName": "僕らの声優力研究所"
+    },
+    {
+      "id": 13009,
+      "heroineId": 13,
+      "costumeId": 9,
+      "costumeName": "冷酷なる悪魔のエクスキューション"
+    },
+    {
+      "id": 4011,
+      "heroineId": 4,
+      "costumeId": 11,
+      "costumeName": "女王に捧げる薬指"
+    },
+    {
+      "id": 12009,
+      "heroineId": 12,
+      "costumeId": 9,
+      "costumeName": "オフショアの乙女"
+    },
+    {
+      "id": 6010,
+      "heroineId": 6,
+      "costumeId": 10,
+      "costumeName": "部屋の中の晴々"
+    },
+    {
+      "id": 8009,
+      "heroineId": 8,
+      "costumeId": 9,
+      "costumeName": "ユー・ガット・エール"
+    },
+    {
+      "id": 14009,
+      "heroineId": 14,
+      "costumeId": 9,
+      "costumeName": "在りし日の詩"
+    },
+    {
+      "id": 1008,
+      "heroineId": 1,
+      "costumeId": 8,
+      "costumeName": "エヴァーグリーン"
+    },
+    {
+      "id": 15008,
+      "heroineId": 15,
+      "costumeId": 8,
+      "costumeName": "ビン詰めの花畑"
+    },
+    {
+      "id": 16009,
+      "heroineId": 16,
+      "costumeId": 9,
+      "costumeName": "バレット・タイム"
+    },
+    {
+      "id": 14008,
+      "heroineId": 14,
+      "costumeId": 8,
+      "costumeName": "雲の向こうは青空"
+    },
+    {
+      "id": 1007,
+      "heroineId": 1,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 2007,
+      "heroineId": 2,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 3007,
+      "heroineId": 3,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 4009,
+      "heroineId": 4,
+      "costumeId": 9,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 5007,
+      "heroineId": 5,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 6008,
+      "heroineId": 6,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 7008,
+      "heroineId": 7,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 8008,
+      "heroineId": 8,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 9009,
+      "heroineId": 9,
+      "costumeId": 9,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 10007,
+      "heroineId": 10,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 11008,
+      "heroineId": 11,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 12008,
+      "heroineId": 12,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 13008,
+      "heroineId": 13,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 14007,
+      "heroineId": 14,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 15007,
+      "heroineId": 15,
+      "costumeId": 7,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 16008,
+      "heroineId": 16,
+      "costumeId": 8,
+      "costumeName": "水着(2020年)"
+    },
+    {
+      "id": 5009,
+      "heroineId": 5,
+      "costumeId": 9,
+      "costumeName": "元気のオーラ・バトル"
+    },
+    {
+      "id": 7010,
+      "heroineId": 7,
+      "costumeId": 10,
+      "costumeName": "ウォーターキャンディ"
+    },
+    {
+      "id": 4012,
+      "heroineId": 4,
+      "costumeId": 12,
+      "costumeName": "fun! fun! fun!"
+    },
+    {
+      "id": 15009,
+      "heroineId": 15,
+      "costumeId": 9,
+      "costumeName": "夏の日のイリュージョン"
+    },
+    {
+      "id": 1009,
+      "heroineId": 1,
+      "costumeId": 9,
+      "costumeName": "廻る日の１ページ"
+    },
+    {
+      "id": 6011,
+      "heroineId": 6,
+      "costumeId": 11,
+      "costumeName": "オーバー・ザ・シー"
+    },
+    {
+      "id": 10009,
+      "heroineId": 10,
+      "costumeId": 9,
+      "costumeName": "End of twilight"
+    },
+    {
+      "id": 9010,
+      "heroineId": 9,
+      "costumeId": 10,
+      "costumeName": "真夏の夜の夢"
+    },
+    {
+      "id": 12010,
+      "heroineId": 12,
+      "costumeId": 10,
+      "costumeName": "私をビーチに連れてって"
+    },
+    {
+      "id": 2009,
+      "heroineId": 2,
+      "costumeId": 9,
+      "costumeName": "ベイビー・クロケット"
+    },
+    {
+      "id": 3009,
+      "heroineId": 3,
+      "costumeId": 9,
+      "costumeName": "なつかげすずし"
+    },
+    {
+      "id": 11009,
+      "heroineId": 11,
+      "costumeId": 9,
+      "costumeName": "way of life, where to go?"
+    },
+    {
+      "id": 13010,
+      "heroineId": 13,
+      "costumeId": 10,
+      "costumeName": "誰ソ彼のオーダー"
+    },
+    {
+      "id": 14010,
+      "heroineId": 14,
+      "costumeId": 10,
+      "costumeName": "ステラ・ハント"
+    },
+    {
+      "id": 4013,
+      "heroineId": 4,
+      "costumeId": 13,
+      "costumeName": "way of life"
+    },
+    {
+      "id": 5010,
+      "heroineId": 5,
+      "costumeId": 10,
+      "costumeName": "天童重工進出ス！"
+    },
+    {
+      "id": 2008,
+      "heroineId": 2,
+      "costumeId": 8,
+      "costumeName": "夏制服"
+    },
+    {
+      "id": 4010,
+      "heroineId": 4,
+      "costumeId": 10,
+      "costumeName": "夏制服"
+    },
+    {
+      "id": 5011,
+      "heroineId": 5,
+      "costumeId": 11,
+      "costumeName": "夏制服"
+    },
+    {
+      "id": 7011,
+      "heroineId": 7,
+      "costumeId": 11,
+      "costumeName": "夏制服"
+    },
+    {
+      "id": 8012,
+      "heroineId": 8,
+      "costumeId": 12,
+      "costumeName": "夏制服"
+    },
+    {
+      "id": 16010,
+      "heroineId": 16,
+      "costumeId": 10,
+      "costumeName": "Red Alert"
+    },
+    {
+      "id": 8010,
+      "heroineId": 8,
+      "costumeId": 10,
+      "costumeName": "harvest ＆ pup"
+    },
+    {
+      "id": 1010,
+      "heroineId": 1,
+      "costumeId": 10,
+      "costumeName": "ハーモニー・ダイナー"
+    },
+    {
+      "id": 9011,
+      "heroineId": 9,
+      "costumeId": 11,
+      "costumeName": "opus 66"
+    },
+    {
+      "id": 2010,
+      "heroineId": 2,
+      "costumeId": 10,
+      "costumeName": "ゴールデンアワー"
+    },
+    {
+      "id": 11010,
+      "heroineId": 11,
+      "costumeId": 10,
+      "costumeName": "DELIGHT & DAYLIGHT"
+    },
+    {
+      "id": 15010,
+      "heroineId": 15,
+      "costumeId": 10,
+      "costumeName": "ゆうやけ小路"
+    },
+    {
+      "id": 6012,
+      "heroineId": 6,
+      "costumeId": 12,
+      "costumeName": "ハッピー・キングダムズ"
+    },
+    {
+      "id": 8011,
+      "heroineId": 8,
+      "costumeId": 11,
+      "costumeName": "パッシング・トーキョー"
+    },
+    {
+      "id": 13011,
+      "heroineId": 13,
+      "costumeId": 11,
+      "costumeName": "星辰揃いし夜の囁き"
+    },
+    {
+      "id": 3010,
+      "heroineId": 3,
+      "costumeId": 10,
+      "costumeName": "いただきのほし"
+    },
+    {
+      "id": 11011,
+      "heroineId": 11,
+      "costumeId": 11,
+      "costumeName": "RING! RING! RING!"
+    },
+    {
+      "id": 10010,
+      "heroineId": 10,
+      "costumeId": 10,
+      "costumeName": "above the promise"
+    },
+    {
+      "id": 1011,
+      "heroineId": 1,
+      "costumeId": 11,
+      "costumeName": "AiRBLUE X'mas!"
+    },
+    {
+      "id": 12011,
+      "heroineId": 12,
+      "costumeId": 11,
+      "costumeName": "帰れない？帰らない？"
+    },
+    {
+      "id": 4014,
+      "heroineId": 4,
+      "costumeId": 14,
+      "costumeName": "わたしのアリーナ！"
+    },
+    {
+      "id": 16011,
+      "heroineId": 16,
+      "costumeId": 11,
+      "costumeName": "PORTAL"
+    },
+    {
+      "id": 14011,
+      "heroineId": 14,
+      "costumeId": 11,
+      "costumeName": "プルス・ウルトラ"
+    },
+    {
+      "id": 8013,
+      "heroineId": 8,
+      "costumeId": 13,
+      "costumeName": "振袖"
+    },
+    {
+      "id": 7012,
+      "heroineId": 7,
+      "costumeId": 12,
+      "costumeName": "KAZAHANA"
+    },
+    {
+      "id": 15011,
+      "heroineId": 15,
+      "costumeId": 11,
+      "costumeName": "ぱーふぇくとわーるど"
+    },
+    {
+      "id": 6009,
+      "heroineId": 6,
+      "costumeId": 9,
+      "costumeName": "魔法をかけて"
+    },
+    {
+      "id": 5012,
+      "heroineId": 5,
+      "costumeId": 12,
+      "costumeName": "ままならない戦場"
+    },
+    {
+      "id": 2011,
+      "heroineId": 2,
+      "costumeId": 11,
+      "costumeName": "ライトマイファイア"
+    },
+    {
+      "id": 8014,
+      "heroineId": 8,
+      "costumeId": 14,
+      "costumeName": "Feast and Family"
+    },
+    {
+      "id": 9012,
+      "heroineId": 9,
+      "costumeId": 12,
+      "costumeName": "何度も言わせて"
+    },
+    {
+      "id": 16012,
+      "heroineId": 16,
+      "costumeId": 12,
+      "costumeName": "アクターズ・ギルド"
+    },
+    {
+      "id": 1012,
+      "heroineId": 1,
+      "costumeId": 12,
+      "costumeName": "届け君へ"
+    },
+    {
+      "id": 7013,
+      "heroineId": 7,
+      "costumeId": 13,
+      "costumeName": "未来永遠のともだち"
+    },
+    {
+      "id": 14012,
+      "heroineId": 14,
+      "costumeId": 12,
+      "costumeName": "ゲルトルート"
+    },
+    {
+      "id": 12012,
+      "heroineId": 12,
+      "costumeId": 12,
+      "costumeName": "青空バイクに恋してる"
+    },
+    {
+      "id": 16013,
+      "heroineId": 16,
+      "costumeId": 13,
+      "costumeName": "Usual Cases"
+    },
+    {
+      "id": 11012,
+      "heroineId": 11,
+      "costumeId": 12,
+      "costumeName": "You saw my soul"
+    },
+    {
+      "id": 4015,
+      "heroineId": 4,
+      "costumeId": 15,
+      "costumeName": "タイドアフター"
+    }
+  ]
+}
