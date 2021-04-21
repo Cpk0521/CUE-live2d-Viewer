@@ -1,0 +1,925 @@
+{
+    "01": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/01/001/001.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/01/002/001.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/01/003/001.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "私立秋島高校",
+            "path": "live2d/01/004/001.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "Knocking on My Dream!!",
+            "path": "live2d/01/006/001.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/01/007/001.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "廻る日の１ページ",
+            "path": "live2d/01/009/001.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "ハーモニー・ダイナー",
+            "path": "live2d/01/010/001.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "AiRBLUE X'mas!",
+            "path": "live2d/01/011/001.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "届け君へ",
+            "path": "live2d/01/012/001.model3.json"
+        }
+    ],
+    "02": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/02/001/002.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/02/002/002.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/02/003/002.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "都立神瑞学園高校",
+            "path": "live2d/02/004/002.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "シロクロ・コミット",
+            "path": "live2d/02/005/002.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "Knocking on My Dream!!",
+            "path": "live2d/02/006/002.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/02/007/002.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "夏制服",
+            "path": "live2d/02/008/002.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "ゴールデンアワー",
+            "path": "live2d/02/010/002.model3.json"
+        }
+    ],
+    "03": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/03/001/003.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/03/002/003.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/03/003/003.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "ひとりこのへやで",
+            "path": "live2d/03/004/003.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "わたしにできること",
+            "path": "live2d/03/005/003.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "Knocking on My Dream!!",
+            "path": "live2d/03/006/003.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/03/007/003.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "ぬれねこにひき",
+            "path": "live2d/03/008/003.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "なつかげすずし",
+            "path": "live2d/03/009/003.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "いただきのほし",
+            "path": "live2d/03/010/003.model3.json"
+        }
+    ],
+    "04": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/04/001/004.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/04/002/004.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/04/003/004.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "ひたむきトレイル",
+            "path": "live2d/04/004/004.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "不明",
+            "path": "live2d/04/005/004.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "スタンドバイミー",
+            "path": "live2d/04/007/004.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "Knocking on My Dream!!",
+            "path": "live2d/04/008/004.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "水着(2020年)",
+            "path": "live2d/04/009/004.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "夏制服",
+            "path": "live2d/04/010/004.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "女王に捧げる薬指",
+            "path": "live2d/04/011/004.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "fun! fun! fun!",
+            "path": "live2d/04/012/004.model3.json"
+        },
+        {
+            "costumeId": 13,
+            "name": "way of life",
+            "path": "live2d/04/013/004.model3.json"
+        },
+        {
+            "costumeId": 14,
+            "name": "わたしのアリーナ！",
+            "path": "live2d/04/014/004.model3.json"
+        }
+    ],
+    "05": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/05/001/005.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/05/002/005.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/05/003/005.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "三兵衛、秋の感謝フェア",
+            "path": "live2d/05/004/005.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "都立神瑞学園高校",
+            "path": "live2d/05/005/005.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "にこにこワクワク 最高潮！",
+            "path": "live2d/05/006/005.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/05/007/005.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "僕らの声優力研究所",
+            "path": "live2d/05/008/005.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "元気のオーラ・バトル",
+            "path": "live2d/05/009/005.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "天童重工進出ス！",
+            "path": "live2d/05/010/005.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "夏制服",
+            "path": "live2d/05/011/005.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "ままならない戦場",
+            "path": "live2d/05/012/005.model3.json"
+        }
+    ],
+    "06": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/06/001/006.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/06/002/006.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/06/003/006.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "小さな当たり前と大きな幸せ",
+            "path": "live2d/06/004/006.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "笑顔で空を灯して",
+            "path": "live2d/06/005/006.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "今日は明日の思い出",
+            "path": "live2d/06/006/006.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "にこにこワクワク 最高潮！",
+            "path": "live2d/06/007/006.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/06/008/006.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "魔法をかけて",
+            "path": "live2d/06/009/006.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "部屋の中の晴々",
+            "path": "live2d/06/010/006.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "オーバー・ザ・シー",
+            "path": "live2d/06/011/006.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "ハッピー・キングダムズ",
+            "path": "live2d/06/012/006.model3.json"
+        }
+    ],
+    "07": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/07/001/007.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/07/002/007.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/07/003/007.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "導きのロストラビット",
+            "path": "live2d/07/004/007.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "春風トラベリング",
+            "path": "live2d/07/005/007.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "不明",
+            "path": "live2d/07/006/007.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "にこにこワクワク 最高潮！",
+            "path": "live2d/07/007/007.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/07/008/007.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "雨に唄えば",
+            "path": "live2d/07/009/007.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "ウォーターキャンディ",
+            "path": "live2d/07/010/007.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "夏制服",
+            "path": "live2d/07/011/007.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "KAZAHANA",
+            "path": "live2d/07/012/007.model3.json"
+        }
+    ],
+    "08": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/08/001/008.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/08/002/008.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/08/003/008.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "What a girl wants",
+            "path": "live2d/08/004/008.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "私立星漣女子学院",
+            "path": "live2d/08/005/008.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "UP！",
+            "path": "live2d/08/006/008.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "にこにこワクワク 最高潮！",
+            "path": "live2d/08/007/008.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/08/008/008.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "harvest ＆ pup",
+            "path": "live2d/08/010/008.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "パッシング・トーキョー",
+            "path": "live2d/08/011/008.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "夏制服",
+            "path": "live2d/08/012/008.model3.json"
+        },
+        {
+            "costumeId": 13,
+            "name": "振袖",
+            "path": "live2d/08/013/008.model3.json"
+        }
+    ],
+    "09": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/09/001/009.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/09/002/009.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/09/003/009.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "虹を見たあの日の",
+            "path": "live2d/09/004/009.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "Secret Garden",
+            "path": "live2d/09/006/009.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "Good meal, Good life",
+            "path": "live2d/09/008/009.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "水着(2020年)",
+            "path": "live2d/09/009/009.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "真夏の夜の夢",
+            "path": "live2d/09/010/009.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "opus 66",
+            "path": "live2d/09/011/009.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "何度も言わせて",
+            "path": "live2d/09/012/009.model3.json"
+        }
+    ],
+    "10": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/10/001/010.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/10/002/010.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/10/003/010.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "Good meal, Good life",
+            "path": "live2d/10/006/010.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/10/007/010.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "back on top",
+            "path": "live2d/10/008/010.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "End of twilight",
+            "path": "live2d/10/009/010.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "above the promise",
+            "path": "live2d/10/010/010.model3.json"
+        }
+    ],
+    "11": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/11/001/011.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/11/002/011.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/11/003/011.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "ユメ・ウツツ・Unconscious",
+            "path": "live2d/11/004/011.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "DAYS and the DAY",
+            "path": "live2d/11/005/011.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "孤独ノスヽメ",
+            "path": "live2d/11/006/011.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "Good meal, Good life",
+            "path": "live2d/11/007/011.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/11/008/011.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "way of life, where to go?",
+            "path": "live2d/11/009/011.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "DELIGHT & DAYLIGHT",
+            "path": "live2d/11/010/011.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "RING! RING! RING!",
+            "path": "live2d/11/011/011.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "You saw my soul",
+            "path": "live2d/11/012/011.model3.json"
+        }
+    ],
+    "12": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/12/001/012.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/12/002/012.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/12/003/012.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "エンドオブサマーを見送って",
+            "path": "live2d/12/004/012.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "パウダーシュガーの降る頃に",
+            "path": "live2d/12/005/012.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "タイムコールが聴こえる",
+            "path": "live2d/12/006/012.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "Good meal, Good life",
+            "path": "live2d/12/007/012.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/12/008/012.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "オフショアの乙女",
+            "path": "live2d/12/009/012.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "私をビーチに連れてって",
+            "path": "live2d/12/010/012.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "帰れない？帰らない？",
+            "path": "live2d/12/011/012.model3.json"
+        }
+    ],
+    "13": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/13/001/013.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/13/002/013.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/13/003/013.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "Reach For The World!",
+            "path": "live2d/13/004/013.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "カストールの安息日",
+            "path": "live2d/13/005/013.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "炎獄式ビターエンド",
+            "path": "live2d/13/006/013.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "MiRAGE! MiRAGE!!",
+            "path": "live2d/13/007/013.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/13/008/013.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "冷酷なる悪魔のエクスキューション",
+            "path": "live2d/13/009/013.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "誰ソ彼のオーダー",
+            "path": "live2d/13/010/013.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "星辰揃いし夜の囁き",
+            "path": "live2d/13/011/013.model3.json"
+        }
+    ],
+    "14": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/14/001/014.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/14/002/014.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/14/003/014.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "勝利の栄光を君に",
+            "path": "live2d/14/004/014.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "ウェーニーウィーディーウィーキー",
+            "path": "live2d/14/005/014.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "MiRAGE! MiRAGE!!",
+            "path": "live2d/14/006/014.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/14/007/014.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "雲の向こうは青空",
+            "path": "live2d/14/008/014.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "ステラ・ハント",
+            "path": "live2d/14/010/014.model3.json"
+        }
+    ],
+    "15": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/15/001/015.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/15/002/015.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/15/003/015.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "フィルムいっぱいの思い出を",
+            "path": "live2d/15/004/015.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "極彩色で笑いたい",
+            "path": "live2d/15/005/015.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "MiRAGE! MiRAGE!!",
+            "path": "live2d/15/006/015.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "水着(2020年)",
+            "path": "live2d/15/007/015.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "ビン詰めの花畑",
+            "path": "live2d/15/008/015.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "夏の日のイリュージョン",
+            "path": "live2d/15/009/015.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "ゆうやけ小路",
+            "path": "live2d/15/010/015.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "ぱーふぇくとわーるど",
+            "path": "live2d/15/011/015.model3.json"
+        }
+    ],
+    "16": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/16/001/016.model3.json"
+        },
+        {
+            "costumeId": 2,
+            "name": "レッスン着",
+            "path": "live2d/16/002/016.model3.json"
+        },
+        {
+            "costumeId": 3,
+            "name": "Forever Friends",
+            "path": "live2d/16/003/016.model3.json"
+        },
+        {
+            "costumeId": 4,
+            "name": "ハニーバタフライ",
+            "path": "live2d/16/004/016.model3.json"
+        },
+        {
+            "costumeId": 5,
+            "name": "Only two twin primes",
+            "path": "live2d/16/005/016.model3.json"
+        },
+        {
+            "costumeId": 6,
+            "name": "リンケージ・マイナー",
+            "path": "live2d/16/006/016.model3.json"
+        },
+        {
+            "costumeId": 7,
+            "name": "MiRAGE! MiRAGE!!",
+            "path": "live2d/16/007/016.model3.json"
+        },
+        {
+            "costumeId": 8,
+            "name": "水着(2020年)",
+            "path": "live2d/16/008/016.model3.json"
+        },
+        {
+            "costumeId": 9,
+            "name": "バレット・タイム",
+            "path": "live2d/16/009/016.model3.json"
+        },
+        {
+            "costumeId": 10,
+            "name": "Red Alert",
+            "path": "live2d/16/010/016.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "PORTAL",
+            "path": "live2d/16/011/016.model3.json"
+        },
+        {
+            "costumeId": 12,
+            "name": "アクターズ・ギルド",
+            "path": "live2d/16/012/016.model3.json"
+        }
+    ],
+    "101": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/101/001/101.model3.json"
+        }
+    ],
+    "102": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/102/001/102.model3.json"
+        }
+    ],
+    "103": [
+        {
+            "costumeId": 1,
+            "name": "私服",
+            "path": "live2d/103/001/103.model3.json"
+        }
+    ]
+}

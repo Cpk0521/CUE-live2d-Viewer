@@ -2,19 +2,32 @@
 <head>
     <meta charset="utf-8" />
     <title>CUE! Live2d Model Viewer</title>
-
+    <link rel="icon" href="image/logo.png">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         body {margin:0};
     </style>
 </head>
 <body>
-    <canvas id='canvas'></canvas>
-    <div id="list"></div>
+
+    <div style="text-align:center" id='container'>
+        <div id="selecter" style="text-align:center" class="w-75 d-inline-block p-3" >
+            <label for="characterlist" class="display-7"><strong>Character</strong></label>
+            <select class="w-75 form-select form-select-lg mx-auto mb-3" id="characterlist"></select>
+            <label for="costumelist" class="display-7"><strong>Costume</strong></label>
+            <select class="w-75 form-select mx-auto mb-3" id="costumelist"></select>
+
+            <button class="btn btn-primary" id="loadbtn">Load Model</button>
+        </div>
+    </div>
+    <div style="text-align:center" class="p-3" id='viewer'></div>
 
     <script src="js/pixi.min.js"></script> <!-- Pixi -->
     <script src="js/live2dcubismcore.min.js"></script> <!-- live2d SDK -->
     <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/mainrun.js"></script>
 </body>
 </html>
