@@ -3,6 +3,20 @@
 CUE! live2d Viewer 
 [Demo](https://cpk0521.github.io/CUE-live2d-Viewer/index.html "Demo")
 
+
+### To Do List
+------------
+- [x] Change Model
+- [ ] Update the UI
+- [ ] Model motions controller
+- [ ] Show Background Sprites
+- [ ] Show multiple Models
+- [ ] Add Sound
+- [ ] Add Dialogue
+- [ ] Add Dialogue text
+- [ ] Output Capture
+
+
 ### Missing Model
 ------------
 | Character | Name | File name |
