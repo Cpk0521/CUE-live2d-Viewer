@@ -44,7 +44,7 @@ for char in chars:
                 jsondata[tiltename].append({ 'costumeId':model, 'name':c[0].costumeName , 'path':filename})
             else:
                 jsondata[tiltename].append({ 'costumeId':model, 'name':"不明" , 'path':filename})
-            
+                
 
 with open('live2dList.json', 'w', encoding='utf-8') as outfile:
     json.dump(jsondata, outfile, indent=4, ensure_ascii=False)

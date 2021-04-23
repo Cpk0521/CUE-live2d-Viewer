@@ -36,6 +36,11 @@
             "path": "live2d/01/007/001.model3.json"
         },
         {
+            "costumeId": 8,
+            "name": "エヴァーグリーン",
+            "path": "live2d/01/008/001.model3.json"
+        },
+        {
             "costumeId": 9,
             "name": "廻る日の１ページ",
             "path": "live2d/01/009/001.model3.json"
@@ -106,6 +111,11 @@
             "costumeId": 10,
             "name": "ゴールデンアワー",
             "path": "live2d/02/010/002.model3.json"
+        },
+        {
+            "costumeId": 11,
+            "name": "ライトマイファイア",
+            "path": "live2d/02/011/002.model3.json"
         }
     ],
     "003": [
@@ -488,6 +498,11 @@
             "costumeId": 13,
             "name": "振袖",
             "path": "live2d/08/013/008.model3.json"
+        },
+        {
+            "costumeId": 14,
+            "name": "Feast and Family",
+            "path": "live2d/08/014/008.model3.json"
         }
     ],
     "009": [
