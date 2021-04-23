@@ -22,8 +22,5 @@ Live2d Model Files [ModelFiles](https://mega.nz/folder/t8pxkACZ#Kq4aGqbNBeAq0Cuw
 ------------
 | Character | Name | File name |
 | :-----: | :----: | :----: |
-| 六石陽菜 | 【エヴァーグリーン】 | 001_008 |
-| 鷹取舞花 | 【ライトマイファイア】 | 002_011 |
 | 月居ほのか | 【Never Knows Best】 | 004_006 |
-| 九条柚葉 | 【Feast and Family】 | 008_014 |
 
