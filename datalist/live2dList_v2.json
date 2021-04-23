@@ -225,6 +225,11 @@
             "costumeId": 14,
             "name": "わたしのアリーナ！",
             "path": "live2d/04/014/004.model3.json"
+        },
+        {
+            "costumeId": 15,
+            "name": "タイドアフター",
+            "path": "live2d/04/015/004.model3.json"
         }
     ],
     "005": [
@@ -827,6 +832,11 @@
             "path": "live2d/14/010/014.model3.json"
         },
         {
+            "costumeId": 11,
+            "name": "プルス・ウルトラ",
+            "path": "live2d/14/011/014.model3.json"
+        },
+        {
             "costumeId": 12,
             "name": "ゲルトルート",
             "path": "live2d/14/012/014.model3.json"
@@ -949,6 +959,11 @@
             "costumeId": 12,
             "name": "アクターズ・ギルド",
             "path": "live2d/16/012/016.model3.json"
+        },
+        {
+            "costumeId": 13,
+            "name": "Usual Cases",
+            "path": "live2d/16/013/016.model3.json"
         }
     ],
     "101": [

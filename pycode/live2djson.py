@@ -36,9 +36,9 @@ for char in chars:
     chartilte = '%02d' % (char)
     tiltename = '%03d' % (char)
     jsondata.update({tiltename:[]})
-    for model in range(1,15):
+    for model in range(1,20):
         filename = 'live2d/%s/%03d/%03d.model3.json' % (chartilte, model, char)
-        if os.path.exists(filename):
+        if os.path.exists('../' + filename):
             c = list(filter(lambda x: (x.heroineId == char and x.costumeId == model), costlist))
             if c:
                 jsondata[tiltename].append({ 'costumeId':model, 'name':c[0].costumeName , 'path':filename})
