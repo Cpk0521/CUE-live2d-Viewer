@@ -15,9 +15,10 @@ class l2DViewer{
                 this.LoadModel(this.costselecter.val());
             }
         })
-        
+
         //create canvas
         this.app = new PIXI.Application({
+                antialias: true,
                 autoStart: true, backgroundColor : 0x333333
             });
 
@@ -49,7 +50,6 @@ class l2DViewer{
         //setting
         this.model.scale.set(0.2);
         this.model.x = (this.app.screen.width - this.model.width)/2;
-        // this.model.y = (this.app.screen.height - this.model.height)/2;        
 
         //draging
         this.model.buttonMode = true;

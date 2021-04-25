@@ -197,6 +197,11 @@
             "path": "live2d/04/005/004.model3.json"
         },
         {
+            "costumeId": 6,
+            "name": "Never Knows Best",
+            "path": "live2d/04/006/004.model3.json"
+        },
+        {
             "costumeId": 7,
             "name": "スタンドバイミー",
             "path": "live2d/04/007/004.model3.json"
