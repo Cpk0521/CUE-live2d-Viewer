@@ -16,8 +16,5 @@ Live2d Model Files [ModelFiles](https://mega.nz/folder/t8pxkACZ#Kq4aGqbNBeAq0Cuw
 - [ ] Add Dialogue
 - [ ] Add Dialogue text
 - [ ] Output Capture
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 3dc7dd62f981c344281ea44f32922340ab75f866
