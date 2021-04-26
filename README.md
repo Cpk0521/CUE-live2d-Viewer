@@ -8,7 +8,7 @@ Live2d Model Files [ModelFiles](https://mega.nz/folder/t8pxkACZ#Kq4aGqbNBeAq0Cuw
 ### To Do List
 ------------
 - [x] Change Model
-- [ ] Update the UI
+- [x] Update the UI
 - [ ] Model motions controller
 - [ ] Show Background Sprites
 - [ ] Show multiple Models
@@ -16,11 +16,3 @@ Live2d Model Files [ModelFiles](https://mega.nz/folder/t8pxkACZ#Kq4aGqbNBeAq0Cuw
 - [ ] Add Dialogue
 - [ ] Add Dialogue text
 - [ ] Output Capture
-
-
-### Missing Model
-------------
-| Character | Name | File name |
-| :-----: | :----: | :----: |
-| 月居ほのか | 【Never Knows Best】 | 004_006 |
-

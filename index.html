@@ -39,44 +39,79 @@
             
             <div class="col-3 border-start border-primary border-1 bg-light p-0 h-100">
 
-
-                <!-- toolbar header -->
-                <!-- <div class="border-bottom my-2 mx-3" style="border-bottom: 1px solid #cbcbcb;">
-                    <div class="row d-flex justify-content-end align-items-center ">
-                          // <p class="col-8 display-6 justify-content-start"><strong>#1</strong></p>
-                        <button class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info"><strong>+</strong></button>
-                        <button class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info"><strong>-</strong></button>
+                <!-- TAb selection -->
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-canvas-tab" data-toggle="tab" href="#nav-canvas" role="tab" aria-controls="nav-canvas" aria-selected="true">Canvas</a>
+                      <a class="nav-item nav-link" id="nav-model-tab" data-toggle="tab" href="#nav-model" role="tab" aria-controls="nav-model" aria-selected="false">Model</a>
                     </div>
-                    <h2 class="">----</h2>
+                </nav>
+
+                <!-- tab Content -->
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-canvas" role="tabpanel" aria-labelledby="nav-canvas-tab">
+                        --Background--
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-model" role="tabpanel" aria-labelledby="nav-model-tab">
+
+                        <!-- toolbar header -->
+                    <div class="border-bottom my-2 mx-3" style="border-bottom: 1px solid #cbcbcb;">
+                        <div class="row d-flex justify-content-end align-items-center ">
+                            <!-- <p class="col-8 display-6 justify-content-start"><strong>#1</strong></p> -->
+                            <button type="button" class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info" data-toggle="modal" data-target="#addlive2dModal" id="openMedalBtn"><strong>+</strong></button>
+                            <button class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info" style="display: none;" id="removelive2dModel"><strong>-</strong></button>
+                        </div>
+                        <h3 class="" id="ModelName">----</h3>
+                        <h5 class="" id="CostumeName" style="display:none"></h5>
+                    </div>
+
+                    <div id="tools" class="overflow-auto py-2" style="height: 70%;display: none;">
+                        <div id="Modeltools" class="nav flex-column">
+
+                            <!-- //Display Controller -->
+                            <a class="list-unstyled nav-link w-100 bg-primary text-white" data-toggle="collapse" data-target="#DisplayTool" aria-expanded="true" aria-controls="DisplayTool">
+                                    <p class="font-weight-bold m-auto py-2 ">Display</p>
+                            </a>
+                            <div id="DisplayTool" class="collapse">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center my-3">
+                                        <span class="font-weight-bold mx-2" style="width: 30%;"><strong>Scale</strong></span>
+                                        <input type="range" class="form-range " min="0" max="1" step="0.01" value="0" id="scaleRange">
+                                        <span class="font-weight-bold mx-3" style="width: 15%;" id="rangenumber">0</span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center my-3">
+                                        <span class="font-weight-bold mx-2 " style="width: 30%;"><strong>Angle</strong></span>
+                                        <input type="range" class="form-range" min="0" max="360" value="0" id="angleRange">
+                                        <span class="font-weight-bold mx-3" style="width: 15%;" id="rangenumber">0</span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center my-3">
+                                        <span class="font-weight-bold mx-2 " style="width: 30%;"><strong>Alpha</strong></span>
+                                        <input type="range" class="form-range" min="0" max="1" step="0.01" value="0" id="alphaRange">
+                                        <span class="font-weight-bold mx-3" style="width: 15%;" id="rangenumber">0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- //Motions Controller -->
+                            <a class="nav-link w-100 bg-info text-white" data-toggle="collapse" data-target="#MotionsTools" aria-expanded="true" aria-controls="MotionsTools">
+                                <p class="font-weight-bold m-auto py-2">Motions</p>
+                            </a>
+                            <div id="MotionsTools" class="collapse">
+                                <div class="card-body">
+                                    Motions Controller
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    </div>
                 </div>
 
-                <div id="tools" class="overflow-auto py-2" style="height: 70%;">
-                    <div id="Modeltools" class="nav flex-column">
-
-                        //Display Controller
-                        <a class="list-unstyled nav-link w-100 bg-primary text-white" data-toggle="collapse" data-target="#DisplayTool" aria-expanded="true" aria-controls="DisplayTool">
-                                <p class="font-weight-bold m-auto py-2 ">Display</p>
-                        </a>
-                        <div id="DisplayTool" class="collapse">
-                            <div class="card-body">
-                                Display Controller
-                            </div>
-                        </div>
-
-                        //Motions Controller
-                        <a class="nav-link w-100 bg-info text-white" data-toggle="collapse" data-target="#MotionsTools" aria-expanded="true" aria-controls="MotionsTools">
-                            <p class="font-weight-bold m-auto py-2"> Motions </p>
-                        </a>
-                        <div id="MotionsTools" class="collapse">
-                            <div class="card-body">
-                                Motions Controller
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
-
-                <div style="text-align:center" id='container'>
+                <!-- <div style="text-align:center" id='container'>
                     <div id="selecter" style="text-align:center" class="w-100 d-inline-block p-3" >
                         <label for="characterlist" class="display-7"><strong>Character</strong></label>
                         <select class="w-75 form-select form-select-lg mx-auto mb-3" id="characterlist"></select>
@@ -85,9 +120,45 @@
             
                         <button class="btn btn-primary" id="loadbtn">Load Model</button>
                     </div>
+                </div> -->
+        </div>
+        
+        <!--Create Live2d Model Modal -->
+        <div class="modal fade" id="addlive2dModal" tabindex="-1" role="dialog" aria-labelledby="addlive2dModalModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="addlive2dModalModalLabel">Load live2d Model</h5>
                 </div>
+                <div class="modal-body">
+                    <div class="input-group my-3">
+                        <div class="input-group-prepend w-25">
+                          <label class="input-group-text" for="characterlist">Character</label>
+                        </div>
+                        <select class="w-75 form-select mx-auto custom-select" id="characterlist">
+                          <!-- <option selected>Choose...</option> -->
+                        </select>
+                    </div>
+
+                    <div class="input-group my-3">
+                        <div class="input-group-prepend w-25">
+                          <label class="input-group-text" for="costumelist">Costume</label>
+                        </div>
+                        <select class="w-75 form-select mx-auto custom-select" id="costumelist">
+                          <!-- <option selected>Choose...</option> -->
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="LoadModelBtn">Load Model</button>
+                </div>
+            </div>
+            </div>
         </div>
     
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js"></script>

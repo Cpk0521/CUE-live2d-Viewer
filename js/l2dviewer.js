@@ -5,16 +5,6 @@ class l2DViewer{
         
         //component
         this.divviewer = $("#viewer");
-        this.charselecter = $("select#characterlist");
-        this.costselecter = $("select#costumelist");
-        this.loadBtn = $('#loadbtn');
-
-        this.loadBtn.click(()=>{
-            if(this.costselecter.val()){
-                console.log(this.costselecter.val())
-                this.LoadModel(this.costselecter.val());
-            }
-        })
 
         //create canvas
         this.app = new PIXI.Application({
@@ -36,9 +26,8 @@ class l2DViewer{
         }
 
         //model
-        this.selectingModel;
+        this.model;
     }
-
 
     async LoadModel(jsonpath) {
         this.app.stage.removeChildren();
@@ -48,7 +37,7 @@ class l2DViewer{
         this.app.stage.addChild(this.model);
 
         //setting
-        this.model.scale.set(0.2);
+        this.modelOnChangeScale(0.2);
         this.model.x = (this.app.screen.width - this.model.width)/2;
 
         //draging
@@ -73,33 +62,27 @@ class l2DViewer{
         //model.internalModel.motionManager.startMotion('', 1);
 
     }
-    
-    Setupcharselecter(){
-        let charselectlist = "<option>Select</option>";
-        $.each(charset, function(key,val){
-            charselectlist += '<option value="'+val.id+'">'+val.Name+'</option>';
-        });
-        this.charselecter.html(charselectlist);
 
-        this.charselecter.change((event) => {
-            if (event.target.selectedIndex == 0) {
-                return;
-            }
-
-            let cid = event.target.value;
-            console.log(cid);
-            this.Setupcostselecter(cid);
-
-        });
+    clearCanvas(){
+        this.app.stage.removeChildren();
     }
 
-    Setupcostselecter(cid){
-        let costselectlist = "";
-        $.each(costset[String('000'+cid).slice(-3)], function(key,val){
-            costselectlist += '<option value="'+val.path+'">'+val.name+'</option>';
-            // console.log(key, val);
-        });
-        this.costselecter.html(costselectlist)
+    modelOnChangeScale(val){
+        if(this.model){
+            this.model.scale.set(val);
+        }
+    }
+
+    modelOnChangeAngle(val){
+        if(this.model){
+            this.model.angle = val;
+        }
+    }
+
+    modelOnChangeAlpha(val){
+        if(this.model){
+            this.model.alpha = val;
+        }
     }
 
 }
