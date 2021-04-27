@@ -130,4 +130,9 @@ $(document).ready(() => {
         $('#tools').toggle();
     })
 
+    $('a.justify-content-between').click(function(){
+        $(this).find("h5.fas").toggleClass('fas fa-plus fas fa-minus');
+        // console.log($(this));
+    });
+
 });

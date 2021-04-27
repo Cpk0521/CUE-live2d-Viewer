@@ -25,16 +25,26 @@ class l2DViewer{
             this.app.renderer.resize(width, height);
         }
 
+        //container
+        this.bgcontainer = new PIXI.Container();
+        this.app.stage.addChild(this.bgcontainer);
+
+        this.modelcontainer = new PIXI.Container();
+        this.app.stage.addChild(this.modelcontainer);
+        
+        this.loadBackground('image/background/base_178.png');
+
         //model
         this.model;
     }
 
     async LoadModel(jsonpath) {
-        this.app.stage.removeChildren();
+
+        this.modelcontainer.removeChildren();
     
         this.model = await this.l2d.Live2DModel.from(jsonpath);
 
-        this.app.stage.addChild(this.model);
+        this.modelcontainer.addChild(this.model);
 
         //setting
         this.modelOnChangeScale(0.2);
@@ -63,7 +73,7 @@ class l2DViewer{
 
     clearCanvas(){
         this.model.destroy();
-        this.app.stage.removeChildren();
+        this.modelcontainer.removeChildren();
     }
 
     modelOnChangeScale(val){
@@ -90,6 +100,21 @@ class l2DViewer{
             this.model.motion(group, index);
             console.log(this.model.internalModel.motionManager.playing);
         }
+    }
+
+    loadBackground(url){
+        const texture = PIXI.Texture.from(url);
+        const bg = new PIXI.Sprite(texture);
+
+        bg.width = this.app.renderer.width + 2;
+        bg.height = this.app.renderer.height + 2;
+
+        this.bgcontainer.addChild(bg);
+        // const brt = new PIXI.BaseRenderTexture(PIXI.SCALE_MODES.LINEAR, 1);
+        // const rt = new PIXI.RenderTexture(brt);
+        // const sprite = new PIXI.Sprite(rt);
+        // this.app.stage.addChild(sprite);
+        console.log("Done");
     }
 
 }
