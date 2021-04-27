@@ -59,6 +59,30 @@ SetupModelRangeDisplay = (sr, rr, ar)=>{
     })
 }
 
+setupMotionsList = (datalist)=>{   
+    $('#MotionsTools>.card-body').empty();
+    $.each(datalist, (group, list)=>{
+        let grouptitle = document.createElement("span");
+        grouptitle.className = "d-flex py-1 my-1 border-bottom border-top";
+        grouptitle.innerHTML = "\"" + group + "\"";
+        $('#MotionsTools>.card-body').append(grouptitle);
+        $.each(list, (index, file)=>{
+
+            let motionbtn = document.createElement("button");
+            motionbtn.className = "btn btn-info w-100 my-2 text-white";
+            let name = file['File'].replace('.motion3.json', "")
+            motionbtn.innerHTML = name ;
+            motionbtn.addEventListener("click", ()=>{
+                console.log(file['File']);
+                l2dviewer.modelStartMotions(group, index);
+            })
+            
+            $('#MotionsTools>.card-body').append(motionbtn);
+        })
+    })
+}
+
+
 $(document).ready(() => {
 
     l2dviewer = new l2DViewer();

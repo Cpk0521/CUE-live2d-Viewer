@@ -9,7 +9,7 @@ Live2d Model Files [ModelFiles](https://mega.nz/folder/t8pxkACZ#Kq4aGqbNBeAq0Cuw
 ------------
 - [x] Change Model
 - [x] Update the UI
-- [ ] Model motions controller
+- [x] Model motions controller
 - [ ] Show Background Sprites
 - [ ] Show multiple Models
 - [ ] Add Sound

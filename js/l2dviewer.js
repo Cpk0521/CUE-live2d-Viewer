@@ -38,7 +38,7 @@ class l2DViewer{
 
         //setting
         this.modelOnChangeScale(0.2);
-        this.model.x = (this.app.screen.width - this.model.width)/2;
+        // this.model.x = (this.app.screen.width - this.model.width)/2;
 
         //draging
         this.model.buttonMode = true;
@@ -58,18 +58,18 @@ class l2DViewer{
         this.model.on("pointerupoutside", () => (this.model.dragging = false));
         this.model.on("pointerup", () => (this.model.dragging = false));
 
-        //Animation
-        //model.internalModel.motionManager.startMotion('', 1);
-
+        setupMotionsList(this.model.internalModel.motionManager.definitions);
     }
 
     clearCanvas(){
+        this.model.destroy();
         this.app.stage.removeChildren();
     }
 
     modelOnChangeScale(val){
         if(this.model){
             this.model.scale.set(val);
+            this.model.x = (this.app.screen.width - this.model.width)/2;
         }
     }
 
@@ -82,6 +82,13 @@ class l2DViewer{
     modelOnChangeAlpha(val){
         if(this.model){
             this.model.alpha = val;
+        }
+    }
+
+    modelStartMotions(group, index){
+        if(!this.model.internalModel.motionManager.playing){
+            this.model.motion(group, index);
+            console.log(this.model.internalModel.motionManager.playing);
         }
     }
 

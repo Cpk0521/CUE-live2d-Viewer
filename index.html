@@ -34,7 +34,6 @@
                 
                 <!-- <div id="modellist" class="w-100 p3 d-flex align-items-end flex-column border-top border-primary bg-light" style=""></div> -->
 
-
             </div>
             
             <div class="col-3 border-start border-primary border-1 bg-light p-0 h-100">
@@ -50,7 +49,14 @@
                 <!-- tab Content -->
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-canvas" role="tabpanel" aria-labelledby="nav-canvas-tab">
-                        --Background--
+                        <a class="nav-link w-100 bg-info text-white" data-toggle="collapse" data-target="#canvasTools" aria-expanded="true" aria-controls="canvasTools">
+                            <h4 class="font-weight-bold m-auto py-2">Background</h4>
+                        </a>
+                        <div id="canvasTools" class="collapse">
+                            <div class="card-body">
+                                Motions Controller
+                            </div>
+                        </div>
                     </div>
 
                     <div class="tab-pane fade" id="nav-model" role="tabpanel" aria-labelledby="nav-model-tab">
@@ -66,12 +72,12 @@
                         <h5 class="" id="CostumeName" style="display:none"></h5>
                     </div>
 
-                    <div id="tools" class="overflow-auto py-2" style="height: 70%;display: none;">
+                    <div id="tools" class="py-2 overflow-auto" style="height:70%;display: none;">
                         <div id="Modeltools" class="nav flex-column">
 
                             <!-- //Display Controller -->
                             <a class="list-unstyled nav-link w-100 bg-primary text-white" data-toggle="collapse" data-target="#DisplayTool" aria-expanded="true" aria-controls="DisplayTool">
-                                    <p class="font-weight-bold m-auto py-2 ">Display</p>
+                                    <h4 class="font-weight-bold m-auto py-2 ">Display</h4>
                             </a>
                             <div id="DisplayTool" class="collapse">
                                 <div class="card-body">
@@ -97,11 +103,12 @@
 
                             <!-- //Motions Controller -->
                             <a class="nav-link w-100 bg-info text-white" data-toggle="collapse" data-target="#MotionsTools" aria-expanded="true" aria-controls="MotionsTools">
-                                <p class="font-weight-bold m-auto py-2">Motions</p>
+                                <h4 class="font-weight-bold m-auto py-2">Motions</h4>
                             </a>
                             <div id="MotionsTools" class="collapse">
                                 <div class="card-body">
-                                    Motions Controller
+                                    <!-- <span class="d-flex py-1 my-1 border-bottom border-top">""</span>
+                                    <button class="btn btn-info w-100 my-2 text-white">Motion/001</button> -->
                                 </div>
                             </div>
 
@@ -111,16 +118,6 @@
                     </div>
                 </div>
 
-                <!-- <div style="text-align:center" id='container'>
-                    <div id="selecter" style="text-align:center" class="w-100 d-inline-block p-3" >
-                        <label for="characterlist" class="display-7"><strong>Character</strong></label>
-                        <select class="w-75 form-select form-select-lg mx-auto mb-3" id="characterlist"></select>
-                        <label for="costumelist" class="display-7"><strong>Costume</strong></label>
-                        <select class="w-75 form-select mx-auto mb-3" id="costumelist"></select>
-            
-                        <button class="btn btn-primary" id="loadbtn">Load Model</button>
-                    </div>
-                </div> -->
         </div>
         
         <!--Create Live2d Model Modal -->
