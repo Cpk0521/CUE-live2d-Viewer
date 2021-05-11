@@ -47,7 +47,9 @@ class l2DViewer{
         this.modelcontainer.addChild(this.model);
 
         //setting
+        this.model.anchor.set(0.5);
         this.modelOnChangeScale(0.2);
+        this.model.position.set(this.app.screen.width/2, this.app.screen.height);
         // this.model.x = (this.app.screen.width - this.model.width)/2;
 
         //draging
@@ -79,7 +81,6 @@ class l2DViewer{
     modelOnChangeScale(val){
         if(this.model){
             this.model.scale.set(val);
-            this.model.x = (this.app.screen.width - this.model.width)/2;
         }
     }
 
