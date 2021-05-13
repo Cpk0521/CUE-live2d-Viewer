@@ -36,21 +36,25 @@ class l2DViewer{
 
         //model
         this.model;
+        this.modelsetting;
     }
 
     async LoadModel(jsonpath) {
 
         this.modelcontainer.removeChildren();
     
-        this.model = await this.l2d.Live2DModel.from(jsonpath);
+        let settingsJSON = await fetch(jsonpath).then(res => res.json());
+        settingsJSON.url = jsonpath;
 
+        this.modelsetting = new this.l2d.Cubism4ModelSettings(settingsJSON);
+        this.model = await this.l2d.Live2DModel.from(settingsJSON);
+        
         this.modelcontainer.addChild(this.model);
-
-        //setting
+        
+        //display setting
         this.model.anchor.set(0.5);
         this.modelOnChangeScale(0.2);
-        this.model.position.set(this.app.screen.width/2, this.app.screen.height);
-        // this.model.x = (this.app.screen.width - this.model.width)/2;
+        this.model.position.set(this.app.screen.width/2, this.app.screen.height * 2/3);
 
         //draging
         this.model.buttonMode = true;
