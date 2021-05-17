@@ -17,9 +17,7 @@ Setupcharselecter = ()=>{
         }
 
         let cid = event.target.value;
-        // console.log(cid);
         Setupcostselecter(cid);
-        // this.Setupcostselecter(cid);
     });
 }
 
@@ -27,7 +25,6 @@ Setupcostselecter = (cid)=>{
     let costselectlist = "";
     $.each(costset[String('000'+cid).slice(-3)], function(key,val){
         costselectlist += '<option value="'+val.path+'">'+val.name+'</option>';
-        // console.log(key, val);
     });
     $('select#costumelist').html(costselectlist);
 }
@@ -85,19 +82,18 @@ setupMotionsList = (datalist)=>{
 
 $(document).ready(() => {
 
-    l2dviewer = new l2DViewer();
+    l2dviewer = new l2DViewer($("#viewer"));
 
     $.getJSON("datalist/CharactorList.json", function(data) {
         charset = data.Charactor;
     }).done(function() {
-        // l2dviewer.Setupcharselecter();
         Setupcharselecter();
     });
 
     $.getJSON("datalist/live2dList_v2.json", function(data) {
         costset = data;
     }).done(function() {
-        console.log(costset);
+        // console.log(costset);
     });
 
     $('#LoadModelBtn').click(()=>{
@@ -116,7 +112,6 @@ $(document).ready(() => {
 
             SetupModelRangeDisplay(0.2, 0, 1);
         }
-        // console.log("Loading");rangenumber
     });
 
     $('#removelive2dModel').click(()=>{

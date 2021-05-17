@@ -1,43 +1,50 @@
 class l2DViewer{
-    constructor() {
+    constructor(divviewer) {
 
         this.l2d = PIXI.live2d;
         
-        //component
-        this.divviewer = $("#viewer");
-
         //create canvas
         this.app = new PIXI.Application({
                 antialias: true,
-                autoStart: true, backgroundColor : 0x333333
+                autoStart: true, 
+                backgroundColor : 0xFFFFFF
             });
 
-        // let width = window.innerWidth * 0.7;
-        let width = this.divviewer.width() * 0.95;
+        //canvas setting
+        let width = divviewer.width() * 0.95;
         let height = (width / 17) * 9;
         this.app.renderer.resize(width, height);
-        this.divviewer.html(this.app.view);
-
-        window.onresize = (e)=>{
-            if(e === void 0) { e = null; }
-            let width = this.divviewer.width() * 0.95;
-            let height = (width / 17) * 9;
-            this.app.renderer.resize(width, height);
-        }
+        divviewer.html(this.app.view);
 
         //container
         this.bgcontainer = new PIXI.Container();
         this.app.stage.addChild(this.bgcontainer);
 
         this.modelcontainer = new PIXI.Container();
+        this.modelcontainer.width = width;
+        this.modelcontainer.height = height;
         this.app.stage.addChild(this.modelcontainer);
         
+        //backgound
         this.loadBackground('image/background/base_178.png');
 
+        window.onresize = (e)=>{
+            if(e === void 0) { e = null; }
+            let width = divviewer.width() * 0.95;
+            let height = (width / 17) * 9;
+            this.app.renderer.resize(width, height);
+
+            this.bgcontainer.children.forEach((child)=>{
+                child.width = width;
+                child.height = height;
+            })
+        }
+        
         //model
         this.model;
         this.modelsetting;
     }
+
 
     async LoadModel(jsonpath) {
 
@@ -54,7 +61,7 @@ class l2DViewer{
         //display setting
         this.model.anchor.set(0.5);
         this.modelOnChangeScale(0.2);
-        this.model.position.set(this.app.screen.width/2, this.app.screen.height * 2/3);
+        this.model.position.set(this.app.screen.width/2, this.app.screen.height * 3/4);
 
         //draging
         this.model.buttonMode = true;
@@ -108,18 +115,18 @@ class l2DViewer{
     }
 
     loadBackground(url){
-        const texture = PIXI.Texture.from(url);
-        const bg = new PIXI.Sprite(texture);
+        this.bgcontainer.removeChildren();
 
-        bg.width = this.app.renderer.width + 2;
-        bg.height = this.app.renderer.height + 2;
+        const bg = new PIXI.Sprite(PIXI.Texture.from(url));
+
+        bg.width = this.app.renderer.width;
+        bg.height = this.app.renderer.height;
 
         this.bgcontainer.addChild(bg);
-        // const brt = new PIXI.BaseRenderTexture(PIXI.SCALE_MODES.LINEAR, 1);
-        // const rt = new PIXI.RenderTexture(brt);
-        // const sprite = new PIXI.Sprite(rt);
-        // this.app.stage.addChild(sprite);
+      
         console.log("Done");
     }
+
+
 
 }
