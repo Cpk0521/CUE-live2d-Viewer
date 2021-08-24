@@ -1,6 +1,6 @@
 # CUE-live2d-Viewer
 
-##由於遊戲暫時停止 網頁也暫時停止更新
+## 由於遊戲暫時停止 網頁也暫時停止更新
 
 CUE! live2d Viewer [Demo](https://cpk0521.github.io/CUE-live2d-Viewer/index.html "Demo")
 
