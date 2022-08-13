@@ -63,6 +63,8 @@ setupMotionsList = (datalist)=>{
         grouptitle.className = "d-flex py-1 my-1 border-bottom border-top";
         grouptitle.innerHTML = "\"" + group + "\"";
         $('#MotionsTools>.card-body').append(grouptitle);
+        list.sort((a, b) => a['File'].localeCompare(b['File']));
+        // console.log(list)
         $.each(list, (index, file)=>{
 
             let motionbtn = document.createElement("button");
