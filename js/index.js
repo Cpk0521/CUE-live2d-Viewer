@@ -37,7 +37,7 @@ function l2DViewer(){
         this._app.renderer.resize(width, height);
         div.html(this._app.view);
 
-        this.loadBackground('./Image/background/base_178.png')
+        this.loadBackground('./image/background/base_178.png')
 
         if (!this._containers['modelcontainer']){
             this._containers['modelcontainer'] = new PIXI.Container();
