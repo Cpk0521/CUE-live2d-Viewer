@@ -1,191 +1,159 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8" />
-    <title>CUE! Live2d Model Viewer</title>
-    <link rel="icon" href="image/favicon.jpg">
+    <title>live2d Model Viewer | CUE!-see you everyday-</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <link rel="icon" href="./Image/favicon.png" />
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        * {margin:0};
-    </style>
-</head>
-<body class="">
-        <div class="align-items-center px-md-5 bg-white border-bottom shadow-sm">
-            <div class="row flex-nowrap justify-content-between align-items-center px-3">
-                <div class="col-6 py-2 justify-content-start">
-                <p class="my-auto display-6 font-weight-bold"><strong>CUE! Live2d Viewer</strong></p>
-                </div>
-                <div class="col-3 d-flex justify-content-end align-items-center">
-                    <a class="btn btn-primary" href="https://github.com/Cpk0521/CUE-live2d-Viewer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                        </svg>
-                        Github
-                    </a>
-                </div>
-            </div>
-        </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="live2d Model Viewer | CUE!-see you everyday-"
+    />
 
-        <div id='container' class="d-flex container-fluid row p-0 m-0 h-100">
-            <div class="col-lg-9 p-0 m-0">
-                <div id="viewer" style="text-align:center" class="my-4"></div>
-            </div>
-            
-            <div class="col-lg-3 border-start border-primary border-1 bg-light p-0 h-100">
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content=""
+    />
+    <meta name="twitter:title" content="live2d Model Viewer | CUE!-see you everyday-" />
+    <meta
+      name="twitter:description"
+      content="live2d Model Viewer | CUE!-see you everyday-"
+    />
+    <!-- <meta
+      name="twitter:image"
+      content=""
+    /> -->
 
-                <!-- TAb selection -->
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-model-tab" data-toggle="tab" href="#nav-model" role="tab" aria-controls="nav-model" aria-selected="true">Models</a>
-                        <!-- <a class="nav-item nav-link" id="nav-modelsetting-tab" data-toggle="tab" href="#nav-modelsetting" role="tab" aria-controls="nav-modelsetting" aria-selected="false">Display</a> -->
-                        <!-- <a class="nav-item nav-link" id="nav-canvas-tab" data-toggle="tab" href="#nav-canvas" role="tab" aria-controls="nav-canvas" aria-selected="false">Background</a> -->
-                    </div>
-                </nav>
-
-                <!-- tab Content -->
-                <div class="tab-content" id="nav-tabContent">
-
-                    <!-- <div class="tab-pane fade" id="nav-canvas" role="tabpanel" aria-labelledby="nav-canvas-tab">
-                        
-                        <a class="nav-link w-100 text-info d-flex justify-content-between border-top border-bottom" data-toggle="collapse" data-target="#canvasTools" aria-expanded="true" aria-controls="canvasTools">
-                            <h4 class="font-weight-bold my-auto py-2">Background</h4>
-                            <h5 class="fas fa-plus my-auto py-2"></h5>
-                        </a>
-
-                        <div id="canvasTools" class="collapse">
-                            <div class="card-body m-auto overflow-auto text-center" style="height:85%;"> -->
-                                <!-- <div style="background-image: url(image/favicon.jpg); width: 180px;height: 90px;"></div>
-                                <div style="background-image: url(image/favicon.jpg); width: 180px;height: 90px;"></div> -->
-                                <!-- <img src="image/background/base_178.png" class="img-thumbnail m-auto" style="width:30%">
-                                <img src="image/background/base_267.png" class="img-thumbnail m-auto" style="width:30%">
-                                <img src="image/background/base_294.png" class="img-thumbnail m-auto" style="width:30%"> -->
-                            <!-- </div>
-                        </div>
-                       
-                    </div> -->
-
-                    <div class="tab-pane fade" id="nav-modelsetting" role="tabpanel" aria-labelledby="nav-modelsetting-tab">
-                         <!-- toolbar header -->
-                         <div class="border-bottom my-2 mx-3" style="border-bottom: 1px solid #cbcbcb;">
-                            <!-- <div class="row d-flex justify-content-end align-items-center ">
-                                <button type="button" class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info" data-toggle="modal" data-target="#addlive2dModal"><i class="fas fa-plus"></i></button>
-                                <button class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info" style="display: none;" ><i class="fas fa-minus"></i></button>
-                            </div> -->
-                            <h3 class="" >----</h3>
-                            <h5 class="" style="display:none"></h5>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-pane fade show active" id="nav-model" role="tabpanel" aria-labelledby="nav-model-tab">
-
-                        <!-- toolbar header -->
-                        <div class="border-bottom my-2 mx-3" style="border-bottom: 1px solid #cbcbcb;">
-                            <div class="row d-flex justify-content-end align-items-center ">
-                                <!-- <p class="col-8 display-6 justify-content-start"><strong>#1</strong></p> -->
-                                <button type="button" class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info" data-toggle="modal" data-target="#addlive2dModal" id="openMedalBtn"><i class="fas fa-plus"></i></button>
-                                <button class="btn btn-outline-info btn-circle btn-circle-xl m-1 text-info" style="display: none;" id="removelive2dModel"><i class="fas fa-minus"></i></button>
-                            </div>
-                            <h3 class="" id="ModelName">----</h3>
-                            <h5 class="" id="CostumeName" style="display:none"></h5>
-                        </div>
-
-                        <div id="tools" class="py-2 overflow-auto" style="height:70%;display: none;">
-                            <div id="Modeltools" class="nav flex-column">
-
-                                <!-- //Display Controller -->
-                                <a class=" nav-link w-100 text-primary d-flex justify-content-between border-top border-bottom " data-toggle="collapse" data-target="#DisplayTool" aria-expanded="true" aria-controls="DisplayTool">
-                                        <h4 class="font-weight-bold my-auto py-2">Display</h4>
-                                        <h5 class="fas fa-plus my-auto py-2"></h5>
-                                </a>
-                                <div id="DisplayTool" class="collapse">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-center my-3">
-                                            <span class="font-weight-bold mx-2" style="width: 30%;"><strong>Scale</strong></span>
-                                            <input type="range" class="form-range " min="0.01" max="1" step="0.01" value="0" id="scaleRange">
-                                            <span class="font-weight-bold mx-3" style="width: 15%;" id="rangenumber">0</span>
-                                        </div>
-
-                                        <div class="d-flex justify-content-center my-3">
-                                            <span class="font-weight-bold mx-2 " style="width: 30%;"><strong>Angle</strong></span>
-                                            <input type="range" class="form-range" min="0" max="360" value="0" id="angleRange">
-                                            <span class="font-weight-bold mx-3" style="width: 15%;" id="rangenumber">0</span>
-                                        </div>
-
-                                        <div class="d-flex justify-content-center my-3">
-                                            <span class="font-weight-bold mx-2 " style="width: 30%;"><strong>Alpha</strong></span>
-                                            <input type="range" class="form-range" min="0" max="1" step="0.01" value="0" id="alphaRange">
-                                            <span class="font-weight-bold mx-3" style="width: 15%;" id="rangenumber">0</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- //Motions Controller -->
-                                <a class="nav-link w-100 text-info d-flex justify-content-between border-top border-bottom" data-toggle="collapse" data-target="#MotionsTools" aria-expanded="true" aria-controls="MotionsTools">
-                                    <h4 class="font-weight-bold my-auto py-2">Motions</h4>
-                                    <h5 class="fas fa-plus my-auto py-2"></h5>
-                                </a>
-                                <div id="MotionsTools" class="collapse">
-                                    <div class="card-body">
-                                        <!-- <span class="d-flex py-1 my-1 border-bottom border-top">""</span>
-                                        <button class="btn btn-info w-100 my-2 text-white">Motion/001</button> -->
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-        </div>
-        
-        <!--Create Live2d Model Modal -->
-        <div class="modal fade" id="addlive2dModal" tabindex="-1" role="dialog" aria-labelledby="addlive2dModalModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="addlive2dModalModalLabel">Load live2d Model</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="input-group my-3">
-                        <div class="input-group-prepend w-25">
-                          <label class="input-group-text" for="characterlist">Character</label>
-                        </div>
-                        <select class="w-75 form-select mx-auto custom-select" id="characterlist">
-                          <!-- <option selected>Choose...</option> -->
-                        </select>
-                    </div>
-
-                    <div class="input-group my-3">
-                        <div class="input-group-prepend w-25">
-                          <label class="input-group-text" for="costumelist">Costume</label>
-                        </div>
-                        <select class="w-75 form-select mx-auto custom-select" id="costumelist">
-                          <!-- <option selected>Choose...</option> -->
-                        </select>
-                    </div>
-                    
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="LoadModelBtn">Load Model</button>
-                </div>
-            </div>
-            </div>
-        </div>
+    <!-- facebook -->
+    <meta property="og:title" content="live2d Model Viewer | CUE!-see you everyday-" />
+    <meta
+      property="og:site_name"
+      content="live2d Model Viewer | CUE!-see you everyday-"
+    />
+    <meta
+      property="og:description"
+      content="live2d Model Viewer | CUE!-see you everyday-"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content=""
+    />
+    <!-- <meta
+      property="og:image"
+      content="%PUBLIC_URL%"
+    /> -->
     
-    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js"></script>
-    <script src="js/bootstrap.min.js" ></script>
+      <div class="bg"></div>
 
-    <script src="js/pixi.min.js"></script> <!-- Pixi -->
-    <script src="js/live2dcubismcore.min.js"></script> <!-- live2d SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script>
-    <script src="js/l2dviewer.js"></script>
-    <script src="js/mainrun.js"></script>
-</body>
+      <!-- <div class='header'>
+          <div class='header-contain'>
+            <a href="./index.html" ><img src='./Image/favicon.png'></img></a>
+          </div>
+      </div> -->
+
+      <div class="container">
+        <main class="container-main">
+          <div id="viewer"></div>
+        </main>
+
+        <aside class="container-opt"> 
+          <div style="display: flex;flex-direction: column;height: 100%;overflow-y: auto;overflow-x: hidden;">
+            <div class="tab">
+              <div class='tab-btn-list'>
+                <div class='tab-btn btn-selecting' id="Modelsbtn"><a onclick="toggleTabContainer('Models')">Models</a></div>
+                <!-- <div class='tab-btn' id="CanvasSettingbtn"><a onclick="toggleTabContainer('CanvasSetting')">Canvas</a></div> -->
+              </div>
+            </div>
+
+            <!-- CONTENT (Models)-->
+            <div class="tab-content shown" id="Models">
+
+              <!-- ADD Model CONTROLLER -->
+              <div class="add-model-block">
+                <!-- CHARACTOR SELECTION -->
+                <div class="char-select">
+                  <p class="select-title">Character</p>
+                  <select id="characterSelect"></select>
+                </div>
+                <!-- COSTUME SELECTION -->
+                <div class="costume-select">
+                  <p class="select-title">Costume</p>
+                  <select id="costumeSelect"></select>
+                </div>
+                <!-- ADD BUTTON -->
+                <button class="add-btn circle-btn" id="addL2DModelBtn"><i class="fas fa-plus"></i></button>
+              </div>
+              <!-- <div id="list" style="overflow: auto;"></div> -->
+              <div class="Models-list" id="ModelsList"></div>
+
+            </div>
+
+            <!-- CONTENT (Models Setting)-->
+            <div class="tab-content" id='ModelSetting'>
+
+              <div id="info">
+                <button class="circle-btn back-btn" id="back-btn"><i class="fa-solid fa-angle-left"></i></button>
+                <p class="ModelName" id="info-ModelName"></p>
+                <p class="CostumeName" id="info-CostumeName"></p>
+              </div>
+
+              <div class="Models-list" id="ModelsSettingList">
+                <button class="collapsible">Display</button>
+                <div class="collapsible-content" id="display-collapsible">
+                  <div class="motion-list">
+                    開発中
+                  </div>
+                </div>
+
+                <button class="collapsible">Expressions</button>
+                <div class="collapsible-content" id="expressions-collapsible">
+                  <div class="motion-list">
+                    開発中
+                  </div>
+                </div>
+
+                <button class="collapsible">Motions</button>
+                <div class="collapsible-content">
+                  <div class="motion-list" id="motion-list">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CONTENT (Canvas Setting)-->
+            <div class="tab-content" id='CanvasSetting'></div>
+
+          </div>
+        </aside>
+
+      </div>
+
+  </body>
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- font-awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+  <!-- Pixi -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.1/browser/pixi.min.js"></script>
+  <!-- live2d SDK -->
+  <!-- <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script> -->
+  <script src="./js/live2dcubismcore.min.js" type="text/javascript"></script>
+  <!-- pixi-live2d-display ( Cubism 3 and Cubism 4) -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script>
+  <!-- ownjs -->
+  <script src="./js/index.js" type="text/javascript"></script>
+
 </html>
