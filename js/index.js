@@ -61,7 +61,7 @@ function l2DViewer(){
         }
     }   
 
-    this.loadBackground = (src) => {
+    this.loadBackground = async (src) => {
 
         if (!this._containers['bgcontainer']){
             this._containers['bgcontainer'] = new PIXI.Container();
@@ -70,7 +70,7 @@ function l2DViewer(){
 
         this._containers['bgcontainer'].removeChildren();
 
-        let bg = new PIXI.Sprite(PIXI.Texture.from(src));
+        let bg = await new PIXI.Sprite(PIXI.Texture.from(src));
         bg.width = this._app.renderer.width;
         bg.height = this._app.renderer.height;
 
@@ -89,8 +89,9 @@ function l2DViewer(){
         this._l2dModels[M.getIndexName()] = M
         this._containers['modelcontainer'].addChild(M._Model);
 
-        M._Model.anchor.set(0.5);
-        M._Model.scale.set(0.2);
+        
+        M.setAnchor(.5)
+        M.setScale(.2)
         M._Model.position.set(this._app.screen.width/2, this._app.screen.height * 3/4);
 
         M._Model.autoInteract = false
@@ -175,6 +176,47 @@ function l2dModel(){
     this.setName = (char, cost) => {
         this._ModelName = char;
         this._costume = cost;
+    }
+
+    this.setAnchor = (val) => {
+        this._Model.anchor.set(0.5);
+    }
+
+    this.setScale = (val) =>{
+        this._Model.scale.set(val)
+    }
+
+    this.setAlpha = (val) => {
+        this._Model.aplha = val
+    }
+
+    this.setAngle = (val) => {
+        this._Model.angle = val
+    }
+
+    this.loadExpression = (index) => {
+        this.getExpressionManager().setExpression(index)
+    }
+
+    this.loadMotion = (group, index, priority) => {
+        this._Model.motion(group, index, priority)
+    }
+
+
+    this.getAnchor = () => {
+        return this._Model.anchor
+    }
+
+    this.getScale = () => {
+        return this._Model.scale
+    }
+
+    this.getAlpha = () => {
+        return this.aplha
+    }
+
+    this.getAngle = () => {
+        return this._Model.angle
     }
 
     this.getIndexName = () => {
@@ -282,7 +324,58 @@ const setupModelSetting = (M) => {
         toggleTabContainer('Models')
     }
 
+    let scale_Range = document.getElementById('scaleRange')
+    let scale_Num = document.getElementById('scaleNum')
+    scale_Range.value = M.getScale().x
+    scale_Num.value = scale_Range.value
+    scale_Range.addEventListener('input', function(e){
+        scale_Num.value = this.value
+        M.setScale(this.value)
+    })
+    scale_Num.addEventListener('keyup', function(e){
+        if(this.value == ""){
+            this.value = scale_Range.value
+            return
+        }
 
+        if(parseInt(this.value) < parseInt(this.min)){
+            this.value = this.min;
+        }
+        if(parseInt(this.value) > parseInt(this.max)){
+            this.value = this.max;
+        }
+        scale_Range.value = this.value
+        M.setScale(this.value)
+    })
+
+
+    let angle_Range = document.getElementById('angleRange')
+    let angle_Num = document.getElementById('angleNum')
+    angle_Range.value = M.getAngle()
+    angle_Num.value = angle_Range.value
+    angle_Range.addEventListener('input', function(e){
+        angle_Num.value = this.value
+        M.setAngle(this.value)
+    })
+    scale_Num.addEventListener('keyup', function(e){
+        if(this.value == ""){
+            this.value = angle_Range.value
+            return
+        }
+
+        if(parseInt(this.value) < parseInt(this.min)){
+            this.value = this.min;
+        }
+        if(parseInt(this.value) > parseInt(this.max)){
+            this.value = this.max;
+        }
+        angle_Range.value = this.value
+        M.setAngle(this.value)
+
+    })
+
+
+    //SET UP EXPRESSTIONS LIST
     let expressionslist = document.getElementById('expressions-list')
     let expressions = M.getExpressions()
     expressionslist.innerHTML = ''
@@ -290,17 +383,14 @@ const setupModelSetting = (M) => {
         let expbtn = document.createElement("button");
         expbtn.innerHTML = exp['Name'].replace('.exp3.json', '');
         expbtn.addEventListener('click', ()=>{
-            // console.log()
-            M.getExpressionManager().setExpression(index)
+            M.loadExpression(index)
         })
 
         expressionslist.append(expbtn)
     })
 
-
-    
+    //SET UP MOTIONS LIST
     let motionslist = document.getElementById('motion-list')
-
     let motions = M.getMotions()
     motionslist.innerHTML = ''
 
@@ -314,8 +404,7 @@ const setupModelSetting = (M) => {
             let motionbtn = document.createElement("button");
             motionbtn.innerHTML = m['File'].replace('.motion3.json', "") ;
             motionbtn.addEventListener("click", ()=>{
-                // console.log(m['File']);
-                M._Model.motion(key, index, 'FORCE')
+                M.loadMotion(key, index, 'FORCE')
             })
 
             motionslist.append(motionbtn)

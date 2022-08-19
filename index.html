@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>live2d Model Viewer | CUE!-see you everyday-</title>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0">
-    <link rel="icon" href="./Image/favicon.png" />
+    <link rel="icon" href="./image/favicon.png" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -112,7 +112,16 @@
                 <button class="collapsible">Display</button>
                 <div class="collapsible-content" id="display-collapsible">
                   <div class="collapsible-list">
-                    開発中
+                    <div class="rangeOption">
+                      <p>Scale</p>
+                      <input type="range" class="input-range" min="0.01" max="1" step="0.01" id="scaleRange">
+                      <input type="number" min="0.01" max="1" step="0.01" id="scaleNum">
+                    </div>
+                    <div class="rangeOption">
+                      <p>Angle</p>
+                      <input type="range" class="input-range" min="0" max="360" step="0.01" id="angleRange">
+                      <input type="number" min="0" max="360" step="0.01" id="angleNum">
+                    </div>
                   </div>
                 </div>
 
