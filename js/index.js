@@ -150,14 +150,27 @@ function l2dModel(){
         this._modelsetting = new PIXI.live2d.Cubism4ModelSettings(settingsJSON);
         this._Model = await PIXI.live2d.Live2DModel.from(settingsJSON);
 
-        // this._ParametersValues = [...this.getCoreModel()._parameterValues]
+        this._ParametersValues = {};
 
-        //不搖頭
-        this._Model.internalModel.breath._breathParameters = []
-        //不眨眼
-        this._Model.internalModel.eyeBlink._parameterIds = []
+        this._ParametersValues.breath = [...this._Model.internalModel.breath._breathParameters] //Clone
+        this._Model.internalModel.breath._breathParameters = [] //不搖頭
+        
+        this._ParametersValues.eyeBlink = [...this._Model.internalModel.eyeBlink._parameterIds] //Clone
+        this._Model.internalModel.eyeBlink._parameterIds = [] //不眨眼
 
-        //fix穿模問題
+
+        this._ParametersValues.parameter = [] //Clone All Parameters Values
+        this.getCoreModel()._parameterIds.map((p, index) => {
+            let parameter = {}
+            parameter.parameterIds = p
+            parameter.max = this.getCoreModel()._parameterMaximumValues[index]
+            parameter.min = this.getCoreModel()._parameterMinimumValues[index]
+            parameter.defaultValue = this.getCoreModel()._parameterValues[index]
+
+            this._ParametersValues.parameter.push(parameter)
+        })
+
+        //復原Motion 篩走之前多餘的動作片段
         this.getMotionManager().on('motionLoaded', function (group, index, motion) {
             const curves = [];
             motion._motionData.curves.forEach((f) => {
@@ -194,6 +207,10 @@ function l2dModel(){
         this._Model.angle = val
     }
 
+    this.setParameters = (id, value) => {
+        this.getCoreModel().setParameterValueById(id, value)
+    }
+
     this.loadExpression = (index) => {
         this.getExpressionManager().setExpression(index)
     }
@@ -201,7 +218,6 @@ function l2dModel(){
     this.loadMotion = (group, index, priority) => {
         this._Model.motion(group, index, priority)
     }
-
 
     this.getAnchor = () => {
         return this._Model.anchor
@@ -241,6 +257,10 @@ function l2dModel(){
 
     this.getMotions = () => {
         return this._modelsetting?.motions
+    }
+
+    this.getAllParameters = () => {
+        return this._ParametersValues.parameter
     }
 
     this.getCoreModel = () => {
@@ -410,6 +430,56 @@ const setupModelSetting = (M) => {
             motionslist.append(motionbtn)
         })
     }
+
+    let parameterslist = document.getElementById('parameters-list')
+    let parameter = M.getAllParameters()
+    parameterslist.innerHTML = ''
+
+    parameter.map((param) => {
+        let p_div = document.createElement("div");
+        p_div.className = 'rangeOption'
+        p_div.innerHTML += `<p>${param.parameterIds}</p>`
+
+        let range = document.createElement("input");
+        range.type = 'range'
+        range.className = 'input-range'
+        range.setAttribute('step', 0.01)
+        range.setAttribute('min', param.min)
+        range.setAttribute('max', param.max)
+        range.value = param.defaultValue
+        p_div.append(range)
+
+        let text = document.createElement("input");
+        text.type = 'number'
+        text.setAttribute('step', 0.01)
+        text.setAttribute('min', param.min)
+        text.setAttribute('max', param.max)
+        text.value = param.defaultValue
+        p_div.append(text)
+
+        range.addEventListener('input', function(e){
+            text.value = this.value
+            M.setParameters(param.parameterIds, this.value)
+        })
+
+        text.addEventListener('keyup', function(e){
+            if(this.value == ""){
+                this.value = range.value
+                return
+            }
+    
+            if(parseInt(this.value) < parseInt(this.min)){
+                this.value = this.min;
+            }
+            if(parseInt(this.value) > parseInt(this.max)){
+                this.value = this.max;
+            }
+            range.value = this.value
+            M.setParameters(param.parameterIds, this.value)
+        })
+
+        parameterslist.append(p_div)
+    })
 
 }
 
