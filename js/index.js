@@ -149,6 +149,14 @@ function l2dModel(){
         this._modelsetting = new PIXI.live2d.Cubism4ModelSettings(settingsJSON);
         this._Model = await PIXI.live2d.Live2DModel.from(settingsJSON);
 
+        // this._ParametersValues = [...this.getCoreModel()._parameterValues]
+
+        //不搖頭
+        this._Model.internalModel.breath._breathParameters = []
+        //不眨眼
+        this._Model.internalModel.eyeBlink._parameterIds = []
+
+        //fix穿模問題
         this.getMotionManager().on('motionLoaded', function (group, index, motion) {
             const curves = [];
             motion._motionData.curves.forEach((f) => {
@@ -161,6 +169,7 @@ function l2dModel(){
               ...curves.flat()
             );
         })
+
     }
 
     this.setName = (char, cost) => {
@@ -193,7 +202,7 @@ function l2dModel(){
     }
 
     this.getCoreModel = () => {
-        return this._Model?.internalMode.coreModel
+        return this._Model.internalModel.coreModel
     }
 
     this.getMotionManager = () => {
@@ -202,6 +211,10 @@ function l2dModel(){
 
     this.getFocusController = () => {
         return this._Model?.internalModel.focusController
+    }
+
+    this.getExpressionManager = () => {
+        return this._Model?.internalModel.motionManager.expressionManager
     }
 
 }
@@ -269,17 +282,39 @@ const setupModelSetting = (M) => {
         toggleTabContainer('Models')
     }
 
+
+    let expressionslist = document.getElementById('expressions-list')
+    let expressions = M.getExpressions()
+    expressionslist.innerHTML = ''
+    Array.from(expressions).forEach((exp, index)=>{
+        let expbtn = document.createElement("button");
+        expbtn.innerHTML = exp['Name'].replace('.exp3.json', '');
+        expbtn.addEventListener('click', ()=>{
+            // console.log()
+            M.getExpressionManager().setExpression(index)
+        })
+
+        expressionslist.append(expbtn)
+    })
+
+
+    
     let motionslist = document.getElementById('motion-list')
 
     let motions = M.getMotions()
     motionslist.innerHTML = ''
 
     for (const key in motions) {
-        Array.from(motions[key]).forEach((x, index) => {
+        Array.from(motions[key]).forEach((m, index) => {
+
+            if(m['File'].includes('loop')){
+                return
+            }
+
             let motionbtn = document.createElement("button");
-            motionbtn.innerHTML = x['File'].replace('.motion3.json', "") ;
+            motionbtn.innerHTML = m['File'].replace('.motion3.json', "") ;
             motionbtn.addEventListener("click", ()=>{
-                console.log(x['File']);
+                // console.log(m['File']);
                 M._Model.motion(key, index, 'FORCE')
             })
 

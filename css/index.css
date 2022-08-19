@@ -345,7 +345,7 @@ select {
     display: none;
 }
 
-.motion-list {
+.collapsible-list {
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
@@ -353,7 +353,7 @@ select {
     gap: 8px;
 }
 
-.motion-list > button {
+.collapsible-list > button {
     width: 100%;
     border-radius: 5px;
     background: #00a1d6;
@@ -365,7 +365,7 @@ select {
     text-align: center;
 }
 
-.motion-list > button:hover {
+.collapsible-list > button:hover {
     background: #0dcaf0;
     border: 1px solid #0dcaf0;
 }
