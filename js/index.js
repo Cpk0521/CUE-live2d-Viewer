@@ -3,22 +3,7 @@
 var l2dviewer;
 var l2dmaster;
 
-PIXI.live2d.Live2DModel.prototype.motion = async function (group, index, priority) {
-    if (priority === "FORCE")
-      await this.internalModel.motionManager.stopAllMotions();
-    const res =
-      index === undefined
-        ? await this.internalModel.motionManager.startRandomMotion(
-            group,
-            priority
-          )
-        : await this.internalModel.motionManager.startMotion(
-            group,
-            index,
-            priority
-          );
-    return res;
-};
+PIXI.live2d.config.setOpacityFromMotion = true
 
 function l2DViewer(){
     
@@ -177,6 +162,7 @@ function l2dModel(){
               if (Array.isArray(curves[f.type])) curves[f.type].push(f);
               else curves[f.type] = [f];
             });
+
             motion._motionData.curves.splice(
               0,
               motion._motionData.curves.length,
