@@ -284,13 +284,27 @@ select {
     padding-bottom: 8px;
 }
 
-#info {
+.info {
     display: grid;
     grid-template-columns: 1fr 5fr;
     justify-items: center;
     align-items: center;
     padding: 8px;
     border-bottom: 1px solid #e6e6e6;
+}
+
+.color-info{
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: large;
+}
+
+.colorPicker {
+    width: 100%;
 }
 
 .back-btn {
@@ -302,7 +316,7 @@ select {
 
 .back-btn:hover {
     background-color : #bebebe;
-    color: #fff;
+    color: rgb(249, 193, 193);
 }
 
 #ModelsSettingList {
@@ -412,6 +426,10 @@ select {
     text-align: center;
 }
 
+#background-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 
 @keyframes SlideIn {
@@ -463,4 +481,5 @@ select {
     .rangeOption > p {
         font-size: large;
     }
+
 }

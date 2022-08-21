@@ -72,7 +72,7 @@
             <div class="tab">
               <div class='tab-btn-list'>
                 <div class='tab-btn btn-selecting' id="Modelsbtn"><a onclick="toggleTabContainer('Models')">Models</a></div>
-                <!-- <div class='tab-btn' id="CanvasSettingbtn"><a onclick="toggleTabContainer('CanvasSetting')">Canvas</a></div> -->
+                <div class='tab-btn' id="CanvasSettingbtn"><a onclick="toggleTabContainer('CanvasSetting')">Canvas</a></div>
               </div>
             </div>
 
@@ -102,7 +102,7 @@
             <!-- CONTENT (Models Setting)-->
             <div class="tab-content" id='ModelSetting'>
 
-              <div id="info">
+              <div class="info">
                 <button class="circle-btn back-btn" id="back-btn"><i class="fa-solid fa-angle-left"></i></button>
                 <p class="ModelName" id="info-ModelName"></p>
                 <p class="CostumeName" id="info-CostumeName"></p>
@@ -153,7 +153,17 @@
             </div>
 
             <!-- CONTENT (Canvas Setting)-->
-            <div class="tab-content" id='CanvasSetting'></div>
+            <div class="tab-content" id='CanvasSetting'>
+              <button class="collapsible">Background</button>
+                <div class="collapsible-content">
+                  <div class="collapsible-list" id="background-list">
+                    <div class="color-info">
+                      <p>Color</p>
+                      <input type="color" class="colorPicker" id="colorPicker" />
+                    </div>
+                  </div>
+                </div>
+            </div>
 
           </div>
         </aside>

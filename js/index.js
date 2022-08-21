@@ -3,8 +3,6 @@
 var l2dviewer;
 var l2dmaster;
 
-PIXI.live2d.config.setOpacityFromMotion = true
-
 function l2DViewer(){
     
     this._app = new PIXI.Application({
@@ -53,6 +51,7 @@ function l2DViewer(){
             this._app.stage.addChild(this._containers['bgcontainer']);
         }
 
+        this._app.renderer.backgroundColor = 0xFFFFFF;
         this._containers['bgcontainer'].removeChildren();
 
         let bg = await new PIXI.Sprite(PIXI.Texture.from(src));
@@ -64,9 +63,13 @@ function l2DViewer(){
         this.log('background updated')
     }
 
-    this.addModel = (M) => {
-        // this._containers['modelcontainer'].removeChildren();
+    this.setBackgroundColor = (color) => {
+        this._containers['bgcontainer'].removeChildren();
+        this._app.renderer.backgroundColor = color
+    }
 
+    this.addModel = (M) => {
+        
         if(this.isModelInList(M.getIndexName())){
             return
         }
@@ -124,7 +127,6 @@ function l2DViewer(){
     }
 }
 
-
 function l2dModel(){
 
     this.setModel = async(src) => {
@@ -143,7 +145,6 @@ function l2dModel(){
         this._ParametersValues.eyeBlink = [...this._Model.internalModel.eyeBlink._parameterIds] //Clone
         this._Model.internalModel.eyeBlink._parameterIds = [] //不眨眼
 
-
         this._ParametersValues.parameter = [] //Clone All Parameters Values
         this.getCoreModel()._parameterIds.map((p, index) => {
             let parameter = {}
@@ -158,6 +159,7 @@ function l2dModel(){
         //復原Motion 篩走之前多餘的動作片段
         this.getMotionManager().on('motionLoaded', function (group, index, motion) {
             const curves = [];
+
             motion._motionData.curves.forEach((f) => {
               if (Array.isArray(curves[f.type])) curves[f.type].push(f);
               else curves[f.type] = [f];
@@ -168,7 +170,12 @@ function l2dModel(){
               motion._motionData.curves.length,
               ...curves.flat()
             );
+
         })
+
+    }
+
+    this.mouseBind = () => {
 
     }
 
@@ -268,11 +275,11 @@ function l2dModel(){
 }
 
 
-const setupCharacterSelect = (masterlist) => {
+const setupCharacterSelect = (data) => {
     let select = document.getElementById('characterSelect');
     let inner = `<option>Select</option>`
 
-    masterlist.Master.map((val) => {
+    data.Master.map((val) => {
         inner += `<option value="${val.id}">${val.name}</option>`
     })
 
@@ -284,9 +291,25 @@ const setupCharacterSelect = (masterlist) => {
         }
 
         let cid = e.target.value;
-        let options = masterlist.Master.find(x => x.id == cid)
+        let options = data.Master.find(x => x.id == cid)
         setupCostumeSelect(options)
     }
+}
+
+const setupCanvasBackgroundOption = (data) => {
+    let list = document.getElementById('background-list');
+    // let inner = ``
+
+    data.map((val)=>{
+        let btn = document.createElement('button')
+        btn.innerHTML = `<img src='./image/${val.thumbnail}'><img>`
+        btn.onclick = () => {
+            l2dviewer?.loadBackground(`./image/${val.background_src}`)
+        }
+
+        list.append(btn)
+    })
+
 }
 
 const setupCostumeSelect = (options) => {
@@ -330,15 +353,21 @@ const setupModelSetting = (M) => {
         toggleTabContainer('Models')
     }
 
+    Array.from(document.getElementsByClassName('collapsible')).forEach(x => {
+        x.classList.remove('active')
+        let content = x.nextElementSibling;
+        content.style.display = "none";
+    })
+
     let scale_Range = document.getElementById('scaleRange')
     let scale_Num = document.getElementById('scaleNum')
     scale_Range.value = M.getScale().x
     scale_Num.value = scale_Range.value
-    scale_Range.addEventListener('input', function(e){
+    scale_Range.oninput = function(e) {
         scale_Num.value = this.value
         M.setScale(this.value)
-    })
-    scale_Num.addEventListener('keyup', function(e){
+    }
+    scale_Num.oninput = function(e){
         if(this.value == ""){
             this.value = scale_Range.value
             return
@@ -352,18 +381,18 @@ const setupModelSetting = (M) => {
         }
         scale_Range.value = this.value
         M.setScale(this.value)
-    })
+    }
 
 
     let angle_Range = document.getElementById('angleRange')
     let angle_Num = document.getElementById('angleNum')
     angle_Range.value = M.getAngle()
     angle_Num.value = angle_Range.value
-    angle_Range.addEventListener('input', function(e){
+    angle_Range.oninput = function(e){
         angle_Num.value = this.value
         M.setAngle(this.value)
-    })
-    scale_Num.addEventListener('keyup', function(e){
+    }
+    angle_Num.oninput = function(e){
         if(this.value == ""){
             this.value = angle_Range.value
             return
@@ -377,8 +406,7 @@ const setupModelSetting = (M) => {
         }
         angle_Range.value = this.value
         M.setAngle(this.value)
-
-    })
+    }
 
 
     //SET UP EXPRESSTIONS LIST
@@ -417,6 +445,7 @@ const setupModelSetting = (M) => {
         })
     }
 
+    //SET UP MOTIONS PARAMETER LIST
     let parameterslist = document.getElementById('parameters-list')
     let parameter = M.getAllParameters()
     parameterslist.innerHTML = ''
@@ -481,11 +510,27 @@ $(document).ready(async() => {
             .then(response => response.json())
             .then(json => {
                 l2dmaster = json
+                setupCharacterSelect(l2dmaster)
             }).catch(function(error) {
                 console.log('failed while loading index.json.');
             });
 
-    setupCharacterSelect(l2dmaster)
+    await fetch('./json/bg.json')
+            .then(function(response) {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response;
+            })
+            .then(response => response.json())
+            .then(json => {
+                // console.log(json)
+                setupCanvasBackgroundOption(json)
+            }).catch(function(error) {
+                console.log('failed while loading index.json.');
+            });
+
+    // setupCharacterSelect(l2dmaster)
 
     l2dviewer = new l2DViewer()
     l2dviewer.createCanvas($("#viewer"))
@@ -539,6 +584,10 @@ $(document).ready(async() => {
         infoblock.append(settingBtn)
 
         modelsList.append(infoblock)
+    }
+
+    document.getElementById("colorPicker").onchange = function(e) {
+        l2dviewer.setBackgroundColor(String(this.value).replace(/#/, '0x'))
     }
 
     Array.from(document.getElementsByClassName('collapsible')).forEach(x => {
