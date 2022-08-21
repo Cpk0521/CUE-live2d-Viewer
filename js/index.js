@@ -81,26 +81,8 @@ function l2DViewer(){
         M.setAnchor(.5)
         M.setScale(.2)
         M._Model.position.set(this._app.screen.width/2, this._app.screen.height * 3/4);
-
-        M._Model.autoInteract = false
-
-        M._Model.buttonMode = true;
-        M._Model.on("pointerdown", (e) => {
-            M._Model.dragging = true;
-            M._Model._pointerX = e.data.global.x - M._Model.x;
-            M._Model._pointerY = e.data.global.y - M._Model.y;
-        });
-
-        M._Model.on("pointermove", (e) => {
-            if (M._Model.dragging) {
-                M._Model.position.x = e.data.global.x - M._Model._pointerX;
-                M._Model.position.y = e.data.global.y - M._Model._pointerY;
-            }
-        });
+        M.pointerEventBind()
         
-        M._Model.on("pointerupoutside", () => (M._Model.dragging = false));
-        M._Model.on("pointerup", () => (M._Model.dragging = false));
-
         this.log('model loaded')
     }
 
@@ -143,7 +125,7 @@ function l2dModel(){
         this._Model.internalModel.breath._breathParameters = [] //不搖頭
         
         this._ParametersValues.eyeBlink = [...this._Model.internalModel.eyeBlink._parameterIds] //Clone
-        this._Model.internalModel.eyeBlink._parameterIds = [] //不眨眼
+        // this._Model.internalModel.eyeBlink._parameterIds = [] //不眨眼
 
         this._ParametersValues.parameter = [] //Clone All Parameters Values
         this.getCoreModel()._parameterIds.map((p, index) => {
@@ -172,11 +154,41 @@ function l2dModel(){
             );
 
         })
-
     }
 
-    this.mouseBind = () => {
+    this.pointerEventBind = () => {
+        
+        this._Model.autoInteract = false;
+        this._Model.interactive = true;
+        this._Model.focusing = false;
 
+        this._Model.buttonMode = true;
+
+        this._Model.on("pointerdown", (e) => {
+            this._Model.dragging = true;
+            this._Model._pointerX = e.data.global.x - this._Model.x;
+            this._Model._pointerY = e.data.global.y - this._Model.y;
+        });
+
+        this._Model.on("pointermove", (e) => {
+            if (this._Model.dragging) {
+                this._Model.position.x = e.data.global.x - this._Model._pointerX;
+                this._Model.position.y = e.data.global.y - this._Model._pointerY;
+            }
+        });
+        
+        this._Model.on("pointerupoutside", () => (this._Model.dragging = false));
+        this._Model.on("pointerup", () => (this._Model.dragging = false));
+
+        // window.addEventListener('pointermove', (event) => {
+        //     if(this._Model.focusing)
+        //         this._Model.focus(event.clientX, event.clientY)
+        // });
+        
+        // window.addEventListener('pointerdown', (event) => {
+        //     if(this._Model.focusing)
+        //         this._Model.tap(event.clientX, event.clientY)
+        // });
     }
 
     this.setName = (char, cost) => {
@@ -185,7 +197,7 @@ function l2dModel(){
     }
 
     this.setAnchor = (val) => {
-        this._Model.anchor.set(0.5);
+        this._Model.anchor.set(val);
     }
 
     this.setScale = (val) =>{
@@ -198,6 +210,14 @@ function l2dModel(){
 
     this.setAngle = (val) => {
         this._Model.angle = val
+    }
+
+    this.setInteractive = (bool) => {
+        this._Model.interactive = bool
+    }
+
+    this.setLookatMouse = (bool) => {
+        this._Model.focusing = bool
     }
 
     this.setParameters = (id, value) => {
@@ -252,6 +272,10 @@ function l2dModel(){
         return this._modelsetting?.motions
     }
 
+    this.getParamById = (id) => {
+        return this._ParametersValues.parameter.find(x => x.parameterIds == id)
+    }
+
     this.getAllParameters = () => {
         return this._ParametersValues.parameter
     }
@@ -273,7 +297,6 @@ function l2dModel(){
     }
 
 }
-
 
 const setupCharacterSelect = (data) => {
     let select = document.getElementById('characterSelect');
@@ -298,8 +321,7 @@ const setupCharacterSelect = (data) => {
 
 const setupCanvasBackgroundOption = (data) => {
     let list = document.getElementById('background-list');
-    // let inner = ``
-
+    
     data.map((val)=>{
         let btn = document.createElement('button')
         btn.innerHTML = `<img src='./image/${val.thumbnail}'><img>`
@@ -359,6 +381,8 @@ const setupModelSetting = (M) => {
         content.style.display = "none";
     })
 
+
+    //SET UP SCALE PARAMETER
     let scale_Range = document.getElementById('scaleRange')
     let scale_Num = document.getElementById('scaleNum')
     scale_Range.value = M.getScale().x
@@ -383,7 +407,7 @@ const setupModelSetting = (M) => {
         M.setScale(this.value)
     }
 
-
+    //SET UP ANGLE PARAMETER
     let angle_Range = document.getElementById('angleRange')
     let angle_Num = document.getElementById('angleNum')
     angle_Range.value = M.getAngle()
@@ -406,6 +430,50 @@ const setupModelSetting = (M) => {
         }
         angle_Range.value = this.value
         M.setAngle(this.value)
+    }
+
+    //SET UP MOUTHOPEN PARAMETER
+    let paramMouthOpenYRange = document.getElementById('paramMouthOpenYRange')
+    let paramMouthOpenYNum = document.getElementById('paramMouthOpenYNum')
+    let param = M.getParamById('ParamMouthOpenY')
+    paramMouthOpenYRange.max = param.max
+    paramMouthOpenYRange.min = param.min
+    paramMouthOpenYRange.value = M.getCoreModel().getPartOpacityById('ParamMouthOpenY')
+    paramMouthOpenYNum.max = param.max
+    paramMouthOpenYNum.min = param.min
+    paramMouthOpenYNum.value = paramMouthOpenYRange.value
+    paramMouthOpenYRange.oninput = function(e){
+        paramMouthOpenYNum.value = this.value
+        M.getCoreModel().setParameterValueById('ParamMouthOpenY', this.value)
+    }
+    paramMouthOpenYNum.oninput = function(e){
+        if(this.value == ""){
+            this.value = paramMouthOpenYRange.value
+            return
+        }
+
+        if(parseInt(this.value) < parseInt(this.min)){
+            this.value = this.min;
+        }
+        if(parseInt(this.value) > parseInt(this.max)){
+            this.value = this.max;
+        }
+        paramMouthOpenYRange.value = this.value
+        M.getCoreModel().setParameterValueById('ParamMouthOpenY', this.value)
+    }
+
+    //SET UP INTERACTIVE
+    // let focusingCheckbox = document.getElementById('FocusingCheckbox')    
+    // focusingCheckbox.checked = M._Model.focusing
+    // focusingCheckbox.onchange = function(e){
+    //     M.setLookatMouse(this.checked);
+    // }
+
+    //Drag
+    let dragCheckbox = document.getElementById('dragCheckbox')
+    dragCheckbox.checked = M._Model.interactive
+    dragCheckbox.onchange = function(e){
+        M.setInteractive(this.checked)
     }
 
 
@@ -431,9 +499,9 @@ const setupModelSetting = (M) => {
     for (const key in motions) {
         Array.from(motions[key]).forEach((m, index) => {
 
-            if(m['File'].includes('loop')){
-                return
-            }
+            // if(m['File'].includes('loop')){
+            //     return
+            // }
 
             let motionbtn = document.createElement("button");
             motionbtn.innerHTML = m['File'].replace('.motion3.json', "") ;
@@ -446,55 +514,55 @@ const setupModelSetting = (M) => {
     }
 
     //SET UP MOTIONS PARAMETER LIST
-    let parameterslist = document.getElementById('parameters-list')
-    let parameter = M.getAllParameters()
-    parameterslist.innerHTML = ''
+    // let parameterslist = document.getElementById('parameters-list')
+    // let parameter = M.getAllParameters()
+    // parameterslist.innerHTML = ''
 
-    parameter.map((param) => {
-        let p_div = document.createElement("div");
-        p_div.className = 'rangeOption'
-        p_div.innerHTML += `<p>${param.parameterIds}</p>`
+    // parameter.map((param) => {
+    //     let p_div = document.createElement("div");
+    //     p_div.className = 'rangeOption'
+    //     p_div.innerHTML += `<p>${param.parameterIds}</p>`
 
-        let range = document.createElement("input");
-        range.type = 'range'
-        range.className = 'input-range'
-        range.setAttribute('step', 0.01)
-        range.setAttribute('min', param.min)
-        range.setAttribute('max', param.max)
-        range.value = param.defaultValue
-        p_div.append(range)
+    //     let range = document.createElement("input");
+    //     range.type = 'range'
+    //     range.className = 'input-range'
+    //     range.setAttribute('step', 0.01)
+    //     range.setAttribute('min', param.min)
+    //     range.setAttribute('max', param.max)
+    //     range.value = param.defaultValue
+    //     p_div.append(range)
 
-        let text = document.createElement("input");
-        text.type = 'number'
-        text.setAttribute('step', 0.01)
-        text.setAttribute('min', param.min)
-        text.setAttribute('max', param.max)
-        text.value = param.defaultValue
-        p_div.append(text)
+    //     let text = document.createElement("input");
+    //     text.type = 'number'
+    //     text.setAttribute('step', 0.01)
+    //     text.setAttribute('min', param.min)
+    //     text.setAttribute('max', param.max)
+    //     text.value = param.defaultValue
+    //     p_div.append(text)
 
-        range.addEventListener('input', function(e){
-            text.value = this.value
-            M.setParameters(param.parameterIds, this.value)
-        })
+    //     range.addEventListener('input', function(e){
+    //         text.value = this.value
+    //         M.setParameters(param.parameterIds, this.value)
+    //     })
 
-        text.addEventListener('keyup', function(e){
-            if(this.value == ""){
-                this.value = range.value
-                return
-            }
+    //     text.addEventListener('keyup', function(e){
+    //         if(this.value == ""){
+    //             this.value = range.value
+    //             return
+    //         }
     
-            if(parseInt(this.value) < parseInt(this.min)){
-                this.value = this.min;
-            }
-            if(parseInt(this.value) > parseInt(this.max)){
-                this.value = this.max;
-            }
-            range.value = this.value
-            M.setParameters(param.parameterIds, this.value)
-        })
+    //         if(parseInt(this.value) < parseInt(this.min)){
+    //             this.value = this.min;
+    //         }
+    //         if(parseInt(this.value) > parseInt(this.max)){
+    //             this.value = this.max;
+    //         }
+    //         range.value = this.value
+    //         M.setParameters(param.parameterIds, this.value)
+    //     })
 
-        parameterslist.append(p_div)
-    })
+    //     parameterslist.append(p_div)
+    // })
 
 }
 
@@ -524,13 +592,10 @@ $(document).ready(async() => {
             })
             .then(response => response.json())
             .then(json => {
-                // console.log(json)
                 setupCanvasBackgroundOption(json)
             }).catch(function(error) {
                 console.log('failed while loading index.json.');
             });
-
-    // setupCharacterSelect(l2dmaster)
 
     l2dviewer = new l2DViewer()
     l2dviewer.createCanvas($("#viewer"))
