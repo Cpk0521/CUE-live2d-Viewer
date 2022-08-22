@@ -82,6 +82,13 @@ function l2DViewer(){
         M.setScale(.2)
         M._Model.position.set(this._app.screen.width/2, this._app.screen.height * 3/4);
         M.pointerEventBind()
+
+        let foreground = PIXI.Sprite.from(PIXI.Texture.WHITE);
+        foreground.width = M._Model.internalModel.width;
+        foreground.height = M._Model.internalModel.height;
+        foreground.alpha = 0.2;
+        foreground.visible = false
+        M.setForeground(foreground)
         
         this.log('model loaded')
     }
@@ -122,6 +129,7 @@ function l2dModel(){
         this._ParametersValues = {};
 
         this._ParametersValues.breath = [...this._Model.internalModel.breath._breathParameters] //Clone
+        this._Model.breathing = false
         this._Model.internalModel.breath._breathParameters = [] //不搖頭
         
         this._ParametersValues.eyeBlink = [...this._Model.internalModel.eyeBlink._parameterIds] //Clone
@@ -212,16 +220,34 @@ function l2dModel(){
         this._Model.angle = val
     }
 
+    this.setForeground = (Sprite) => {
+        this._Model.addChild(Sprite)
+    }
+
+    this.setForegroundVisible = (bool) => {
+        this._Model.children[0].visible = bool
+    }
+
     this.setInteractive = (bool) => {
         this._Model.interactive = bool
     }
-
-    this.setLookatMouse = (bool) => {
-        this._Model.focusing = bool
-    }
+    
+    // this.setLookatMouse = (bool) => {
+    //     this._Model.focusing = bool
+    // }
 
     this.setParameters = (id, value) => {
         this.getCoreModel().setParameterValueById(id, value)
+    }
+
+    this.setBreath = (bool) => {
+        this._Model.breathing = bool
+        if(!this._Model.breathing){
+            this._Model.internalModel.breath._breathParameters = []
+            return 
+        }
+
+        this._Model.internalModel.breath._breathParameters = [...this._ParametersValues.breath]
     }
 
     this.loadExpression = (index) => {
@@ -468,6 +494,20 @@ const setupModelSetting = (M) => {
     // focusingCheckbox.onchange = function(e){
     //     M.setLookatMouse(this.checked);
     // }
+
+    // SET UP BREATH
+    let breathCheckbox = document.getElementById('breathCheckbox')    
+    breathCheckbox.checked = M._Model.breathing
+    breathCheckbox.onchange = function(e){
+        M.setBreath(this.checked);
+    }
+
+    // SET UP FOREGROUND
+    let foregroundCheckbox = document.getElementById('foregroundCheckbox')    
+    foregroundCheckbox.checked = M._Model.children[0].visible
+    foregroundCheckbox.onchange = function(e){
+        M.setForegroundVisible(this.checked);
+    }
 
     //Drag
     let dragCheckbox = document.getElementById('dragCheckbox')
