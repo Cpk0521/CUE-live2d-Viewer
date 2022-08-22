@@ -133,7 +133,8 @@ function l2dModel(){
         this._Model.internalModel.breath._breathParameters = [] //不搖頭
         
         this._ParametersValues.eyeBlink = [...this._Model.internalModel.eyeBlink._parameterIds] //Clone
-        // this._Model.internalModel.eyeBlink._parameterIds = [] //不眨眼
+        this._Model.eyeBlinking = false
+        this._Model.internalModel.eyeBlink._parameterIds = [] //不眨眼
 
         this._ParametersValues.parameter = [] //Clone All Parameters Values
         this.getCoreModel()._parameterIds.map((p, index) => {
@@ -240,7 +241,7 @@ function l2dModel(){
         this.getCoreModel().setParameterValueById(id, value)
     }
 
-    this.setBreath = (bool) => {
+    this.setBreathing = (bool) => {
         this._Model.breathing = bool
         if(!this._Model.breathing){
             this._Model.internalModel.breath._breathParameters = []
@@ -248,6 +249,16 @@ function l2dModel(){
         }
 
         this._Model.internalModel.breath._breathParameters = [...this._ParametersValues.breath]
+    }
+
+    this.setEyeBlinking = (bool) => {
+        this._Model.eyeBlinking = bool
+        if(!this._Model.eyeBlinking){
+            this._Model.internalModel.eyeBlink._parameterIds = []
+            return 
+        }
+
+        this._Model.internalModel.eyeBlink._parameterIds = [...this._ParametersValues.eyeBlink]
     }
 
     this.loadExpression = (index) => {
@@ -496,10 +507,17 @@ const setupModelSetting = (M) => {
     // }
 
     // SET UP BREATH
-    let breathCheckbox = document.getElementById('breathCheckbox')    
-    breathCheckbox.checked = M._Model.breathing
-    breathCheckbox.onchange = function(e){
-        M.setBreath(this.checked);
+    let breathingCheckbox = document.getElementById('breathingCheckbox')    
+    breathingCheckbox.checked = M._Model.breathing
+    breathingCheckbox.onchange = function(e){
+        M.setBreathing(this.checked);
+    }
+
+    //SET UP EYEBLINKING
+    let eyeBlinkingCheckbox = document.getElementById('eyeBlinkingCheckbox')    
+    eyeBlinkingCheckbox.checked = M._Model.eyeBlinking
+    eyeBlinkingCheckbox.onchange = function(e){
+        M.setEyeBlinking(this.checked);
     }
 
     // SET UP FOREGROUND
@@ -539,9 +557,9 @@ const setupModelSetting = (M) => {
     for (const key in motions) {
         Array.from(motions[key]).forEach((m, index) => {
 
-            // if(m['File'].includes('loop')){
-            //     return
-            // }
+            if(m['File'].includes('loop')){
+                return
+            }
 
             let motionbtn = document.createElement("button");
             motionbtn.innerHTML = m['File'].replace('.motion3.json', "") ;
