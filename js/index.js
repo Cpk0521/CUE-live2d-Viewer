@@ -147,6 +147,15 @@ function l2dModel(){
             this._ParametersValues.parameter.push(parameter)
         })
 
+        this._ParametersValues.PartOpacity = [] //Clone All parts
+        this.getCoreModel()._partIds.map((p, index) => {
+            let part = {}
+            part.partId = p
+            part.defaultValue = this.getCoreModel().getPartOpacityById(p)
+
+            this._ParametersValues.PartOpacity.push(part)
+        })
+
         //復原Motion 篩走之前多餘的動作片段
         this.getMotionManager().on('motionLoaded', function (group, index, motion) {
             const curves = [];
@@ -233,12 +242,12 @@ function l2dModel(){
         this._Model.interactive = bool
     }
     
-    // this.setLookatMouse = (bool) => {
-    //     this._Model.focusing = bool
-    // }
-
     this.setParameters = (id, value) => {
         this.getCoreModel().setParameterValueById(id, value)
+    }
+
+    this.setPartOpacity = (id, value) => {
+        this.getCoreModel().setPartOpacityById(id, value)
     }
 
     this.setBreathing = (bool) => {
@@ -315,6 +324,14 @@ function l2dModel(){
 
     this.getAllParameters = () => {
         return this._ParametersValues.parameter
+    }
+
+    this.getPartOpacityById = (id) => {
+        return this._ParametersValues.PartOpacity.find(x => x.partId == id)
+    }
+
+    this.getAllPartOpacity = () => {
+        return this._ParametersValues.PartOpacity
     }
 
     this.getCoreModel = () => {
@@ -603,7 +620,7 @@ const setupModelSetting = (M) => {
             M.setParameters(param.parameterIds, this.value)
         })
 
-        text.addEventListener('keyup', function(e){
+        text.addEventListener('input', function(e){
             if(this.value == ""){
                 this.value = range.value
                 return
@@ -620,6 +637,57 @@ const setupModelSetting = (M) => {
         })
 
         parameterslist.append(p_div)
+    })
+
+    //SET UP MODEL PartOpacity LIST
+    let partOpacityList = document.getElementById('partOpacity-list')
+    let partOpacity = M.getAllPartOpacity()
+    partOpacityList.innerHTML = ''
+
+    partOpacity.map((param) => {
+        let p_div = document.createElement("div");
+        p_div.className = 'rangeOption'
+        p_div.innerHTML += `<p>${param.partId}</p>`
+
+        let range = document.createElement("input");
+        range.type = 'range'
+        range.className = 'input-range'
+        range.setAttribute('step', 1)
+        range.setAttribute('min', 0)
+        range.setAttribute('max', 1)
+        range.value = param.defaultValue
+        p_div.append(range)
+
+        let text = document.createElement("input");
+        text.type = 'number'
+        text.setAttribute('step', 1)
+        text.setAttribute('min', 0)
+        text.setAttribute('max', 1)
+        text.value = param.defaultValue
+        p_div.append(text)
+
+        range.addEventListener('input', function(e){
+            text.value = this.value
+            M.setPartOpacity(param.partId, this.value)
+        })
+
+        text.addEventListener('input', function(e){
+            if(this.value == ""){
+                this.value = range.value
+                return
+            }
+    
+            if(parseInt(this.value) < parseInt(this.min)){
+                this.value = this.min;
+            }
+            if(parseInt(this.value) > parseInt(this.max)){
+                this.value = this.max;
+            }
+            range.value = this.value
+            M.setPartOpacity(param.partId, this.value)
+        })
+
+        partOpacityList.append(p_div)
     })
 
 }
