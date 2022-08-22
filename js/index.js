@@ -571,56 +571,56 @@ const setupModelSetting = (M) => {
         })
     }
 
-    //SET UP MOTIONS PARAMETER LIST
-    // let parameterslist = document.getElementById('parameters-list')
-    // let parameter = M.getAllParameters()
-    // parameterslist.innerHTML = ''
+    //SET UP MODEL PARAMETER LIST
+    let parameterslist = document.getElementById('parameters-list')
+    let parameter = M.getAllParameters()
+    parameterslist.innerHTML = ''
 
-    // parameter.map((param) => {
-    //     let p_div = document.createElement("div");
-    //     p_div.className = 'rangeOption'
-    //     p_div.innerHTML += `<p>${param.parameterIds}</p>`
+    parameter.map((param) => {
+        let p_div = document.createElement("div");
+        p_div.className = 'rangeOption'
+        p_div.innerHTML += `<p>${param.parameterIds}</p>`
 
-    //     let range = document.createElement("input");
-    //     range.type = 'range'
-    //     range.className = 'input-range'
-    //     range.setAttribute('step', 0.01)
-    //     range.setAttribute('min', param.min)
-    //     range.setAttribute('max', param.max)
-    //     range.value = param.defaultValue
-    //     p_div.append(range)
+        let range = document.createElement("input");
+        range.type = 'range'
+        range.className = 'input-range'
+        range.setAttribute('step', 0.01)
+        range.setAttribute('min', param.min)
+        range.setAttribute('max', param.max)
+        range.value = param.defaultValue
+        p_div.append(range)
 
-    //     let text = document.createElement("input");
-    //     text.type = 'number'
-    //     text.setAttribute('step', 0.01)
-    //     text.setAttribute('min', param.min)
-    //     text.setAttribute('max', param.max)
-    //     text.value = param.defaultValue
-    //     p_div.append(text)
+        let text = document.createElement("input");
+        text.type = 'number'
+        text.setAttribute('step', 0.01)
+        text.setAttribute('min', param.min)
+        text.setAttribute('max', param.max)
+        text.value = param.defaultValue
+        p_div.append(text)
 
-    //     range.addEventListener('input', function(e){
-    //         text.value = this.value
-    //         M.setParameters(param.parameterIds, this.value)
-    //     })
+        range.addEventListener('input', function(e){
+            text.value = this.value
+            M.setParameters(param.parameterIds, this.value)
+        })
 
-    //     text.addEventListener('keyup', function(e){
-    //         if(this.value == ""){
-    //             this.value = range.value
-    //             return
-    //         }
+        text.addEventListener('keyup', function(e){
+            if(this.value == ""){
+                this.value = range.value
+                return
+            }
     
-    //         if(parseInt(this.value) < parseInt(this.min)){
-    //             this.value = this.min;
-    //         }
-    //         if(parseInt(this.value) > parseInt(this.max)){
-    //             this.value = this.max;
-    //         }
-    //         range.value = this.value
-    //         M.setParameters(param.parameterIds, this.value)
-    //     })
+            if(parseInt(this.value) < parseInt(this.min)){
+                this.value = this.min;
+            }
+            if(parseInt(this.value) > parseInt(this.max)){
+                this.value = this.max;
+            }
+            range.value = this.value
+            M.setParameters(param.parameterIds, this.value)
+        })
 
-    //     parameterslist.append(p_div)
-    // })
+        parameterslist.append(p_div)
+    })
 
 }
 
