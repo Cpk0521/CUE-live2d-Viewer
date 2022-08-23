@@ -198,15 +198,11 @@ function l2dModel(){
         this._Model.on("pointerupoutside", () => (this._Model.dragging = false));
         this._Model.on("pointerup", () => (this._Model.dragging = false));
 
-        // window.addEventListener('pointermove', (event) => {
-        //     if(this._Model.focusing)
-        //         this._Model.focus(event.clientX, event.clientY)
-        // });
-        
-        // window.addEventListener('pointerdown', (event) => {
-        //     if(this._Model.focusing)
-        //         this._Model.tap(event.clientX, event.clientY)
-        // });
+        let viewer = document.getElementById('viewer');
+        viewer.addEventListener('pointerdown', (e) => {
+            if(this._Model.focusing)
+                this._Model.focus(e.clientX, e.clientY)
+        });
     }
 
     this.setName = (char, cost) => {
@@ -240,6 +236,12 @@ function l2dModel(){
 
     this.setInteractive = (bool) => {
         this._Model.interactive = bool
+    }
+
+    this.setLookatMouse = (bool) => {
+        this._Model.focusing = bool
+        if(!bool)
+            this._Model.focus(this._Model.x, this._Model.y)
     }
     
     this.setParameters = (id, value) => {
@@ -517,11 +519,11 @@ const setupModelSetting = (M) => {
     }
 
     //SET UP INTERACTIVE
-    // let focusingCheckbox = document.getElementById('FocusingCheckbox')    
-    // focusingCheckbox.checked = M._Model.focusing
-    // focusingCheckbox.onchange = function(e){
-    //     M.setLookatMouse(this.checked);
-    // }
+    let focusingCheckbox = document.getElementById('FocusingCheckbox')    
+    focusingCheckbox.checked = M._Model.focusing
+    focusingCheckbox.onchange = function(e){
+        M.setLookatMouse(this.checked);
+    }
 
     // SET UP BREATH
     let breathingCheckbox = document.getElementById('breathingCheckbox')    
