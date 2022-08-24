@@ -16,11 +16,11 @@ function l2DViewer(){
     this.createCanvas = (div) => {
 
         let width = div.width() * 0.97;
-        let height = (width / 17) * 9; 
+        let height = (width / 2); 
         this._app.renderer.resize(width, height);
         div.html(this._app.view);
 
-        this.loadBackground('./image/background/base_178.png')
+        this.loadBackground('./image/backgrounds/bg_004.png')
 
         if (!this._containers['modelcontainer']){
             this._containers['modelcontainer'] = new PIXI.Container();
@@ -32,7 +32,7 @@ function l2DViewer(){
         window.onresize = (e)=>{
             if(e === void 0) { e = null; }
             let width = div.width() * 0.97;
-            let height = (width / 17) * 9;
+            let height = (width / 2); 
             this._app.renderer.resize(width, height);
 
             if(this._containers['bgcontainer']){
@@ -59,7 +59,8 @@ function l2DViewer(){
         bg.height = this._app.renderer.height;
 
         this._containers['bgcontainer'].addChild(bg);
-
+        
+        
         this.log('background updated')
     }
 

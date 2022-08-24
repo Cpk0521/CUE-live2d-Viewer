@@ -490,7 +490,7 @@ select {
     
     .container-opt {
         width: 100%;
-        min-height: auto!important;
+        min-height: 70vh!important;
         
     }
 
