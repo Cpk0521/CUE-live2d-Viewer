@@ -9,320 +9,407 @@
         "Physics": "003.physics3.json",
         "Expressions": [
             {
-                "Name": "F_01.exp3.json",
+                "Name": "F_01",
                 "File": "expressions/F_01.exp3.json"
             },
             {
-                "Name": "F_02.exp3.json",
+                "Name": "F_02",
                 "File": "expressions/F_02.exp3.json"
             },
             {
-                "Name": "F_03.exp3.json",
+                "Name": "F_03",
                 "File": "expressions/F_03.exp3.json"
             },
             {
-                "Name": "F_04.exp3.json",
+                "Name": "F_04",
                 "File": "expressions/F_04.exp3.json"
             },
             {
-                "Name": "F_05.exp3.json",
+                "Name": "F_05",
                 "File": "expressions/F_05.exp3.json"
             },
             {
-                "Name": "F_06.exp3.json",
+                "Name": "F_06",
                 "File": "expressions/F_06.exp3.json"
             },
             {
-                "Name": "F_07.exp3.json",
+                "Name": "F_07",
                 "File": "expressions/F_07.exp3.json"
             },
             {
-                "Name": "F_08.exp3.json",
+                "Name": "F_08",
                 "File": "expressions/F_08.exp3.json"
             },
             {
-                "Name": "F_09.exp3.json",
+                "Name": "F_09",
                 "File": "expressions/F_09.exp3.json"
             },
             {
-                "Name": "F_10.exp3.json",
+                "Name": "F_10",
                 "File": "expressions/F_10.exp3.json"
             },
             {
-                "Name": "F_11.exp3.json",
+                "Name": "F_11",
                 "File": "expressions/F_11.exp3.json"
             },
             {
-                "Name": "F_12.exp3.json",
+                "Name": "F_12",
                 "File": "expressions/F_12.exp3.json"
             },
             {
-                "Name": "F_13.exp3.json",
+                "Name": "F_13",
                 "File": "expressions/F_13.exp3.json"
             }
         ],
         "Motions": {
             "": [
                 {
-                    "File": "motions/LP_01.motion3.json"
+                    "File": "motions/LP_01.motion3.json",
+                    "Name": "LP_01"
                 },
                 {
-                    "File": "motions/LP_04.motion3.json"
+                    "File": "motions/LP_04.motion3.json",
+                    "Name": "LP_04"
                 },
                 {
-                    "File": "motions/LP_04_loop.motion3.json"
+                    "File": "motions/LP_04_loop.motion3.json",
+                    "Name": "LP_04_loop"
                 },
                 {
-                    "File": "motions/LP_07.motion3.json"
+                    "File": "motions/LP_07.motion3.json",
+                    "Name": "LP_07"
                 },
                 {
-                    "File": "motions/LP_07_loop.motion3.json"
+                    "File": "motions/LP_07_loop.motion3.json",
+                    "Name": "LP_07_loop"
                 },
                 {
-                    "File": "motions/LP_08.motion3.json"
+                    "File": "motions/LP_08.motion3.json",
+                    "Name": "LP_08"
                 },
                 {
-                    "File": "motions/LP_08_loop.motion3.json"
+                    "File": "motions/LP_08_loop.motion3.json",
+                    "Name": "LP_08_loop"
                 },
                 {
-                    "File": "motions/LP_09.motion3.json"
+                    "File": "motions/LP_09.motion3.json",
+                    "Name": "LP_09"
                 },
                 {
-                    "File": "motions/LP_09_loop.motion3.json"
+                    "File": "motions/LP_09_loop.motion3.json",
+                    "Name": "LP_09_loop"
                 },
                 {
-                    "File": "motions/LP_11.motion3.json"
+                    "File": "motions/LP_11.motion3.json",
+                    "Name": "LP_11"
                 },
                 {
-                    "File": "motions/LP_11_loop.motion3.json"
+                    "File": "motions/LP_11_loop.motion3.json",
+                    "Name": "LP_11_loop"
                 },
                 {
-                    "File": "motions/LP_12.motion3.json"
+                    "File": "motions/LP_12.motion3.json",
+                    "Name": "LP_12"
                 },
                 {
-                    "File": "motions/LP_12_loop.motion3.json"
+                    "File": "motions/LP_12_loop.motion3.json",
+                    "Name": "LP_12_loop"
                 },
                 {
-                    "File": "motions/LP_16.motion3.json"
+                    "File": "motions/LP_16.motion3.json",
+                    "Name": "LP_16"
                 },
                 {
-                    "File": "motions/LP_16_loop.motion3.json"
+                    "File": "motions/LP_16_loop.motion3.json",
+                    "Name": "LP_16_loop"
                 },
                 {
-                    "File": "motions/LP_18.motion3.json"
+                    "File": "motions/LP_18.motion3.json",
+                    "Name": "LP_18"
                 },
                 {
-                    "File": "motions/LP_18_loop.motion3.json"
+                    "File": "motions/LP_18_loop.motion3.json",
+                    "Name": "LP_18_loop"
                 },
                 {
-                    "File": "motions/LP_19.motion3.json"
+                    "File": "motions/LP_19.motion3.json",
+                    "Name": "LP_19"
                 },
                 {
-                    "File": "motions/LP_19_loop.motion3.json"
+                    "File": "motions/LP_19_loop.motion3.json",
+                    "Name": "LP_19_loop"
                 },
                 {
-                    "File": "motions/LP_20.motion3.json"
+                    "File": "motions/LP_20.motion3.json",
+                    "Name": "LP_20"
                 },
                 {
-                    "File": "motions/LP_20_loop.motion3.json"
+                    "File": "motions/LP_20_loop.motion3.json",
+                    "Name": "LP_20_loop"
                 },
                 {
-                    "File": "motions/LP_21.motion3.json"
+                    "File": "motions/LP_21.motion3.json",
+                    "Name": "LP_21"
                 },
                 {
-                    "File": "motions/LP_21_loop.motion3.json"
+                    "File": "motions/LP_21_loop.motion3.json",
+                    "Name": "LP_21_loop"
                 },
                 {
-                    "File": "motions/LP_22.motion3.json"
+                    "File": "motions/LP_22.motion3.json",
+                    "Name": "LP_22"
                 },
                 {
-                    "File": "motions/LP_22_loop.motion3.json"
+                    "File": "motions/LP_22_loop.motion3.json",
+                    "Name": "LP_22_loop"
                 },
                 {
-                    "File": "motions/LP_24.motion3.json"
+                    "File": "motions/LP_24.motion3.json",
+                    "Name": "LP_24"
                 },
                 {
-                    "File": "motions/LP_24_loop.motion3.json"
+                    "File": "motions/LP_24_loop.motion3.json",
+                    "Name": "LP_24_loop"
                 },
                 {
-                    "File": "motions/P_01.motion3.json"
+                    "File": "motions/P_01.motion3.json",
+                    "Name": "P_01"
                 },
                 {
-                    "File": "motions/P_04.motion3.json"
+                    "File": "motions/P_04.motion3.json",
+                    "Name": "P_04"
                 },
                 {
-                    "File": "motions/P_04_loop.motion3.json"
+                    "File": "motions/P_04_loop.motion3.json",
+                    "Name": "P_04_loop"
                 },
                 {
-                    "File": "motions/P_07.motion3.json"
+                    "File": "motions/P_07.motion3.json",
+                    "Name": "P_07"
                 },
                 {
-                    "File": "motions/P_07_loop.motion3.json"
+                    "File": "motions/P_07_loop.motion3.json",
+                    "Name": "P_07_loop"
                 },
                 {
-                    "File": "motions/P_08.motion3.json"
+                    "File": "motions/P_08.motion3.json",
+                    "Name": "P_08"
                 },
                 {
-                    "File": "motions/P_08_loop.motion3.json"
+                    "File": "motions/P_08_loop.motion3.json",
+                    "Name": "P_08_loop"
                 },
                 {
-                    "File": "motions/P_09.motion3.json"
+                    "File": "motions/P_09.motion3.json",
+                    "Name": "P_09"
                 },
                 {
-                    "File": "motions/P_09_loop.motion3.json"
+                    "File": "motions/P_09_loop.motion3.json",
+                    "Name": "P_09_loop"
                 },
                 {
-                    "File": "motions/P_11.motion3.json"
+                    "File": "motions/P_11.motion3.json",
+                    "Name": "P_11"
                 },
                 {
-                    "File": "motions/P_11_loop.motion3.json"
+                    "File": "motions/P_11_loop.motion3.json",
+                    "Name": "P_11_loop"
                 },
                 {
-                    "File": "motions/P_12.motion3.json"
+                    "File": "motions/P_12.motion3.json",
+                    "Name": "P_12"
                 },
                 {
-                    "File": "motions/P_12_loop.motion3.json"
+                    "File": "motions/P_12_loop.motion3.json",
+                    "Name": "P_12_loop"
                 },
                 {
-                    "File": "motions/P_16.motion3.json"
+                    "File": "motions/P_16.motion3.json",
+                    "Name": "P_16"
                 },
                 {
-                    "File": "motions/P_16_loop.motion3.json"
+                    "File": "motions/P_16_loop.motion3.json",
+                    "Name": "P_16_loop"
                 },
                 {
-                    "File": "motions/P_18.motion3.json"
+                    "File": "motions/P_18.motion3.json",
+                    "Name": "P_18"
                 },
                 {
-                    "File": "motions/P_18_loop.motion3.json"
+                    "File": "motions/P_18_loop.motion3.json",
+                    "Name": "P_18_loop"
                 },
                 {
-                    "File": "motions/P_19.motion3.json"
+                    "File": "motions/P_19.motion3.json",
+                    "Name": "P_19"
                 },
                 {
-                    "File": "motions/P_19_loop.motion3.json"
+                    "File": "motions/P_19_loop.motion3.json",
+                    "Name": "P_19_loop"
                 },
                 {
-                    "File": "motions/P_20.motion3.json"
+                    "File": "motions/P_20.motion3.json",
+                    "Name": "P_20"
                 },
                 {
-                    "File": "motions/P_20_loop.motion3.json"
+                    "File": "motions/P_20_loop.motion3.json",
+                    "Name": "P_20_loop"
                 },
                 {
-                    "File": "motions/P_21.motion3.json"
+                    "File": "motions/P_21.motion3.json",
+                    "Name": "P_21"
                 },
                 {
-                    "File": "motions/P_21_loop.motion3.json"
+                    "File": "motions/P_21_loop.motion3.json",
+                    "Name": "P_21_loop"
                 },
                 {
-                    "File": "motions/P_22.motion3.json"
+                    "File": "motions/P_22.motion3.json",
+                    "Name": "P_22"
                 },
                 {
-                    "File": "motions/P_22_loop.motion3.json"
+                    "File": "motions/P_22_loop.motion3.json",
+                    "Name": "P_22_loop"
                 },
                 {
-                    "File": "motions/P_24.motion3.json"
+                    "File": "motions/P_24.motion3.json",
+                    "Name": "P_24"
                 },
                 {
-                    "File": "motions/P_24_loop.motion3.json"
+                    "File": "motions/P_24_loop.motion3.json",
+                    "Name": "P_24_loop"
                 },
                 {
-                    "File": "motions/P_25.motion3.json"
+                    "File": "motions/P_25.motion3.json",
+                    "Name": "P_25"
                 },
                 {
-                    "File": "motions/P_25_loop.motion3.json"
+                    "File": "motions/P_25_loop.motion3.json",
+                    "Name": "P_25_loop"
                 },
                 {
-                    "File": "motions/P_26.motion3.json"
+                    "File": "motions/P_26.motion3.json",
+                    "Name": "P_26"
                 },
                 {
-                    "File": "motions/P_26_loop.motion3.json"
+                    "File": "motions/P_26_loop.motion3.json",
+                    "Name": "P_26_loop"
                 },
                 {
-                    "File": "motions/P_27.motion3.json"
+                    "File": "motions/P_27.motion3.json",
+                    "Name": "P_27"
                 },
                 {
-                    "File": "motions/P_27_loop.motion3.json"
+                    "File": "motions/P_27_loop.motion3.json",
+                    "Name": "P_27_loop"
                 },
                 {
-                    "File": "motions/RP_01.motion3.json"
+                    "File": "motions/RP_01.motion3.json",
+                    "Name": "RP_01"
                 },
                 {
-                    "File": "motions/RP_04.motion3.json"
+                    "File": "motions/RP_04.motion3.json",
+                    "Name": "RP_04"
                 },
                 {
-                    "File": "motions/RP_04_loop.motion3.json"
+                    "File": "motions/RP_04_loop.motion3.json",
+                    "Name": "RP_04_loop"
                 },
                 {
-                    "File": "motions/RP_07.motion3.json"
+                    "File": "motions/RP_07.motion3.json",
+                    "Name": "RP_07"
                 },
                 {
-                    "File": "motions/RP_07_loop.motion3.json"
+                    "File": "motions/RP_07_loop.motion3.json",
+                    "Name": "RP_07_loop"
                 },
                 {
-                    "File": "motions/RP_08.motion3.json"
+                    "File": "motions/RP_08.motion3.json",
+                    "Name": "RP_08"
                 },
                 {
-                    "File": "motions/RP_08_loop.motion3.json"
+                    "File": "motions/RP_08_loop.motion3.json",
+                    "Name": "RP_08_loop"
                 },
                 {
-                    "File": "motions/RP_09.motion3.json"
+                    "File": "motions/RP_09.motion3.json",
+                    "Name": "RP_09"
                 },
                 {
-                    "File": "motions/RP_09_loop.motion3.json"
+                    "File": "motions/RP_09_loop.motion3.json",
+                    "Name": "RP_09_loop"
                 },
                 {
-                    "File": "motions/RP_11.motion3.json"
+                    "File": "motions/RP_11.motion3.json",
+                    "Name": "RP_11"
                 },
                 {
-                    "File": "motions/RP_11_loop.motion3.json"
+                    "File": "motions/RP_11_loop.motion3.json",
+                    "Name": "RP_11_loop"
                 },
                 {
-                    "File": "motions/RP_12.motion3.json"
+                    "File": "motions/RP_12.motion3.json",
+                    "Name": "RP_12"
                 },
                 {
-                    "File": "motions/RP_12_loop.motion3.json"
+                    "File": "motions/RP_12_loop.motion3.json",
+                    "Name": "RP_12_loop"
                 },
                 {
-                    "File": "motions/RP_16.motion3.json"
+                    "File": "motions/RP_16.motion3.json",
+                    "Name": "RP_16"
                 },
                 {
-                    "File": "motions/RP_16_loop.motion3.json"
+                    "File": "motions/RP_16_loop.motion3.json",
+                    "Name": "RP_16_loop"
                 },
                 {
-                    "File": "motions/RP_18.motion3.json"
+                    "File": "motions/RP_18.motion3.json",
+                    "Name": "RP_18"
                 },
                 {
-                    "File": "motions/RP_18_loop.motion3.json"
+                    "File": "motions/RP_18_loop.motion3.json",
+                    "Name": "RP_18_loop"
                 },
                 {
-                    "File": "motions/RP_19.motion3.json"
+                    "File": "motions/RP_19.motion3.json",
+                    "Name": "RP_19"
                 },
                 {
-                    "File": "motions/RP_19_loop.motion3.json"
+                    "File": "motions/RP_19_loop.motion3.json",
+                    "Name": "RP_19_loop"
                 },
                 {
-                    "File": "motions/RP_20.motion3.json"
+                    "File": "motions/RP_20.motion3.json",
+                    "Name": "RP_20"
                 },
                 {
-                    "File": "motions/RP_20_loop.motion3.json"
+                    "File": "motions/RP_20_loop.motion3.json",
+                    "Name": "RP_20_loop"
                 },
                 {
-                    "File": "motions/RP_21.motion3.json"
+                    "File": "motions/RP_21.motion3.json",
+                    "Name": "RP_21"
                 },
                 {
-                    "File": "motions/RP_21_loop.motion3.json"
+                    "File": "motions/RP_21_loop.motion3.json",
+                    "Name": "RP_21_loop"
                 },
                 {
-                    "File": "motions/RP_22.motion3.json"
+                    "File": "motions/RP_22.motion3.json",
+                    "Name": "RP_22"
                 },
                 {
-                    "File": "motions/RP_22_loop.motion3.json"
+                    "File": "motions/RP_22_loop.motion3.json",
+                    "Name": "RP_22_loop"
                 },
                 {
-                    "File": "motions/RP_24.motion3.json"
+                    "File": "motions/RP_24.motion3.json",
+                    "Name": "RP_24"
                 },
                 {
-                    "File": "motions/RP_24_loop.motion3.json"
+                    "File": "motions/RP_24_loop.motion3.json",
+                    "Name": "RP_24_loop"
                 }
             ]
         }
