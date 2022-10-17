@@ -273,23 +273,40 @@ PIXI.live2d.CubismMotion.prototype.doUpdateParameters = function (model, userTim
     }
   }
 
-
   //重寫讀取部件部分
-  for (let index = 0; index < curves.length; ++index) {
+  // for (let index = 0; index < curves.length; ++index) {
     
-    if(curves[index].type != PIXI.live2d.CubismMotionCurveTarget.CubismMotionCurveTarget_PartOpacity)
+  //   if(curves[index].type != PIXI.live2d.CubismMotionCurveTarget.CubismMotionCurveTarget_PartOpacity)
+  //     continue;
+    
+  //   parameterIndex = model.getPartIndex(curves.at(index).id);
+
+  //   if (parameterIndex == -1)
+  //     continue;
+    
+  //   value = evaluateCurve(this._motionData, index, time);
+
+  //   model.setPartOpacityByIndex(parameterIndex, value);
+
+  // }
+
+  for (; c < curves.length; ++c) {
+    
+    if(curves[c].type != PIXI.live2d.CubismMotionCurveTarget.CubismMotionCurveTarget_PartOpacity)
       continue;
     
-    parameterIndex = model.getPartIndex(curves.at(index).id);
+    parameterIndex = model.getPartIndex(curves.at(c).id);
 
     if (parameterIndex == -1)
       continue;
     
-    value = evaluateCurve(this._motionData, index, time);
+    value = evaluateCurve(this._motionData, c, time);
 
     model.setPartOpacityByIndex(parameterIndex, value);
 
   }
+
+
 
   // for (
   //   ;

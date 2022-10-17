@@ -148,7 +148,7 @@ function l2dModel(){
             this._ParametersValues.parameter.push(parameter)
         })
 
-        this._ParametersValues.PartOpacity = [] //Clone All parts
+        this._ParametersValues.PartOpacity = [] //Clone All Part Opacity
         this.getCoreModel()._partIds.map((p, index) => {
             let part = {}
             part.partId = p
@@ -278,6 +278,14 @@ function l2dModel(){
     }
 
     this.loadMotion = (group, index, priority) => {
+        // this._Model.internalModel.pose
+
+        // this._ParametersValues.PartOpacity.map((x)=>{
+        //     this.getCoreModel().setParameterValueById(x.partId, x.defaultValue)
+        // })
+
+        // console.log(this.getCoreModel())
+
         this._Model.motion(group, index, priority)
     }
 
@@ -561,7 +569,7 @@ const setupModelSetting = (M) => {
     expressionslist.innerHTML = ''
     Array.from(expressions).forEach((exp, index)=>{
         let expbtn = document.createElement("button");
-        expbtn.innerHTML = exp['Name'].replace('.exp3.json', '');
+        expbtn.innerHTML = exp['Name']
         expbtn.addEventListener('click', ()=>{
             M.loadExpression(index)
         })
@@ -582,7 +590,7 @@ const setupModelSetting = (M) => {
             }
 
             let motionbtn = document.createElement("button");
-            motionbtn.innerHTML = m['File'].replace('.motion3.json', "") ;
+            motionbtn.innerHTML = m['Name']
             motionbtn.addEventListener("click", ()=>{
                 M.loadMotion(key, index, 'FORCE')
             })
@@ -655,7 +663,7 @@ const setupModelSetting = (M) => {
         let range = document.createElement("input");
         range.type = 'range'
         range.className = 'input-range'
-        range.setAttribute('step', 1)
+        range.setAttribute('step', 0.1)
         range.setAttribute('min', 0)
         range.setAttribute('max', 1)
         range.value = param.defaultValue
@@ -663,7 +671,7 @@ const setupModelSetting = (M) => {
 
         let text = document.createElement("input");
         text.type = 'number'
-        text.setAttribute('step', 1)
+        text.setAttribute('step', 0.1)
         text.setAttribute('min', 0)
         text.setAttribute('max', 1)
         text.value = param.defaultValue
@@ -799,3 +807,19 @@ $(document).ready(async() => {
 
 
 })
+
+
+
+// background 
+// {
+//     "thumbnail" : "backgroundthumbnail/background_thumb038.png",
+//     "background_src" : "backgrounds/bg_038.png"
+// },
+// {
+//     "thumbnail" : "backgroundthumbnail/background_thumb039.png",
+//     "background_src" : "backgrounds/bg_039.png"
+// },
+// {
+//     "thumbnail" : "backgroundthumbnail/background_thumb042.png",
+//     "background_src" : "backgrounds/bg_042.png"
+// },
