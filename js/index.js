@@ -807,3 +807,19 @@ $(document).ready(async() => {
 
 
 })
+
+
+
+// background 
+// {
+//     "thumbnail" : "backgroundthumbnail/background_thumb038.png",
+//     "background_src" : "backgrounds/bg_038.png"
+// },
+// {
+//     "thumbnail" : "backgroundthumbnail/background_thumb039.png",
+//     "background_src" : "backgrounds/bg_039.png"
+// },
+// {
+//     "thumbnail" : "backgroundthumbnail/background_thumb042.png",
+//     "background_src" : "backgrounds/bg_042.png"
+// },
