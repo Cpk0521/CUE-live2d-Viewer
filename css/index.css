@@ -1,3 +1,13 @@
+/* @font-face {
+    font-family: RodinCattleya_Pro_B;
+    src: url(../font/FOT_RodinCattleya_Pro_B.otf);
+}
+
+@font-face {
+    font-family: RodinCattleya_Pro_EB;
+    src: url(../font/FOT_RodinCattleya_Pro_EB.otf);
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -137,7 +147,7 @@ img {
     flex-direction: column;
     overflow: auto;
 
-    gap: 10px;
+    /* gap: 10px; */
     /* padding: 10px 10px; */
     animation: SlideIn .2s;
     height: 100%;
@@ -320,7 +330,7 @@ select {
 }
 
 #ModelsSettingList {
-    padding: 10px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
     gap: 0px;
 }
 

@@ -10,6 +10,7 @@ function l2DViewer(){
                     autoStart: true, 
                     backgroundColor : 0xFFFFFF
                 });
+    this.copyright = true
     this._containers = {}
     this._l2dModels = {}
 
@@ -17,6 +18,8 @@ function l2DViewer(){
 
         let width = div.width() * 0.97;
         let height = (width / 2); 
+        // let height = Math.floor(width / 16 * 9); 
+        
         this._app.renderer.resize(width, height);
         div.html(this._app.view);
 
@@ -29,6 +32,16 @@ function l2DViewer(){
             this._app.stage.addChild(this._containers['modelcontainer']);
         }
 
+        if(!this._containers['misclcontainer']) {
+            this._containers['misclcontainer'] = new PIXI.Container();
+            this._app.stage.addChild(this._containers['misclcontainer']);
+            this.copyright = true
+            const copyright = new PIXI.Sprite(PIXI.Texture.from('./image/misc/Title_CopyW.png'));
+            copyright.anchor.set(1)
+            copyright.position.set(this._app.screen.width, this._app.screen.height);
+            this._containers['misclcontainer'].addChild(copyright);
+        }
+        
         window.onresize = (e)=>{
             if(e === void 0) { e = null; }
             let width = div.width() * 0.97;
@@ -110,6 +123,12 @@ function l2DViewer(){
 
     this.findModel = (name) => {
         return this._l2dModels[name] ?? {}
+    }
+
+
+    this.switchCopyright = () => {
+        this.copyright = !this.copyright
+        this._containers['misclcontainer'].visible = this.copyright
     }
 
     this.log = (text = '') => {
@@ -278,13 +297,6 @@ function l2dModel(){
     }
 
     this.loadMotion = (group, index, priority) => {
-        // this._Model.internalModel.pose
-
-        // this._ParametersValues.PartOpacity.map((x)=>{
-        //     this.getCoreModel().setParameterValueById(x.partId, x.defaultValue)
-        // })
-
-        // console.log(this.getCoreModel())
 
         this._Model.motion(group, index, priority)
     }
@@ -362,6 +374,8 @@ function l2dModel(){
     }
 
 }
+
+
 
 const setupCharacterSelect = (data) => {
     let select = document.getElementById('characterSelect');
@@ -790,6 +804,12 @@ $(document).ready(async() => {
 
     document.getElementById("colorPicker").onchange = function(e) {
         l2dviewer.setBackgroundColor(String(this.value).replace(/#/, '0x'))
+    }
+
+    let copyrightCheckbox = document.getElementById("copyrightCheckbox");
+    copyrightCheckbox.checked = l2dviewer.copyright
+    copyrightCheckbox.onchange = function(e){
+        l2dviewer.switchCopyright()
     }
 
     Array.from(document.getElementsByClassName('collapsible')).forEach(x => {

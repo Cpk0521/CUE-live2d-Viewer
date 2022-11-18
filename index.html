@@ -186,15 +186,32 @@
 
             <!-- CONTENT (Canvas Setting)-->
             <div class="tab-content" id='CanvasSetting'>
-              <button class="collapsible">Background</button>
-                <div class="collapsible-content">
-                  <div class="collapsible-list" id="background-list">
-                    <div class="color-info">
-                      <p>Color</p>
-                      <input type="color" class="colorPicker" id="colorPicker" />
-                    </div>
+
+              <button class="collapsible">Setting</button>
+              <div class="collapsible-content">
+                <div class="collapsible-list">
+                  <div class="checkBoxOption">
+                    <p>Copyright</p>
+                    <input type="checkbox" id="copyrightCheckbox" checked>
+                  </div>
+
+                  <div class="checkBoxOption">
+                    <p>Dialogue (Future.)</p>
+                    <input type="checkbox" id="copyrightCheckbox" disabled readonly>
                   </div>
                 </div>
+              </div>  
+
+              <button class="collapsible">Background</button>
+              <div class="collapsible-content">
+                <div class="collapsible-list" id="background-list">
+                  <div class="color-info">
+                    <p>Color</p>
+                    <input type="color" class="colorPicker" id="colorPicker" />
+                  </div>
+                </div>
+              </div>  
+              
             </div>
 
           </div>
@@ -212,12 +229,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.1/browser/pixi.min.js"></script>
   <!-- live2d SDK -->
   <!-- <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script> -->
-  <script src="./js/live2dcubismcore.min.js" type="text/javascript"></script>
+  <script src="./lib/live2dcubismcore.min.js" type="text/javascript"></script>
   <!-- pixi-live2d-display ( Cubism 3 and Cubism 4) -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js" type="text/javascript"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js" type="text/javascript"></script> -->
+  <script src="./lib/cubism4.js" type="text/javascript"></script>
   <!-- ownjs -->
-  <script src="./js/overwrite.js" type="text/javascript"></script>
+  <!-- <script src="./js/overwrite.js" type="text/javascript"></script> -->
   <script src="./js/index.js" type="text/javascript"></script>
 
 </html>
