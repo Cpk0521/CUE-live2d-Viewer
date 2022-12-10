@@ -1,6 +1,6 @@
 {
-    "FadeInTime": 0,
-    "FadeOutTime": 0,
+    "FadeInTime": 0.5,
+    "FadeOutTime": 0.5,
     "Parameters": [
         {
             "Blend": "Add",
@@ -83,17 +83,17 @@
             "Value": 2
         },
         {
-            "Blend": "Add",
+            "Blend": "Overwrite",
             "Id": "ParamMouthOpenY",
             "Value": 0
         },
         {
-            "Blend": "Add",
+            "Blend": "Overwrite",
             "Id": "Param_mouth_form01",
             "Value": -3
         },
         {
-            "Blend": "Add",
+            "Blend": "Overwrite",
             "Id": "Param_mouth_form02",
             "Value": 1
         },

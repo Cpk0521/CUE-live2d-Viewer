@@ -73,351 +73,525 @@
             "": [
                 {
                     "File": "motions/LP_01.motion3.json",
-                    "Name": "LP_01"
+                    "Name": "LP_01",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_04.motion3.json",
-                    "Name": "LP_04"
+                    "Name": "LP_04",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_04_loop.motion3.json",
-                    "Name": "LP_04_loop"
+                    "Name": "LP_04_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_06.motion3.json",
-                    "Name": "LP_06"
+                    "Name": "LP_06",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_06_loop.motion3.json",
-                    "Name": "LP_06_loop"
+                    "Name": "LP_06_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_07.motion3.json",
-                    "Name": "LP_07"
+                    "Name": "LP_07",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_07_loop.motion3.json",
-                    "Name": "LP_07_loop"
+                    "Name": "LP_07_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_08.motion3.json",
-                    "Name": "LP_08"
+                    "Name": "LP_08",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_08_loop.motion3.json",
-                    "Name": "LP_08_loop"
+                    "Name": "LP_08_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_11.motion3.json",
-                    "Name": "LP_11"
+                    "Name": "LP_11",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_11_loop.motion3.json",
-                    "Name": "LP_11_loop"
+                    "Name": "LP_11_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_12.motion3.json",
-                    "Name": "LP_12"
+                    "Name": "LP_12",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_12_loop.motion3.json",
-                    "Name": "LP_12_loop"
+                    "Name": "LP_12_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_15.motion3.json",
-                    "Name": "LP_15"
+                    "Name": "LP_15",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_15_loop.motion3.json",
-                    "Name": "LP_15_loop"
+                    "Name": "LP_15_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_18.motion3.json",
-                    "Name": "LP_18"
+                    "Name": "LP_18",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_18_loop.motion3.json",
-                    "Name": "LP_18_loop"
+                    "Name": "LP_18_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_19.motion3.json",
-                    "Name": "LP_19"
+                    "Name": "LP_19",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_19_loop.motion3.json",
-                    "Name": "LP_19_loop"
+                    "Name": "LP_19_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_20.motion3.json",
-                    "Name": "LP_20"
+                    "Name": "LP_20",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_20_loop.motion3.json",
-                    "Name": "LP_20_loop"
+                    "Name": "LP_20_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_21.motion3.json",
-                    "Name": "LP_21"
+                    "Name": "LP_21",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_21_loop.motion3.json",
-                    "Name": "LP_21_loop"
+                    "Name": "LP_21_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_22.motion3.json",
-                    "Name": "LP_22"
+                    "Name": "LP_22",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_22_loop.motion3.json",
-                    "Name": "LP_22_loop"
+                    "Name": "LP_22_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_24.motion3.json",
-                    "Name": "LP_24"
+                    "Name": "LP_24",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_24_loop.motion3.json",
-                    "Name": "LP_24_loop"
+                    "Name": "LP_24_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_31.motion3.json",
-                    "Name": "LP_31"
+                    "Name": "LP_31",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/LP_31_loop.motion3.json",
-                    "Name": "LP_31_loop"
+                    "Name": "LP_31_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_01.motion3.json",
-                    "Name": "P_01"
+                    "Name": "P_01",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_04.motion3.json",
-                    "Name": "P_04"
+                    "Name": "P_04",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_04_loop.motion3.json",
-                    "Name": "P_04_loop"
+                    "Name": "P_04_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_06.motion3.json",
-                    "Name": "P_06"
+                    "Name": "P_06",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_06_loop.motion3.json",
-                    "Name": "P_06_loop"
+                    "Name": "P_06_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_07.motion3.json",
-                    "Name": "P_07"
+                    "Name": "P_07",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_07_loop.motion3.json",
-                    "Name": "P_07_loop"
+                    "Name": "P_07_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_08.motion3.json",
-                    "Name": "P_08"
+                    "Name": "P_08",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_08_loop.motion3.json",
-                    "Name": "P_08_loop"
+                    "Name": "P_08_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_11.motion3.json",
-                    "Name": "P_11"
+                    "Name": "P_11",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_11_loop.motion3.json",
-                    "Name": "P_11_loop"
+                    "Name": "P_11_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_12.motion3.json",
-                    "Name": "P_12"
+                    "Name": "P_12",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_12_loop.motion3.json",
-                    "Name": "P_12_loop"
+                    "Name": "P_12_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_15.motion3.json",
-                    "Name": "P_15"
+                    "Name": "P_15",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_15_loop.motion3.json",
-                    "Name": "P_15_loop"
+                    "Name": "P_15_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_18.motion3.json",
-                    "Name": "P_18"
+                    "Name": "P_18",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_18_loop.motion3.json",
-                    "Name": "P_18_loop"
+                    "Name": "P_18_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_19.motion3.json",
-                    "Name": "P_19"
+                    "Name": "P_19",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_19_loop.motion3.json",
-                    "Name": "P_19_loop"
+                    "Name": "P_19_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_20.motion3.json",
-                    "Name": "P_20"
+                    "Name": "P_20",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_20_loop.motion3.json",
-                    "Name": "P_20_loop"
+                    "Name": "P_20_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_21.motion3.json",
-                    "Name": "P_21"
+                    "Name": "P_21",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_21_loop.motion3.json",
-                    "Name": "P_21_loop"
+                    "Name": "P_21_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_22.motion3.json",
-                    "Name": "P_22"
+                    "Name": "P_22",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_22_loop.motion3.json",
-                    "Name": "P_22_loop"
+                    "Name": "P_22_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_24.motion3.json",
-                    "Name": "P_24"
+                    "Name": "P_24",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_24_loop.motion3.json",
-                    "Name": "P_24_loop"
+                    "Name": "P_24_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_31.motion3.json",
-                    "Name": "P_31"
+                    "Name": "P_31",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/P_31_loop.motion3.json",
-                    "Name": "P_31_loop"
+                    "Name": "P_31_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_01.motion3.json",
-                    "Name": "RP_01"
+                    "Name": "RP_01",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_04.motion3.json",
-                    "Name": "RP_04"
+                    "Name": "RP_04",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_04_loop.motion3.json",
-                    "Name": "RP_04_loop"
+                    "Name": "RP_04_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_06.motion3.json",
-                    "Name": "RP_06"
+                    "Name": "RP_06",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_06_loop.motion3.json",
-                    "Name": "RP_06_loop"
+                    "Name": "RP_06_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_07.motion3.json",
-                    "Name": "RP_07"
+                    "Name": "RP_07",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_07_loop.motion3.json",
-                    "Name": "RP_07_loop"
+                    "Name": "RP_07_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_08.motion3.json",
-                    "Name": "RP_08"
+                    "Name": "RP_08",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_08_loop.motion3.json",
-                    "Name": "RP_08_loop"
+                    "Name": "RP_08_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_11.motion3.json",
-                    "Name": "RP_11"
+                    "Name": "RP_11",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_11_loop.motion3.json",
-                    "Name": "RP_11_loop"
+                    "Name": "RP_11_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_12.motion3.json",
-                    "Name": "RP_12"
+                    "Name": "RP_12",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_12_loop.motion3.json",
-                    "Name": "RP_12_loop"
+                    "Name": "RP_12_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_15.motion3.json",
-                    "Name": "RP_15"
+                    "Name": "RP_15",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_15_loop.motion3.json",
-                    "Name": "RP_15_loop"
+                    "Name": "RP_15_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_18.motion3.json",
-                    "Name": "RP_18"
+                    "Name": "RP_18",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_18_loop.motion3.json",
-                    "Name": "RP_18_loop"
+                    "Name": "RP_18_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_19.motion3.json",
-                    "Name": "RP_19"
+                    "Name": "RP_19",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_19_loop.motion3.json",
-                    "Name": "RP_19_loop"
+                    "Name": "RP_19_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_20.motion3.json",
-                    "Name": "RP_20"
+                    "Name": "RP_20",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_20_loop.motion3.json",
-                    "Name": "RP_20_loop"
+                    "Name": "RP_20_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_21.motion3.json",
-                    "Name": "RP_21"
+                    "Name": "RP_21",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_21_loop.motion3.json",
-                    "Name": "RP_21_loop"
+                    "Name": "RP_21_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_22.motion3.json",
-                    "Name": "RP_22"
+                    "Name": "RP_22",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_22_loop.motion3.json",
-                    "Name": "RP_22_loop"
+                    "Name": "RP_22_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_24.motion3.json",
-                    "Name": "RP_24"
+                    "Name": "RP_24",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_24_loop.motion3.json",
-                    "Name": "RP_24_loop"
+                    "Name": "RP_24_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_31.motion3.json",
-                    "Name": "RP_31"
+                    "Name": "RP_31",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 },
                 {
                     "File": "motions/RP_31_loop.motion3.json",
-                    "Name": "RP_31_loop"
+                    "Name": "RP_31_loop",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
                 }
             ]
         }
