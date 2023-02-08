@@ -187,22 +187,23 @@ function l2dModel(){
             this._ParametersValues.PartOpacity.push(part)
         })
 
-        //復原Motion 篩走之前多餘的動作片段
-        this.getMotionManager().on('motionLoaded', function (group, index, motion) {
-            const curves = [];
+        //重新排序
+        // this.getMotionManager().on('motionLoaded', function (group, index, motion) {
+        //     const curves = [];
 
-            motion._motionData.curves.forEach((f) => {
-              if (Array.isArray(curves[f.type])) curves[f.type].push(f);
-              else curves[f.type] = [f];
-            });
+        //     // motion._motionData.curves.forEach((f) => {
+        //     //   if (Array.isArray(curves[f.type])) curves[f.type].push(f);
+        //     //   else curves[f.type] = [f];
+        //     // });
 
-            motion._motionData.curves.splice(
-              0,
-              motion._motionData.curves.length,
-              ...curves.flat()
-            );
+        //     // motion._motionData.curves.splice(
+        //     //   0,
+        //     //   motion._motionData.curves.length,
+        //     //   ...curves.flat()
+        //     // );
 
-        })
+        //     // console.log(motion._motionData)
+        // })
     }
 
     this.pointerEventBind = () => {
