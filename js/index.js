@@ -191,18 +191,17 @@ function l2dModel(){
         // this.getMotionManager().on('motionLoaded', function (group, index, motion) {
         //     const curves = [];
 
-        //     // motion._motionData.curves.forEach((f) => {
-        //     //   if (Array.isArray(curves[f.type])) curves[f.type].push(f);
-        //     //   else curves[f.type] = [f];
-        //     // });
+        //     motion._motionData.curves.forEach((f) => {
+        //       if (Array.isArray(curves[f.type])) curves[f.type].push(f);
+        //       else curves[f.type] = [f];
+        //     });
 
-        //     // motion._motionData.curves.splice(
-        //     //   0,
-        //     //   motion._motionData.curves.length,
-        //     //   ...curves.flat()
-        //     // );
+        //     motion._motionData.curves.splice(
+        //       0,
+        //       motion._motionData.curves.length,
+        //       ...curves.flat()
+        //     );
 
-        //     // console.log(motion._motionData)
         // })
     }
 
@@ -849,7 +848,6 @@ $(document).ready(async() => {
 
 
 })
-
 
 
 // background 
