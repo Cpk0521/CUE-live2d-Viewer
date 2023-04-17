@@ -3,6 +3,8 @@
 var l2dviewer;
 var l2dmaster;
 
+PIXI.live2d.CubismConfig.setOpacityFromMotion = true
+
 function l2DViewer(){
     
     this._app = new PIXI.Application({
@@ -207,7 +209,7 @@ function l2dModel(){
 
     this.pointerEventBind = () => {
         
-        this._Model.autoInteract = false; //v7
+        this._Model.autoInteract = false;
         this._Model.interactive = true;
         this._Model.focusing = false;
 
