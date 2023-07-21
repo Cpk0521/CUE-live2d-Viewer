@@ -75,12 +75,13 @@ img {
 }
 
 #viewer {
-    width: 100%;
+    /* width: 100%; */
     margin: auto;
     text-align:center;
     /* position: sticky;
     top: 10vh; */
-    padding: 20px 0;
+    /* padding: 20px 0; */
+    padding: 20px;
 }
 
 .container-opt {    
@@ -498,6 +499,10 @@ select {
         width: 100%;
     }
     
+    #viewer {
+        padding: 0!important;
+    }
+
     .container-opt {
         width: 100%;
         min-height: 70vh!important;

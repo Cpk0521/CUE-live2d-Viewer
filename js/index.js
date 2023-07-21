@@ -3,156 +3,126 @@
 var l2dviewer;
 var l2dmaster;
 
-PIXI.live2d.CubismConfig.setOpacityFromMotion = true
+class l2dViewer{
 
-function l2DViewer(){
+    copyright = true
+    _containers = new Map()
+    _l2dModels = new Map()
     
-    this._app = new PIXI.Application({
-                    antialias: true,
-                    autoStart: true, 
-                    backgroundColor : 0xFFFFFF
-                });
-    this.copyright = true
-    this._containers = {}
-    this._l2dModels = {}
-
-    this.createCanvas = (div) => {
-
-        let width = div.width() * 0.97;
-        let height = (width / 2); 
-        // let height = Math.floor(width / 16 * 9); 
-        
-        this._app.renderer.resize(width, height);
-        div.html(this._app.view);
-
-        this.loadBackground('./image/backgrounds/bg_004.png')
-
-        if (!this._containers['modelcontainer']){
-            this._containers['modelcontainer'] = new PIXI.Container();
-            this._containers['modelcontainer'].width = width;
-            this._containers['modelcontainer'].height = height;
-            this._app.stage.addChild(this._containers['modelcontainer']);
+    constructor(element){
+        if (document.getElementById("viewer")) {
+            document.getElementById("viewer").remove();
         }
-
-        // if(!this._containers['misclcontainer']) {
-        //     this._containers['misclcontainer'] = new PIXI.Container();
-        //     this._app.stage.addChild(this._containers['misclcontainer']);
-        //     this.copyright = true
-        //     const copyright = new PIXI.Sprite(PIXI.Texture.from('./image/misc/Title_CopyW.png'));
-        //     copyright.anchor.set(1)
-        //     copyright.position.set(this._app.screen.width, this._app.screen.height);
-        //     copyright.width = 440
-        //     copyright.height = 22
-        //     this._containers['misclcontainer'].addChild(copyright);
-        // }
         
-        window.onresize = (e)=>{
-            if(e === void 0) { e = null; }
-            let width = div.width() * 0.97;
-            let height = (width / 2); 
-            this._app.renderer.resize(width, height);
+        this._element = element
+        this._app = new PIXI.Application({
+            hello : false,
+            width : 1334,
+            height : 750,
+            backgroundColor : 0x000000
+        });
 
-            if(this._containers['bgcontainer']){
-                this._containers['bgcontainer'].children.forEach((child)=>{
-                    child.width = width;
-                    child.height = height;
-                })
-            }
+        globalThis.__PIXI_APP__ = this._app;
 
-            // if(this._containers['misclcontainer']) {
-            //     this._containers['misclcontainer'].children.forEach((child)=>{
-            //         child.width = width / 440;
-            //         child.height = height / 22;
-            //         child.anchor.set(1)
-            //         child.position.set(this._app.screen.width, this._app.screen.height);
-            //     })
-            // }
-        }
-    }   
+        this._app.view.setAttribute("id", "viewer");
+        element.appendChild(this._app.view);
 
-    this.loadBackground = async (src) => {
+        this._resizeViwer();
+        window.addEventListener('resize', this._resizeViwer.bind(this));
 
-        if (!this._containers['bgcontainer']){
-            this._containers['bgcontainer'] = new PIXI.Container();
-            this._app.stage.addChild(this._containers['bgcontainer']);
-        }
+        let bgcontainer = new PIXI.Container();
+        this._app.stage.addChild(bgcontainer);
+        this._containers.set('BG', bgcontainer);
 
-        this._app.renderer.backgroundColor = 0xFFFFFF;
-        this._containers['bgcontainer'].removeChildren();
+        let modelcontainer = new PIXI.Container();
+        this._app.stage.addChild(modelcontainer);
+        this._containers.set('Models', modelcontainer);
 
-        let bg = await new PIXI.Sprite(PIXI.Texture.from(src));
-        bg.width = this._app.renderer.width;
-        bg.height = this._app.renderer.height;
-
-        this._containers['bgcontainer'].addChild(bg);
-        
-        
-        this.log('background updated')
+        this.loadBG('./image/backgrounds/bg_004.png')
     }
 
-    this.setBackgroundColor = (color) => {
-        this._containers['bgcontainer'].removeChildren();
-        this._app.renderer.backgroundColor = color
+    _resizeViwer(){
+        let elewidth = this._element.offsetWidth;
+        let eleheight = this._element.offsetHeight;
+
+        let ratio = Math.min(elewidth / 1334, eleheight / 750);
+        
+        let resizedX = 1334 * ratio;
+        let resizedY = 750 * ratio;
+        
+        this._app.view.style.width = `${resizedX}px`;
+        this._app.view.style.height = `${resizedY}px`;
+    }
+    
+    setBGColor(color) {
+        this._containers.get('BG').removeChildren();
+        this._app.renderer.background.color  = color
     }
 
-    this.addModel = (M) => {
+    loadBG(src) {
+        this.setBGColor(0xFFFFFF);
         
-        if(this.isModelInList(M.getIndexName())){
-            return
+        let bg = new PIXI.Sprite(PIXI.Texture.from(src));
+        bg.width = 1334;
+        bg.height = 750;
+        this._containers.get('BG').addChild(bg);
+
+        console.log('background updated')
+    }
+
+    addModel(model){
+        if(this._l2dModels.has(model.getIndexName())){
+            return;
         }
 
-        this._l2dModels[M.getIndexName()] = M
-        this._containers['modelcontainer'].addChild(M._Model);
-
+        this._l2dModels.set(model.getIndexName(), model);
+        this._containers.get('Models').addChild(model._Model);
         
-        M.setAnchor(.5)
-        M.setScale(.2)
-        M._Model.position.set(this._app.screen.width/2, this._app.screen.height * 3/4);
-        M.pointerEventBind()
+
+        model.setAnchor(.5);
+        model.setScale(.3);
+        model._Model.position.set(this._app.screen.width/2, this._app.screen.height * 3/4);
+        model.pointerEventBind();
 
         let foreground = PIXI.Sprite.from(PIXI.Texture.WHITE);
-        foreground.width = M._Model.internalModel.width;
-        foreground.height = M._Model.internalModel.height;
+        foreground.width = model._Model.internalModel.width;
+        foreground.height = model._Model.internalModel.height;
         foreground.alpha = 0.2;
         foreground.visible = false
-        M.setForeground(foreground)
-        
-        this.log('model loaded')
+        model.setForeground(foreground)
+
+        console.log('model loaded')
     }
 
-    this.removeModel = (name) => {
-        if (this.isModelInList(name)){
-            this._l2dModels[name]._Model.destroy()
-            this._containers['modelcontainer'].removeChild(this._l2dModels[name]._Model)
-            delete this._l2dModels[name]
+    removeModel(name) {
+        let model = this._l2dModels.get(name)
+        if(!model){
+            return;
         }
+        this._containers.get('Models').removeChild(model);
+        model._Model.destroy();
+        this._l2dModels.delete('name');
 
-        this.log('model removed')
-    }
-    
-    this.isModelInList = (name) => {
-        return name in this._l2dModels 
-    }
-
-    this.findModel = (name) => {
-        return this._l2dModels[name] ?? {}
+        console.log('model removed');
     }
 
-
-    // this.switchCopyright = () => {
-    //     this.copyright = !this.copyright
-    //     this._containers['misclcontainer'].visible = this.copyright
-    // }
-
-    this.log = (text = '') => {
-        console.log(text)
+    isModelInList(name){
+        return this._l2dModels.has(name);
     }
+
+    findModel(name){
+        return this._l2dModels.get(name);
+    }
+
 }
 
-function l2dModel(){
+PIXI.live2d.CubismConfig.setOpacityFromMotion = true
 
-    this.setModel = async(src) => {
+class HeroModel{
 
+    _container = new PIXI.Container()
+
+    async create(src){
         let settingsJSON = await fetch(src).then(res => res.json());
         settingsJSON.url = src;
 
@@ -188,26 +158,9 @@ function l2dModel(){
 
             this._ParametersValues.PartOpacity.push(part)
         })
-
-        //重新排序
-        // this.getMotionManager().on('motionLoaded', function (group, index, motion) {
-        //     const curves = [];
-
-        //     motion._motionData.curves.forEach((f) => {
-        //       if (Array.isArray(curves[f.type])) curves[f.type].push(f);
-        //       else curves[f.type] = [f];
-        //     });
-
-        //     motion._motionData.curves.splice(
-        //       0,
-        //       motion._motionData.curves.length,
-        //       ...curves.flat()
-        //     );
-
-        // })
     }
 
-    this.pointerEventBind = () => {
+    pointerEventBind() {
         
         this._Model.autoInteract = false;
         this._Model.interactive = true;
@@ -238,54 +191,89 @@ function l2dModel(){
         });
     }
 
-    this.setName = (char, cost) => {
+    setName(char, cost){
         this._ModelName = char;
         this._costume = cost;
     }
 
-    this.setAnchor = (val) => {
-        this._Model.anchor.set(val);
+    setAnchor(x, y){
+        if(!y) y = x
+        this._Model.anchor.set(x, y);
     }
 
-    this.setScale = (val) =>{
+    setScale(val){
         this._Model.scale.set(val)
     }
 
-    this.setAlpha = (val) => {
+    setAlpha(val){
         this._Model.aplha = val
     }
 
-    this.setAngle = (val) => {
+    setAngle(val){
         this._Model.angle = val
     }
 
-    this.setForeground = (Sprite) => {
+    setForeground(Sprite){
         this._Model.addChild(Sprite)
     }
 
-    this.setForegroundVisible = (bool) => {
+    setForegroundVisible(bool){
         this._Model.children[0].visible = bool
     }
 
-    this.setInteractive = (bool) => {
+    setInteractive(bool){
         this._Model.interactive = bool
     }
 
-    this.setLookatMouse = (bool) => {
+    setLookatMouse(bool){
         this._Model.focusing = bool
-        if(!bool)
+        if(!bool){
             this._Model.focus(this._Model.x, this._Model.y)
+        }
     }
+
+    //!!!!
+    // setLookat(value){
+
+    //     if(value == 0){
+    //         this.getFocusController().focus(0, 0)
+    //     }else{
+
+    //         let bound = this._Model.getBounds()
+    //         // console.log(bound)
+
+    //         let center = { x: this._Model.x , y: this._Model.y }
+    //         let r = this._Model.width
+    //         // let half_h = this._Model.height / 2
+            
+    //         let rand = (value - 90) * (Math.PI / 180)
+    //         let x = center.x + r * Math.cos(rand) 
+    //         let y = (center.y) + r * Math.sin(rand)
+
+    //         let testGraphics = new PIXI.Graphics()
+    //         testGraphics.beginFill(0xff0000);
+    //         testGraphics.drawRect(x, y, 10, 10);
+    //         testGraphics.endFill();
+
+    //         this._container.addChild(testGraphics)
+
+    //         console.log(x, y)
+
+    //         // this.getFocusController().focus(x, y)
+    //         this._Model.focus(x, y)
+    //         console.log(this._Model.focus)
+    //     }   
+    // }
     
-    this.setParameters = (id, value) => {
+    setParameters(id, value){
         this.getCoreModel().setParameterValueById(id, value)
     }
 
-    this.setPartOpacity = (id, value) => {
+    setPartOpacity(id, value){
         this.getCoreModel().setPartOpacityById(id, value)
     }
 
-    this.setBreathing = (bool) => {
+    setBreathing(bool){
         this._Model.breathing = bool
         if(!this._Model.breathing){
             this._Model.internalModel.breath._breathParameters = []
@@ -295,7 +283,7 @@ function l2dModel(){
         this._Model.internalModel.breath._breathParameters = [...this._ParametersValues.breath]
     }
 
-    this.setEyeBlinking = (bool) => {
+    setEyeBlinking(bool){
         this._Model.eyeBlinking = bool
         if(!this._Model.eyeBlinking){
             this._Model.internalModel.eyeBlink._parameterIds = []
@@ -305,100 +293,98 @@ function l2dModel(){
         this._Model.internalModel.eyeBlink._parameterIds = [...this._ParametersValues.eyeBlink]
     }
 
-    this.loadExpression = (index) => {
+    loadExpression(index){
         this.getExpressionManager().setExpression(index)
     }
 
-    this.executeMotionByName = (name, type = '') => {
+    executeMotionByName = (name, type = '') => {
         let index = this._getMotionByName(type, name)
         this.loadMotion(type, index, 'FORCE')
     }
 
-    this._getMotionByName = (type, name) => {
+    _getMotionByName = (type, name) => {
         let motions = this._modelsetting?.motions
         return motions[type].findIndex(motion => motion.Name == name)
     }
 
-    this.loadMotion = (group, index, priority) => {
+    loadMotion = (group, index, priority) => {
         this._Model.motion(group, index, priority)
     }
 
 
-    this.getAnchor = () => {
+    getAnchor(){
         return this._Model.anchor
     }
 
-    this.getScale = () => {
+    getScale(){
         return this._Model.scale
     }
 
-    this.getAlpha = () => {
+    getAlpha(){
         return this.aplha
     }
 
-    this.getAngle = () => {
+    getAngle(){
         return this._Model.angle
     }
 
-    this.getIndexName = () => {
+    getIndexName(){
         return `${this._ModelName}_${this._costume}`
     }
 
-    this.getSetting = () => {
+    getSetting(){
         return this._modelsetting
     }
 
-    this.getUrl = () => {
+    getUrl(){
         return this._modelsetting?.url
     }
 
-    this.getGroups = () => {
+    getGroups(){
         return this._modelsetting?.groups
     }
 
-    this.getExpressions = () => {
+    getExpressions(){
         return this._modelsetting?.expressions
     }
 
-    this.getMotions = () => {
+    getMotions(){
         return this._modelsetting?.motions
     }
 
-    this.getParamById = (id) => {
+    getParamById(id){
         return this._ParametersValues.parameter.find(x => x.parameterIds == id)
     }
 
-    this.getAllParameters = () => {
+    getAllParameters(){
         return this._ParametersValues.parameter
     }
 
-    this.getPartOpacityById = (id) => {
+    getPartOpacityById(id){
         return this._ParametersValues.PartOpacity.find(x => x.partId == id)
     }
 
-    this.getAllPartOpacity = () => {
+    getAllPartOpacity(){
         return this._ParametersValues.PartOpacity
     }
 
-    this.getCoreModel = () => {
+    getCoreModel(){
         return this._Model.internalModel.coreModel
     }
 
-    this.getMotionManager = () => {
+    getMotionManager(){
         return this._Model?.internalModel.motionManager
     }
 
-    this.getFocusController = () => {
+    getFocusController(){
         return this._Model?.internalModel.focusController
     }
 
-    this.getExpressionManager = () => {
+    getExpressionManager(){
         return this._Model?.internalModel.motionManager.expressionManager
     }
 
 }
-
-
 
 const setupCharacterSelect = (data) => {
     let select = document.getElementById('characterSelect');
@@ -428,7 +414,7 @@ const setupCanvasBackgroundOption = (data) => {
         let btn = document.createElement('button')
         btn.innerHTML = `<img src='./image/${val.thumbnail}'><img>`
         btn.onclick = () => {
-            l2dviewer?.loadBackground(`./image/${val.background_src}`)
+            l2dviewer?.loadBG(`./image/${val.background_src}`)
         }
 
         list.append(btn)
@@ -533,6 +519,32 @@ const setupModelSetting = (M) => {
         angle_Range.value = this.value
         M.setAngle(this.value)
     }
+
+    //!!!!
+    // let test_Range = document.getElementById('test')
+    // let test_Num = document.getElementById('testNum')
+    // test_Range.value = M.getAngle()
+    // test_Num.value = test_Range.value
+    // test_Range.oninput = function(e){
+    //     test_Num.value = this.value
+    //     M.setLookat(this.value)
+    // }
+    // test_Num.oninput = function(e){
+    //     if(this.value == ""){
+    //         this.value = test_Range.value
+    //         return
+    //     }
+
+    //     if(parseInt(this.value) < parseInt(this.min)){
+    //         this.value = this.min;
+    //     }
+    //     if(parseInt(this.value) > parseInt(this.max)){
+    //         this.value = this.max;
+    //     }
+    //     test_Range.value = this.value
+    //     M.setLookat(this.value)
+        
+    // }
 
     //SET UP MOUTHOPEN PARAMETER
     let paramMouthOpenYRange = document.getElementById('paramMouthOpenYRange')
@@ -771,8 +783,7 @@ $(document).ready(async() => {
                 console.log('failed while loading index.json.');
             });
 
-    l2dviewer = new l2DViewer()
-    l2dviewer.createCanvas($("#viewer"))
+    l2dviewer = new l2dViewer(document.getElementById('viewer-place'))
     
     document.getElementById('addL2DModelBtn').onclick = async () => {
         let charvalue = document.getElementById('characterSelect');
@@ -792,8 +803,9 @@ $(document).ready(async() => {
             return
         }
         
-        let M = new l2dModel()
-        await M.setModel(costdata.path)
+        let M = new HeroModel()
+        // await M.setModel(costdata.path)
+        await M.create(costdata.path)
         M.setName(fulldata.name, costdata.costumeName)
         l2dviewer.addModel(M)
         
@@ -826,7 +838,7 @@ $(document).ready(async() => {
     }
 
     document.getElementById("colorPicker").onchange = function(e) {
-        l2dviewer.setBackgroundColor(String(this.value).replace(/#/, '0x'))
+        l2dviewer.setBGColor(String(this.value).replace(/#/, '0x'))
     }
 
     // let copyrightCheckbox = document.getElementById("copyrightCheckbox");
@@ -850,18 +862,3 @@ $(document).ready(async() => {
 
 
 })
-
-
-// background 
-// {
-//     "thumbnail" : "backgroundthumbnail/background_thumb038.png",
-//     "background_src" : "backgrounds/bg_038.png"
-// },
-// {
-//     "thumbnail" : "backgroundthumbnail/background_thumb039.png",
-//     "background_src" : "backgrounds/bg_039.png"
-// },
-// {
-//     "thumbnail" : "backgroundthumbnail/background_thumb042.png",
-//     "background_src" : "backgrounds/bg_042.png"
-// },
