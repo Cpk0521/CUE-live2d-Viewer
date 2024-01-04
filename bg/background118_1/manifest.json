@@ -1,0 +1,49 @@
+{
+    "env": {
+        "name": "background118_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 296.0,
+            "x": 667.1366599947214,
+            "y": 147.8699951171875
+        },
+        {
+            "name": "Flare",
+            "image": "flare.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 667.0,
+            "height": 375.0,
+            "x": 334.54998779296875,
+            "y": 188.1199951171875
+        },
+        {
+            "name": "Cloud (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1669.5400390625,
+            "height": 311.80999755859375,
+            "x": 832.6999969482422,
+            "y": 78.5
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

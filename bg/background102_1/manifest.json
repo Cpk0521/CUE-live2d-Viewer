@@ -1,0 +1,21 @@
+{
+    "env": {
+        "name": "background102_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Image",
+            "image": "bg_102_1.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

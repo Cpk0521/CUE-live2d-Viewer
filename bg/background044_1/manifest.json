@@ -1,0 +1,95 @@
+{
+    "env": {
+        "name": "background044_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky Trim",
+            "image": "sky_trim.png",
+            "parent": "root",
+            "width": 760.0,
+            "height": 400.0,
+            "x": 0.0,
+            "y": 400.0,
+            "pivotX": 0.0,
+            "pivotY": 1.0
+        },
+        {
+            "name": "Cloud1 Trim",
+            "image": "cloud_trim.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 206.0,
+            "x": 667.0,
+            "y": 124.60000610351562
+        },
+        {
+            "name": "Cloud2 Trim",
+            "image": "cloud_trim.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 206.0,
+            "x": 2001.0,
+            "y": 124.60000610351562
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "Image_Star_A",
+            "image": "star_A.png",
+            "parent": "root",
+            "width": 46.5,
+            "height": 54.5,
+            "x": 87.6998291015625,
+            "y": 27.257781982421875
+        },
+        {
+            "name": "Image_Star_B",
+            "image": "star_B.png",
+            "parent": "root",
+            "width": 39.5,
+            "height": 84.0,
+            "x": 173.72003173828125,
+            "y": 41.937774658203125
+        },
+        {
+            "name": "Image_Star_C",
+            "image": "star_C.png",
+            "parent": "root",
+            "width": 34.0,
+            "height": 116.5,
+            "x": 279.1034851074219,
+            "y": 58.25006103515625
+        },
+        {
+            "name": "Image_Star_D",
+            "image": "star_D.png",
+            "parent": "root",
+            "width": 34.0,
+            "height": 149.0,
+            "x": 340.469970703125,
+            "y": 74.4378662109375
+        },
+        {
+            "name": "Image_Star_E",
+            "image": "star_E.png",
+            "parent": "root",
+            "width": 29.0,
+            "height": 158.5,
+            "x": 394.1050109863281,
+            "y": 87.77987670898438
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

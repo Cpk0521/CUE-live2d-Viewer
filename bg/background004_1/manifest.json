@@ -1,0 +1,50 @@
+{
+    "env": {
+        "name": "background004_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky Trim",
+            "image": "sky_trim.png",
+            "parent": "root",
+            "width": 760.0,
+            "height": 400.0,
+            "x": 0.0,
+            "y": 400.0,
+            "pivotX": 0.0,
+            "pivotY": 1.0
+        },
+        {
+            "name": "Cloud1 Trim",
+            "image": "cloud_trim.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 206.0,
+            "x": 667.0,
+            "y": 124.60000610351562
+        },
+        {
+            "name": "Cloud2 Trim",
+            "image": "cloud_trim.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 206.0,
+            "x": 2001.0,
+            "y": 124.60000610351562
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

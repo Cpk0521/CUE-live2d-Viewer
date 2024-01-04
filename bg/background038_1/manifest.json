@@ -1,0 +1,89 @@
+{
+    "env": {
+        "name": "background038_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Base1",
+            "image": "base1.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "Base2",
+            "image": "base2.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 594.7416381835938,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 297.0
+        },
+        {
+            "name": "Image_Leaf1",
+            "image": "leaf1.png",
+            "parent": "root",
+            "width": 447.4458312988281,
+            "height": 270.96875,
+            "pivotX": 0.0,
+            "pivotY": 0.0,
+            "x": 148.0999755859375,
+            "y": -5.459991455078125
+        },
+        {
+            "name": "Image_Leaf2",
+            "image": "leaf2.png",
+            "parent": "root",
+            "width": 296.6760559082031,
+            "height": 137.56875610351562,
+            "pivotX": 0.0,
+            "pivotY": 0.0,
+            "x": 0.02838134765625,
+            "y": -5.459991455078125
+        },
+        {
+            "name": "Image_Leaf3",
+            "image": "leaf3.png",
+            "parent": "root",
+            "width": 434.9395751953125,
+            "height": 261.2416687011719,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 924.2000122070312,
+            "y": 125.69999694824219
+        },
+        {
+            "name": "Image_Leaf4",
+            "image": "leaf4.png",
+            "parent": "root",
+            "width": 361.9864501953125,
+            "height": 189.67813110351562,
+            "pivotX": 1.0,
+            "pivotY": 0.0,
+            "x": 1333.9000244140625,
+            "y": -8.899993896484375
+        },
+        {
+            "name": "Image_LowLeaf_Right",
+            "image": "low_leaf_1_right.png",
+            "parent": "root",
+            "width": 323.7729187011719,
+            "height": 268.8843688964844,
+            "pivotX": 0.5,
+            "pivotY": 1.0,
+            "x": 1172.1100769042969,
+            "y": 589.8421936035156
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

@@ -1,0 +1,67 @@
+{
+    "env": {
+        "name": "background149_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 502.5,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 251.25
+        },
+        {
+            "name": "Image_Cloud1_1",
+            "image": "cloud1.png",
+            "parent": "root",
+            "width": 934.5,
+            "height": 196.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 506.7799987792969,
+            "y": 98.0
+        },
+        {
+            "name": "Image_Cloud1_2",
+            "image": "cloud1.png",
+            "parent": "root",
+            "width": 934.5,
+            "height": 196.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 1840.780029296875,
+            "y": 98.0
+        },
+        {
+            "name": "Cloud2",
+            "image": "cloud2.png",
+            "parent": "root",
+            "width": 2553.0,
+            "height": 236.5,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 652.1000003814697,
+            "y": 301.0
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 502.5,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 498.75
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

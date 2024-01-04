@@ -1,0 +1,31 @@
+{
+    "env": {
+        "name": "background033_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 374.99993896484375
+        },
+        {
+            "name": "Image_Light",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 657.2728881835938,
+            "height": 114.640625,
+            "x": 578.3000030517578,
+            "y": 279.0999984741211
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

@@ -1,0 +1,79 @@
+{
+    "env": {
+        "name": "background042_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 361.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 180.5
+        },
+        {
+            "name": "Image_Cloud",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1333.0,
+            "height": 308.5,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 666.5,
+            "y": 154.25
+        },
+        {
+            "name": "Image_Cloud (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1333.0,
+            "height": 308.5,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 1999.5,
+            "y": 154.25
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "CloudShadow",
+            "image": "shadow_mask.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 258.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 621.3500061035156
+        },
+        {
+            "name": "Image_CloudShadow",
+            "image": "cloud_shadow.png",
+            "blendMode": 1,
+            "parent": "CloudShadow",
+            "width": 1334.199951171875,
+            "height": 284.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 668.0,
+            "y": 374.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

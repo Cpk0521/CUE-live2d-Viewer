@@ -1,0 +1,71 @@
+{
+    "env": {
+        "name": "background026_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky_trim.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 320.0,
+            "x": 667.0,
+            "y": 320.0,
+            "pivotY": 1.0
+        },
+        {
+            "name": "Image_Cloud",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 270.0,
+            "x": 0.0,
+            "y": 270.0,
+            "pivotX": 0.0,
+            "pivotY": 1.0
+        },
+        {
+            "name": "Image_Cloud (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 270.0,
+            "x": 0.0,
+            "y": 270.0,
+            "pivotX": 0.0,
+            "pivotY": 1.0
+        },
+        {
+            "name": "Image_Gondola",
+            "image": "gondola_01_green.png",
+            "parent": "root",
+            "width": 7.5,
+            "height": 10.5,
+            "x": -153.00000732392073,
+            "y": 127.38000059127808
+        },
+        {
+            "name": "Image_Wheel",
+            "image": "wheel.png",
+            "parent": "root",
+            "width": 391.2099914550781,
+            "height": 391.2099914550781,
+            "x": 40.29998779296875,
+            "y": 104.0
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

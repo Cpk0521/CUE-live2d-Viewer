@@ -1,0 +1,78 @@
+{
+    "env": {
+        "name": "background013_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 374.99993896484375
+        },
+        {
+            "name": "ShadowImage",
+            "image": "shadow.png",
+            "parent": "root",
+            "width": 1038.5759477081301,
+            "height": 224.2589917383193,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 623.5000914937199,
+            "y": 650.1973114013672
+        },
+        {
+            "name": "LeafBackImage",
+            "image": "tree_leaf_back.png",
+            "parent": "root",
+            "width": 563.0900268554688,
+            "height": 297.780029296875,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 282.2152099609375,
+            "y": 145.13983154296875
+        },
+        {
+            "name": "TreeBase",
+            "image": "tree_base.png",
+            "parent": "root",
+            "width": 463.57000732421875,
+            "height": 750.1199951171875,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 232.44992065429688,
+            "y": 371.2790832519531
+        },
+        {
+            "name": "LeafImage",
+            "image": "tree_leaf.png",
+            "parent": "root",
+            "width": 455.04998779296875,
+            "height": 170.1400146484375,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 228.23312377929688,
+            "y": 81.21818542480469
+        },
+        {
+            "name": "EF",
+            "image": "EF.png",
+            "parent": "root",
+            "width": 658.239990234375,
+            "height": 750.2000122070312,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 329.1199951171875,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

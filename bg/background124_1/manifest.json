@@ -1,0 +1,93 @@
+{
+    "env": {
+        "name": "background124_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 514.5,
+            "height": 210.0,
+            "x": 457.1000061035156,
+            "y": 105.10000610351562
+        },
+        {
+            "name": "Cloud",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 715.5,
+            "height": 131.5,
+            "x": 487.0,
+            "y": 65.06021118164062
+        },
+        {
+            "name": "Base2",
+            "image": "base2.png",
+            "parent": "root",
+            "width": 760.0,
+            "height": 114.0,
+            "x": 380.0,
+            "y": 57.10003662109375
+        },
+        {
+            "name": "Image_Train",
+            "image": "train.png",
+            "parent": "root",
+            "width": 744.5,
+            "height": 61.5,
+            "x": 384.8999938964844,
+            "y": 62.5
+        },
+        {
+            "name": "Image_Train (1)",
+            "image": "train.png",
+            "parent": "root",
+            "width": 744.5,
+            "height": 61.5,
+            "x": 384.8999938964844,
+            "y": 62.5
+        },
+        {
+            "name": "Image_Train (2)",
+            "image": "train.png",
+            "parent": "root",
+            "width": 744.5,
+            "height": 61.5,
+            "x": 384.8999938964844,
+            "y": 62.5
+        },
+        {
+            "name": "Image_Train (3)",
+            "image": "train.png",
+            "parent": "root",
+            "width": 744.5,
+            "height": 61.5,
+            "x": 384.8999938964844,
+            "y": 62.5
+        },
+        {
+            "name": "Image_Train (4)",
+            "image": "train.png",
+            "parent": "root",
+            "width": 744.5,
+            "height": 61.5,
+            "x": 384.8999938964844,
+            "y": 62.5
+        },
+        {
+            "name": "Base1",
+            "image": "base1.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

@@ -1,0 +1,84 @@
+{
+    "env": {
+        "name": "background014_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 1062.0,
+            "height": 279.0,
+            "x": 803.0,
+            "y": 139.5
+        },
+        {
+            "name": "Cloud1",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1230.0,
+            "height": 200.0,
+            "x": 719.0,
+            "y": 100.0
+        },
+        {
+            "name": "Cloud1 (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1230.0,
+            "height": 200.0,
+            "x": -510.9998779296875,
+            "y": 100.0
+        },
+        {
+            "name": "Base1",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "TreeBase",
+            "image": "tree_base.png",
+            "parent": "root",
+            "width": 505.0,
+            "height": 574.0,
+            "x": 284.50006103515625,
+            "y": 287.5999984741211
+        },
+        {
+            "name": "TreeLeaf1",
+            "image": "tree_leaf_1.png",
+            "parent": "root",
+            "width": 202.0,
+            "height": 289.0,
+            "x": 168.5,
+            "y": 171.50001525878906
+        },
+        {
+            "name": "TreeLeaf2",
+            "image": "tree_leaf_2.png",
+            "parent": "root",
+            "width": 105.0,
+            "height": 182.0,
+            "x": 450.3000183105469,
+            "y": 247.00000381469727
+        },
+        {
+            "name": "Base23",
+            "image": "base23_shadow_replace.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 720.5,
+            "x": 667.0,
+            "y": 360.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

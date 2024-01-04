@@ -1,0 +1,106 @@
+{
+    "env": {
+        "name": "background049_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky_trim.png",
+            "parent": "root",
+            "width": 129.0,
+            "height": 195.0,
+            "x": 686.5,
+            "y": 97.16000366210938
+        },
+        {
+            "name": "Image_Cloud",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1332.0,
+            "height": 311.0,
+            "x": 667.0,
+            "y": 155.5
+        },
+        {
+            "name": "Image_Cloud (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1332.0,
+            "height": 311.0,
+            "x": 2001.0,
+            "y": 155.5
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "Image_Flag_A2",
+            "image": "flag_A2.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 88.0,
+            "height": 251.5,
+            "x": 1185.5502319335938,
+            "y": 153.24996948242188
+        },
+        {
+            "name": "Image_PoleRight",
+            "image": "pole_right.png",
+            "parent": "root",
+            "width": 220.0,
+            "height": 630.0,
+            "x": 1121.5,
+            "y": 315.0
+        },
+        {
+            "name": "Image_Flag_A1",
+            "image": "flag_A1.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 88.0,
+            "height": 249.5,
+            "x": 1058.6000061035156,
+            "y": 154.24996948242188
+        },
+        {
+            "name": "Image_Flag_B1",
+            "image": "flag_B1.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 63.0,
+            "height": 188.0,
+            "x": 234.49996948242188,
+            "y": 204.0
+        },
+        {
+            "name": "Image_PoleLeft",
+            "image": "pole_left.png",
+            "parent": "root",
+            "width": 192.0,
+            "height": 595.5,
+            "x": 266.0,
+            "y": 297.6159973144531
+        },
+        {
+            "name": "Image_Flag_B2",
+            "image": "flag_B2.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 62.0,
+            "height": 189.0,
+            "x": 326.0999450683594,
+            "y": 203.10000610351562
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

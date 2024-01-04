@@ -38,7 +38,7 @@ class l2dViewer{
         this._app.stage.addChild(modelcontainer);
         this._containers.set('Models', modelcontainer);
 
-        this.loadBG('./image/backgrounds/bg_004.png')
+        this.loadBG('./bg/background004_1/manifest.json')
     }
 
     _resizeViwer(){
@@ -62,12 +62,10 @@ class l2dViewer{
     loadBG(src) {
         this.setBGColor(0xFFFFFF);
         
-        let bg = new PIXI.Sprite(PIXI.Texture.from(src));
-        bg.width = 1334;
-        bg.height = 750;
+        const bg = BGContainer.from(src);
         this._containers.get('BG').addChild(bg);
 
-        console.log('background updated')
+        console.log('background updated');
     }
 
     addModel(model){
@@ -112,6 +110,45 @@ class l2dViewer{
 
     findModel(name){
         return this._l2dModels.get(name);
+    }
+
+}
+
+class BGContainer extends PIXI.Container{
+
+    static from(source){
+        const bg = new this();
+        bg._init(source);
+        return bg;
+    }
+
+    async _init(source){
+        let menifest = await fetch(source).then(res => res.json());
+        const folder = source.split('manifest.json')[0]
+
+        const ratio = 1334 / menifest.env.width;
+        const scale = (menifest.env.height * ratio - 750) /2;
+
+        this.name = menifest.env.name;
+
+        menifest.elements.forEach((element) => {
+            const url = folder + menifest.env.images + element.image
+            
+            const sprite = PIXI.Sprite.from(url);
+            sprite.name = element.name;
+
+            sprite.width = element.width * ratio;
+            sprite.height = element.height * ratio;
+
+            sprite.anchor.set(element.pivotX ?? 0.5, element.pivotY ?? 0.5);
+
+            if(element.blendMode){
+                sprite.blendMode = element.blendMode
+            }
+
+            sprite.position.set(element.x, element.y);
+            this.addChild(sprite);
+        });
     }
 
 }
@@ -414,7 +451,7 @@ const setupCanvasBackgroundOption = (data) => {
         let btn = document.createElement('button')
         btn.innerHTML = `<img src='./image/${val.thumbnail}'><img>`
         btn.onclick = () => {
-            l2dviewer?.loadBG(`./image/${val.background_src}`)
+            l2dviewer?.loadBG(`./bg/${val.background_src}`)
         }
 
         list.append(btn)

@@ -1,0 +1,95 @@
+{
+    "env": {
+        "name": "background052_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "Light",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 97.75,
+            "height": 82.25,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 729.5,
+            "y": 93.29998779296875
+        },
+        {
+            "name": "Light (1)",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 97.75,
+            "height": 82.25,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 642.1000003814697,
+            "y": 39.20001220703125
+        },
+        {
+            "name": "Light (2)",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 97.75,
+            "height": 82.25,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 393.0,
+            "y": 105.79998779296875
+        },
+        {
+            "name": "Light (3)",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 97.75,
+            "height": 82.25,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 229.60000610351562,
+            "y": 60.600006103515625
+        },
+        {
+            "name": "Light (4)",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 97.75,
+            "height": 82.25,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 1075.2000122070312,
+            "y": 80.39999389648438
+        },
+        {
+            "name": "Light (5)",
+            "image": "light.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 97.75,
+            "height": 82.25,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 1072.3999938964844,
+            "y": 18.20001220703125
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

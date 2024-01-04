@@ -1,0 +1,84 @@
+{
+    "env": {
+        "name": "background011_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky_trim.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 260.0,
+            "x": 667.0,
+            "y": 130.0
+        },
+        {
+            "name": "Cloud_A1",
+            "image": "cloud_A.png",
+            "parent": "root",
+            "width": 1024.0,
+            "height": 145.5,
+            "x": 821.0000610351562,
+            "y": 72.75006103515625
+        },
+        {
+            "name": "Cloud_A2",
+            "image": "cloud_A.png",
+            "parent": "root",
+            "width": 1024.0,
+            "height": 145.5,
+            "x": -202.9996337890625,
+            "y": 72.75006103515625
+        },
+        {
+            "name": "Cloud_B1",
+            "image": "cloud_B.png",
+            "parent": "root",
+            "width": 1249.9000244140625,
+            "height": 194.6999969482422,
+            "x": 655.0501708984375,
+            "y": 96.4000244140625
+        },
+        {
+            "name": "Cloud_B2",
+            "image": "cloud_B.png",
+            "parent": "root",
+            "width": 1249.9000244140625,
+            "height": 194.6999969482422,
+            "x": -594.94970703125,
+            "y": 96.4000244140625
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "Tree_Left",
+            "image": "tree_leaf.png",
+            "parent": "root",
+            "width": 398.0,
+            "height": 183.5,
+            "x": 199.00006103515625,
+            "y": 92.00006103515625
+        },
+        {
+            "name": "Object_Left",
+            "image": "object_left.png",
+            "parent": "root",
+            "width": 440.0,
+            "height": 552.5,
+            "x": 220.0,
+            "y": 383.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

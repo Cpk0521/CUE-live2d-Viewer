@@ -1,0 +1,85 @@
+{
+    "env": {
+        "name": "background150_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 350.0,
+            "x": 667.0,
+            "y": 175.0
+        },
+        {
+            "name": "Image_Cloud3_1",
+            "image": "cloud3_loop.png",
+            "parent": "root",
+            "width": 1178.0,
+            "height": 237.5,
+            "x": 742.179931640625,
+            "y": 118.75
+        },
+        {
+            "name": "Image_Cloud3_2",
+            "image": "cloud3_loop.png",
+            "parent": "root",
+            "width": 1178.0,
+            "height": 237.5,
+            "x": 2076.179931640625,
+            "y": 118.75
+        },
+        {
+            "name": "Cloud2",
+            "image": "cloud2.png",
+            "parent": "root",
+            "width": 1332.5,
+            "height": 335.0,
+            "x": 667.75,
+            "y": 176.8000030517578
+        },
+        {
+            "name": "Image_Cloud1_1",
+            "image": "cloud1_loop.png",
+            "parent": "root",
+            "width": 1268.5,
+            "height": 183.0,
+            "x": 696.9300003051758,
+            "y": 236.0500030517578
+        },
+        {
+            "name": "Image_Cloud1_2",
+            "image": "cloud1_loop.png",
+            "parent": "root",
+            "width": 1268.5,
+            "height": 183.0,
+            "x": 2030.9300537109375,
+            "y": 236.0500030517578
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 724.5,
+            "x": 667.0,
+            "y": 387.75
+        },
+        {
+            "name": "Effect",
+            "image": "effect.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 593.5,
+            "height": 367.5,
+            "x": 296.75,
+            "y": 183.75
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

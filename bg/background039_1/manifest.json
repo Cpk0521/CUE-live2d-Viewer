@@ -1,0 +1,57 @@
+{
+    "env": {
+        "name": "background039_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 369.0,
+            "height": 750.0,
+            "x": 1149.5,
+            "y": 375.13568000495434
+        },
+        {
+            "name": "Image_Cloud",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1247.0,
+            "height": 373.5,
+            "x": 1239.0,
+            "y": 104.79998779296875
+        },
+        {
+            "name": "Image_Cloud (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1247.0,
+            "height": 373.5,
+            "x": 2486.0,
+            "y": 104.79998779296875
+        },
+        {
+            "name": "Base1",
+            "image": "base1.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        },
+        {
+            "name": "Base2",
+            "image": "base2.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 750.0,
+            "x": 667.0,
+            "y": 375.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}

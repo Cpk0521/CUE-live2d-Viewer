@@ -1,0 +1,79 @@
+{
+    "env": {
+        "name": "background027_1",
+        "width": 1334,
+        "height": 750,
+        "images": "./images/"
+    },
+    "elements": [
+        {
+            "name": "Sky",
+            "image": "sky.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 300.0,
+            "pivotX": 0.5,
+            "pivotY": 0.0,
+            "x": 667.0,
+            "y": 0.0
+        },
+        {
+            "name": "Image_Cloud",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1704.4000244140625,
+            "height": 213.10000610351562,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 667.0,
+            "y": 106.89999389648438
+        },
+        {
+            "name": "Image_Cloud (1)",
+            "image": "cloud.png",
+            "parent": "root",
+            "width": 1704.4000244140625,
+            "height": 213.10000610351562,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 2195.0,
+            "y": 106.89999389648438
+        },
+        {
+            "name": "Base",
+            "image": "base.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 590.0,
+            "pivotX": 0.5,
+            "pivotY": 1.0,
+            "x": 667.0,
+            "y": 750.0
+        },
+        {
+            "name": "WaterImage",
+            "image": "BG027_WaterMask.png",
+            "blendMode": 1,
+            "parent": "root",
+            "width": 1658.5999755859375,
+            "height": 628.7000122070312,
+            "pivotX": 0.5,
+            "pivotY": 0.5,
+            "x": 656.5,
+            "y": 488.9000015258789
+        },
+        {
+            "name": "Base (1)",
+            "image": "base1.png",
+            "parent": "root",
+            "width": 1334.0,
+            "height": 404.0,
+            "pivotX": 0.5,
+            "pivotY": 1.0,
+            "x": 666.9999408719996,
+            "y": 750.0
+        }
+    ],
+    "groups": [],
+    "animations": {}
+}
