@@ -6,7 +6,7 @@ var l2dmaster;
 class l2dViewer{
 
     copyright = true
-    _containers = new Map()
+    containers = new Map()
     _l2dModels = new Map()
     
     constructor(element){
@@ -32,11 +32,11 @@ class l2dViewer{
 
         let bgcontainer = new PIXI.Container();
         this._app.stage.addChild(bgcontainer);
-        this._containers.set('BG', bgcontainer);
+        this.containers.set('BG', bgcontainer);
 
         let modelcontainer = new PIXI.Container();
         this._app.stage.addChild(modelcontainer);
-        this._containers.set('Models', modelcontainer);
+        this.containers.set('Models', modelcontainer);
 
         this.loadBG('./bg/background004_1/manifest.json')
     }
@@ -55,7 +55,7 @@ class l2dViewer{
     }
     
     setBGColor(color) {
-        this._containers.get('BG').removeChildren();
+        this.containers.get('BG').removeChildren();
         this._app.renderer.background.color  = color
     }
 
@@ -63,7 +63,7 @@ class l2dViewer{
         this.setBGColor(0xFFFFFF);
         
         const bg = BGContainer.from(src);
-        this._containers.get('BG').addChild(bg);
+        this.containers.get('BG').addChild(bg);
 
         console.log('background updated');
     }
@@ -74,7 +74,7 @@ class l2dViewer{
         }
 
         this._l2dModels.set(model.getIndexName(), model);
-        this._containers.get('Models').addChild(model._Model);
+        this.containers.get('Models').addChild(model._Model);
         
 
         model.setAnchor(.5);
@@ -97,7 +97,7 @@ class l2dViewer{
         if(!model){
             return;
         }
-        this._containers.get('Models').removeChild(model);
+        this.containers.get('Models').removeChild(model);
         model._Model.destroy();
         this._l2dModels.delete('name');
 
@@ -110,6 +110,10 @@ class l2dViewer{
 
     findModel(name){
         return this._l2dModels.get(name);
+    }
+
+    get app(){
+        return this._app;
     }
 
 }
@@ -883,6 +887,34 @@ $(document).ready(async() => {
     // copyrightCheckbox.onchange = function(e){
     //     l2dviewer.switchCopyright()
     // }
+
+    document.getElementById('snapshotBtn').onclick = async() => {
+        if(!l2dviewer.app) return;
+        const renderer = l2dviewer.app.renderer
+        const texture = renderer.generateTexture(l2dviewer.app.stage, {
+            region : {
+                x : 0,
+                y : 0,
+                width : renderer.width,
+                height : renderer.height
+            }
+        })
+        const iamge = await renderer.extract.image(texture);
+        let  screenshot = document.createElement('a');
+        screenshot.download = 'snapshot.png'
+        screenshot.href = iamge.src;
+        screenshot.click();
+    }
+
+    document.getElementById('model_snapshotBtn').onclick = async() => {
+        let container = l2dviewer.containers.get('Models');
+        if(!container || !l2dviewer.app) return;
+        const iamge = await l2dviewer.app.renderer.extract.image(container);
+        let screenshot = document.createElement('a');
+        screenshot.download = 'model_snapshot.png'
+        screenshot.href = iamge.src;
+        screenshot.click();
+    }
 
     Array.from(document.getElementsByClassName('collapsible')).forEach(x => {
         x.addEventListener('click', function() {
