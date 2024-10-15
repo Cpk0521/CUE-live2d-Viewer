@@ -99,7 +99,7 @@ class l2dViewer{
         }
         this.containers.get('Models').removeChild(model);
         model._Model.destroy();
-        this._l2dModels.delete('name');
+        this._l2dModels.delete(name);
 
         console.log('model removed');
     }
